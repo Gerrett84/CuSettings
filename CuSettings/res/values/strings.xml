@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_size">Adjust the icon size does not work well in some case, you could remove the settings by select remove settings.</string>
+    <string name="xy_change">"Configure dpi warning:
+Some applications and themes does not work well if the dpi is set as 268. DO NOT report it as bug, just set back to 320 if you are not happy."</string>
+    <string name="app_name">Note Settings</string>
+    <string name="confirm">Confirm</string>
+    <string name="deskadjust">Desktop layout adjust</string>
+    <string name="icon_layout">Configure the layout, and there are known issues for widget under 5 columns.</string>
+    <string name="advice">This application is portet from the note2 and is not officially supported by MIUI, it is only used for test purpose. (by fanoge@miui)</string>
+    <string name="feature">Feature settings</string>
+    <string name="ssime">remove Samsung IME (not supportet)</string>
+    <string name="mulwin">remove Multiple windows feature (not supportet)</string>
+    <string name="dpi268">set DPI=268</string>
+    <string name="feature_hint">A reboot is required for some cases</string>
+    <string name="otawarn">Reboot needed</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="IconSize">
+        <item>高清图标</item>
+        <item>高清图标（小）</item>
+        <item>普通图标</item>
+        <item>中等大小</item>
+        <item>小</item>
+        <item>很小</item>
+        <item>极小(建议使用小字体)</item>
+        <item>变态小(建议使用小字体)</item>
+        <item>清除设置</item>
+    </string-array>
+    <string-array name="xy">
+        <item>系统默认</item>
+        <item>5x5</item>
+        <item>5x6</item>
+        <item>6x6</item>
+        <item>6x7</item>
+    </string-array>
+</resources>

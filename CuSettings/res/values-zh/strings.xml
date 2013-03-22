@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_size">改动桌面图标在某些模式（比如大字体或者主题）下可能出现不兼容情况，可以选择“清除设置”移除此设置。</string>
+    <string name="app_name">Note定制</string>
+    <string name="confirm">确认</string>
+    <string name="deskadjust">桌面布局调整</string>
+    <string name="icon_layout">列数大于5的布局仅供测试，设置前先备份数据，可能不能兼容某些小部件，也不能与系统默认布局切换保留设置，可以选择“系统默认”清除此设置。</string>
+    <string name="advice">此应用只能在 MIUI上使用，此应用以及所提供的设置都不是Note2 MIUIv4.1 ROM所正式支持的功能，由于此应用导致的问题，请不要反馈。造成无法开机等极端情况下，请尝试在recovery下清除数据解决。(by fanoge@miui)</string>
+    <string name="feature">功能设定</string>
+    <string name="ssime">移除三星输入法</string>
+    <string name="mulwin">禁止多窗口功能</string>
+    <string name="dpi268">设置DPI为268</string>
+    <string name="feature_hint">除了特别提示的项目外，以下设置一般不会引起系统更新(OTA)失败，如果失败，请取消所有设置再次OTA即可．有些设置需要重启生效．</string>
+    <string name="otawarn">强烈不推荐，每次OTA前必须取消</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="linearLayout1">false</item>
+    <item type="id" name="spinner1">false</item>
+    <item type="id" name="spinner_xy">false</item>
+    <item type="id" name="button_confirm">false</item>
+    <item type="id" name="view1">false</item>
+    <item type="id" name="linearLayout_feature">false</item>
+</resources>

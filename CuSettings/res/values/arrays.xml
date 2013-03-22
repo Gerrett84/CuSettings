@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="IconSize">
+        <item>high definition</item>
+        <item>high definition - small</item>
+        <item>normal</item>
+        <item>medium</item>
+        <item>small</item>
+        <item>very small</item>
+        <item>extreme small</item>
+        <item>smaller! smaller!</item>
+        <item>remove settings</item>
+    </string-array>
+    <string-array name="dpi">
+        <item>320</item>
+        <item>268</item>
+    </string-array>
+    <string-array name="xy">
+        <item>not set</item>
+        <item>5x5</item>
+        <item>5x6</item>
+        <item>6x6</item>
+        <item>6x7</item>
+    </string-array>
+</resources>
