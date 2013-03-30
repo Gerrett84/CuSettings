@@ -14,6 +14,22 @@
 
 .field public static final sCookieTypeOther:I = 0x3
 
+.field private static sPreloadDrawableSources:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Ljava/util/Set",
+            "<",
+            "Landroid/util/Pair",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/String;",
+            ">;>;>;"
+        }
+    .end annotation
+.end field
+
 .field private static sUiModeOrder:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -53,7 +69,29 @@
     .end annotation
 .end field
 
+.field private mIsPreloadOverlayed:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mPackageName:Ljava/lang/String;
+
+.field private mPreloadingIds:Ljava/util/Stack;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Stack",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private mSkipFiles:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
@@ -76,14 +114,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 27
+    .line 30
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Landroid/content/res/MiuiResources;->sUiModeOrder:Landroid/util/SparseArray;
 
-    .line 29
+    .line 32
     sget-object v0, Landroid/content/res/MiuiResources;->sUiModeOrder:Landroid/util/SparseArray;
 
     const/16 v1, 0xc
@@ -96,7 +134,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 30
+    .line 33
     sget-object v0, Landroid/content/res/MiuiResources;->sUiModeOrder:Landroid/util/SparseArray;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -105,7 +143,7 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 31
+    .line 34
     sget-object v0, Landroid/content/res/MiuiResources;->sUiModeOrder:Landroid/util/SparseArray;
 
     const/16 v1, 0xd
@@ -118,7 +156,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 32
+    .line 35
     sget-object v0, Landroid/content/res/MiuiResources;->sUiModeOrder:Landroid/util/SparseArray;
 
     const/16 v1, 0xe
@@ -131,7 +169,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 41
+    .line 44
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
@@ -145,43 +183,43 @@
     .locals 1
 
     .prologue
-    .line 44
+    .line 51
     invoke-direct {p0}, Landroid/content/res/Resources;-><init>()V
 
-    .line 37
+    .line 40
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mIntegers:Landroid/util/SparseArray;
 
-    .line 38
+    .line 41
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mCharSequences:Landroid/util/SparseArray;
 
-    .line 39
+    .line 42
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mSkipFiles:Landroid/util/SparseArray;
 
-    .line 272
+    .line 333
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mCookieType:Landroid/util/SparseIntArray;
 
-    .line 45
+    .line 52
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/content/res/MiuiResources;->init(Ljava/lang/String;)V
 
-    .line 46
+    .line 53
     return-void
 .end method
 
@@ -192,43 +230,43 @@
     .parameter "config"
 
     .prologue
-    .line 49
+    .line 56
     invoke-direct {p0, p1, p2, p3}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
 
-    .line 37
+    .line 40
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mIntegers:Landroid/util/SparseArray;
 
-    .line 38
+    .line 41
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mCharSequences:Landroid/util/SparseArray;
 
-    .line 39
+    .line 42
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mSkipFiles:Landroid/util/SparseArray;
 
-    .line 272
+    .line 333
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mCookieType:Landroid/util/SparseIntArray;
 
-    .line 50
+    .line 57
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/content/res/MiuiResources;->init(Ljava/lang/String;)V
 
-    .line 51
+    .line 58
     return-void
 .end method
 
@@ -240,43 +278,43 @@
     .parameter "compInfo"
 
     .prologue
-    .line 55
+    .line 62
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;Landroid/content/res/CompatibilityInfo;)V
 
-    .line 37
+    .line 40
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mIntegers:Landroid/util/SparseArray;
 
-    .line 38
+    .line 41
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mCharSequences:Landroid/util/SparseArray;
 
-    .line 39
+    .line 42
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mSkipFiles:Landroid/util/SparseArray;
 
-    .line 272
+    .line 333
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mCookieType:Landroid/util/SparseIntArray;
 
-    .line 56
+    .line 63
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/content/res/MiuiResources;->init(Ljava/lang/String;)V
 
-    .line 57
+    .line 64
     return-void
 .end method
 
@@ -285,25 +323,25 @@
     .parameter "cookie"
 
     .prologue
-    .line 275
+    .line 336
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mCookieType:Landroid/util/SparseIntArray;
 
     invoke-virtual {v2, p1}, Landroid/util/SparseIntArray;->get(I)I
 
     move-result v1
 
-    .line 276
+    .line 337
     .local v1, type:I
     if-nez v1, :cond_0
 
-    .line 277
+    .line 338
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mAssets:Landroid/content/res/AssetManager;
 
     invoke-virtual {v2, p1}, Landroid/content/res/AssetManager;->getCookieName(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 278
+    .line 339
     .local v0, name:Ljava/lang/String;
     const-string v2, "/system/framework/framework-res.apk"
 
@@ -313,21 +351,21 @@
 
     if-eqz v2, :cond_1
 
-    .line 279
+    .line 340
     const/4 v1, 0x1
 
-    .line 287
+    .line 348
     :goto_0
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mCookieType:Landroid/util/SparseIntArray;
 
     invoke-virtual {v2, p1, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 290
+    .line 351
     .end local v0           #name:Ljava/lang/String;
     :cond_0
     return v1
 
-    .line 281
+    .line 342
     .restart local v0       #name:Ljava/lang/String;
     :cond_1
     const-string v2, "/system/framework/framework-miui-res.apk"
@@ -338,12 +376,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 282
+    .line 343
     const/4 v1, 0x2
 
     goto :goto_0
 
-    .line 285
+    .line 346
     :cond_2
     const/4 v1, 0x3
 
@@ -354,7 +392,7 @@
     .locals 6
 
     .prologue
-    .line 173
+    .line 184
     const-string/jumbo v3, "miui_font_scale_switch"
 
     const-string v4, "bool"
@@ -365,31 +403,31 @@
 
     move-result v2
 
-    .line 174
+    .line 185
     .local v2, miuiScaleId:I
     if-eqz v2, :cond_0
 
-    .line 175
+    .line 186
     const/4 v1, 0x0
 
-    .line 177
+    .line 188
     .local v1, miuiScale:Z
     :try_start_0
     invoke-virtual {p0, v2}, Landroid/content/res/MiuiResources;->getBoolean(I)Z
 
     move-result v1
 
-    .line 178
+    .line 189
     if-eqz v1, :cond_0
 
-    .line 179
+    .line 190
     const v3, 0x606000b
 
     invoke-virtual {p0, v3}, Landroid/content/res/MiuiResources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 180
+    .line 191
     .local v0, miuiFontScales:[Ljava/lang/String;
     sget-object v3, Landroid/content/res/MiuiResources;->sUiModeOrder:Landroid/util/SparseArray;
 
@@ -419,14 +457,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 186
+    .line 197
     .end local v0           #miuiFontScales:[Ljava/lang/String;
     .end local v1           #miuiScale:Z
     :cond_0
     :goto_0
     return-void
 
-    .line 183
+    .line 194
     .restart local v1       #miuiScale:Z
     :catch_0
     move-exception v3
@@ -446,16 +484,16 @@
     .end annotation
 
     .prologue
-    .line 61
+    .line 68
     invoke-virtual {p0, p1}, Landroid/content/res/MiuiResources;->getThemeCharSequence(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 62
+    .line 69
     .local v0, cs:Ljava/lang/CharSequence;
     if-eqz v0, :cond_0
 
-    .line 65
+    .line 72
     .end local v0           #cs:Ljava/lang/CharSequence;
     :goto_0
     return-object v0
@@ -475,16 +513,16 @@
     .parameter "def"
 
     .prologue
-    .line 70
+    .line 77
     invoke-virtual {p0, p1}, Landroid/content/res/MiuiResources;->getThemeCharSequence(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 71
+    .line 78
     .local v0, cs:Ljava/lang/CharSequence;
     if-eqz v0, :cond_0
 
-    .line 74
+    .line 81
     .end local v0           #cs:Ljava/lang/CharSequence;
     :goto_0
     return-object v0
@@ -503,19 +541,19 @@
     .parameter "id"
 
     .prologue
-    .line 253
+    .line 314
     iget-boolean v2, p0, Landroid/content/res/MiuiResources;->mHasValues:Z
 
     if-nez v2, :cond_0
 
-    .line 254
+    .line 315
     const/4 v1, 0x0
 
-    .line 265
+    .line 326
     :goto_0
     return-object v1
 
-    .line 257
+    .line 318
     :cond_0
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mCharSequences:Landroid/util/SparseArray;
 
@@ -523,11 +561,11 @@
 
     move-result v0
 
-    .line 258
+    .line 319
     .local v0, index:I
     if-ltz v0, :cond_1
 
-    .line 259
+    .line 320
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mCharSequences:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -539,7 +577,7 @@
     .local v1, value:Ljava/lang/CharSequence;
     goto :goto_0
 
-    .line 262
+    .line 323
     .end local v1           #value:Ljava/lang/CharSequence;
     :cond_1
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
@@ -548,7 +586,7 @@
 
     move-result-object v1
 
-    .line 263
+    .line 324
     .restart local v1       #value:Ljava/lang/CharSequence;
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mCharSequences:Landroid/util/SparseArray;
 
@@ -562,19 +600,19 @@
     .parameter "id"
 
     .prologue
-    .line 237
+    .line 298
     iget-boolean v2, p0, Landroid/content/res/MiuiResources;->mHasValues:Z
 
     if-nez v2, :cond_0
 
-    .line 238
+    .line 299
     const/4 v1, 0x0
 
-    .line 249
+    .line 310
     :goto_0
     return-object v1
 
-    .line 241
+    .line 302
     :cond_0
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mIntegers:Landroid/util/SparseArray;
 
@@ -582,11 +620,11 @@
 
     move-result v0
 
-    .line 242
+    .line 303
     .local v0, index:I
     if-ltz v0, :cond_1
 
-    .line 243
+    .line 304
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mIntegers:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -598,7 +636,7 @@
     .local v1, value:Ljava/lang/Integer;
     goto :goto_0
 
-    .line 246
+    .line 307
     .end local v1           #value:Ljava/lang/Integer;
     :cond_1
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
@@ -607,7 +645,7 @@
 
     move-result-object v1
 
-    .line 247
+    .line 308
     .restart local v1       #value:Ljava/lang/Integer;
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mIntegers:Landroid/util/SparseArray;
 
@@ -628,10 +666,10 @@
     .end annotation
 
     .prologue
-    .line 79
+    .line 86
     invoke-super {p0, p1, p2, p3}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
 
-    .line 80
+    .line 87
     iget v1, p2, Landroid/util/TypedValue;->type:I
 
     const/16 v2, 0x10
@@ -651,24 +689,24 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 82
+    .line 89
     :cond_1
     invoke-virtual {p0, p1}, Landroid/content/res/MiuiResources;->getThemeInt(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 83
+    .line 90
     .local v0, themeInteger:Ljava/lang/Integer;
     if-eqz v0, :cond_2
 
-    .line 84
+    .line 91
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
     iput v1, p2, Landroid/util/TypedValue;->data:I
 
-    .line 87
+    .line 94
     .end local v0           #themeInteger:Ljava/lang/Integer;
     :cond_2
     return-void
@@ -679,10 +717,10 @@
     .parameter "packageName"
 
     .prologue
-    .line 197
+    .line 257
     iput-object p1, p0, Landroid/content/res/MiuiResources;->mPackageName:Ljava/lang/String;
 
-    .line 198
+    .line 258
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -705,7 +743,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 201
+    .line 261
     :cond_0
     invoke-static {p0}, Lmiui/content/res/ThemeResources;->getSystem(Landroid/content/res/Resources;)Lmiui/content/res/ThemeResources;
 
@@ -713,7 +751,7 @@
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
 
-    .line 207
+    .line 268
     :goto_0
     iget-object v0, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
 
@@ -723,13 +761,13 @@
 
     iput-boolean v0, p0, Landroid/content/res/MiuiResources;->mHasValues:Z
 
-    .line 208
+    .line 269
     invoke-direct {p0}, Landroid/content/res/MiuiResources;->updateMiuiFontScale()V
 
-    .line 209
+    .line 270
     return-void
 
-    .line 204
+    .line 264
     :cond_1
     invoke-static {p0, p1}, Lmiui/content/res/ThemeResourcesPackage;->getThemeResources(Landroid/content/res/Resources;Ljava/lang/String;)Lmiui/content/res/ThemeResourcesPackage;
 
@@ -737,7 +775,7 @@
 
     iput-object v0, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
 
-    .line 205
+    .line 265
     invoke-static {p0}, Lmiui/content/res/ThemeResources;->getSystem(Landroid/content/res/Resources;)Lmiui/content/res/ThemeResources;
 
     move-result-object v0
@@ -746,11 +784,137 @@
 
     invoke-virtual {v0, v1}, Lmiui/content/res/ThemeResources;->enableFilter(Ljava/lang/String;)V
 
+    .line 266
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Landroid/content/res/MiuiResources;->mIsPreloadOverlayed:Landroid/util/SparseArray;
+
+    goto :goto_0
+.end method
+
+.method isPreloadOverlayed(I)Z
+    .locals 7
+    .parameter "id"
+
+    .prologue
+    const/4 v4, 0x0
+
+    .line 201
+    iget-object v5, p0, Landroid/content/res/MiuiResources;->mIsPreloadOverlayed:Landroid/util/SparseArray;
+
+    if-nez v5, :cond_0
+
+    .line 217
+    :goto_0
+    return v4
+
+    .line 203
+    :cond_0
+    iget-object v5, p0, Landroid/content/res/MiuiResources;->mIsPreloadOverlayed:Landroid/util/SparseArray;
+
+    invoke-virtual {v5, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    .line 204
+    .local v1, isOverlayed:Ljava/lang/Boolean;
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v4
+
+    goto :goto_0
+
+    .line 206
+    :cond_1
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    .line 207
+    sget-object v4, Landroid/content/res/MiuiResources;->sPreloadDrawableSources:Landroid/util/SparseArray;
+
+    invoke-virtual {v4, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/util/Set;
+
+    .line 208
+    .local v3, sources:Ljava/util/Set;,"Ljava/util/Set<Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/String;>;>;"
+    if-eqz v3, :cond_3
+
+    .line 209
+    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    .local v0, i$:Ljava/util/Iterator;
+    :cond_2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/util/Pair;
+
+    .line 210
+    .local v2, source:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/String;>;"
+    iget-object v5, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
+
+    iget-object v4, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v4, Ljava/lang/Integer;
+
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+
+    move-result v6
+
+    iget-object v4, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v4, Ljava/lang/String;
+
+    invoke-virtual {v5, v6, v4}, Lmiui/content/res/ThemeResources;->containsOverlayEntry(ILjava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    .line 211
+    const/4 v4, 0x1
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    .line 216
+    .end local v0           #i$:Ljava/util/Iterator;
+    .end local v2           #source:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/String;>;"
+    :cond_3
+    iget-object v4, p0, Landroid/content/res/MiuiResources;->mIsPreloadOverlayed:Landroid/util/SparseArray;
+
+    invoke-virtual {v4, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .line 217
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v4
+
     goto :goto_0
 .end method
 
 .method loadDrawable(Landroid/util/TypedValue;I)Landroid/graphics/drawable/Drawable;
-    .locals 2
+    .locals 7
     .parameter "value"
     .parameter "id"
     .annotation system Ldalvik/annotation/Throws;
@@ -760,24 +924,180 @@
     .end annotation
 
     .prologue
-    .line 189
+    .line 222
+    invoke-virtual {p0}, Landroid/content/res/MiuiResources;->isPreloading()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    .line 223
+    sget-object v5, Landroid/content/res/MiuiResources;->sPreloadDrawableSources:Landroid/util/SparseArray;
+
+    if-nez v5, :cond_0
+
+    .line 224
+    new-instance v5, Landroid/util/SparseArray;
+
+    invoke-direct {v5}, Landroid/util/SparseArray;-><init>()V
+
+    sput-object v5, Landroid/content/res/MiuiResources;->sPreloadDrawableSources:Landroid/util/SparseArray;
+
+    .line 225
+    new-instance v5, Ljava/util/Stack;
+
+    invoke-direct {v5}, Ljava/util/Stack;-><init>()V
+
+    iput-object v5, p0, Landroid/content/res/MiuiResources;->mPreloadingIds:Ljava/util/Stack;
+
+    .line 227
+    :cond_0
+    iget-object v5, p0, Landroid/content/res/MiuiResources;->mPreloadingIds:Ljava/util/Stack;
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 229
+    iget v5, p1, Landroid/util/TypedValue;->type:I
+
+    const/16 v6, 0x1c
+
+    if-lt v5, v6, :cond_1
+
+    iget v5, p1, Landroid/util/TypedValue;->type:I
+
+    const/16 v6, 0x1f
+
+    if-le v5, v6, :cond_3
+
+    .line 231
+    :cond_1
+    iget-object v5, p1, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 232
+    .local v1, file:Ljava/lang/String;
+    const-string v5, ".xml"
+
+    invoke-virtual {v1, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_3
+
+    .line 233
+    iget-object v5, p0, Landroid/content/res/MiuiResources;->mPreloadingIds:Ljava/util/Stack;
+
+    invoke-virtual {v5}, Ljava/util/Stack;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    .local v2, i$:Ljava/util/Iterator;
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    .line 234
+    .local v3, loadingId:Ljava/lang/Integer;
+    sget-object v5, Landroid/content/res/MiuiResources;->sPreloadDrawableSources:Landroid/util/SparseArray;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v6
+
+    invoke-virtual {v5, v6}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/util/Set;
+
+    .line 235
+    .local v4, sources:Ljava/util/Set;,"Ljava/util/Set<Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/String;>;>;"
+    if-nez v4, :cond_2
+
+    .line 236
+    new-instance v4, Ljava/util/HashSet;
+
+    .end local v4           #sources:Ljava/util/Set;,"Ljava/util/Set<Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/String;>;>;"
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
+
+    .line 237
+    .restart local v4       #sources:Ljava/util/Set;,"Ljava/util/Set<Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/String;>;>;"
+    sget-object v5, Landroid/content/res/MiuiResources;->sPreloadDrawableSources:Landroid/util/SparseArray;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v6
+
+    invoke-virtual {v5, v6, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .line 239
+    :cond_2
+    new-instance v5, Landroid/util/Pair;
+
+    iget v6, p1, Landroid/util/TypedValue;->assetCookie:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-direct {v5, v6, v1}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-interface {v4, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 245
+    .end local v1           #file:Ljava/lang/String;
+    .end local v2           #i$:Ljava/util/Iterator;
+    .end local v3           #loadingId:Ljava/lang/Integer;
+    .end local v4           #sources:Ljava/util/Set;,"Ljava/util/Set<Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/String;>;>;"
+    :cond_3
     invoke-super {p0, p1, p2}, Landroid/content/res/Resources;->loadDrawable(Landroid/util/TypedValue;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 190
+    .line 246
     .local v0, d:Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
 
-    move-result v1
+    move-result v5
 
-    if-eqz v1, :cond_0
+    if-eqz v5, :cond_4
 
-    .line 191
+    .line 247
     invoke-virtual {v0, p2}, Landroid/graphics/drawable/Drawable;->setId(I)V
 
-    .line 193
-    :cond_0
+    .line 250
+    :cond_4
+    invoke-virtual {p0}, Landroid/content/res/MiuiResources;->isPreloading()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    .line 251
+    iget-object v5, p0, Landroid/content/res/MiuiResources;->mPreloadingIds:Ljava/util/Stack;
+
+    invoke-virtual {v5}, Ljava/util/Stack;->pop()Ljava/lang/Object;
+
+    .line 253
+    :cond_5
     return-object v0
 .end method
 
@@ -787,7 +1107,7 @@
     .parameter "id"
 
     .prologue
-    .line 108
+    .line 115
     iget-object v6, p0, Landroid/content/res/MiuiResources;->mSkipFiles:Landroid/util/SparseArray;
 
     invoke-virtual {v6, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -796,18 +1116,18 @@
 
     if-eqz v6, :cond_0
 
-    .line 109
+    .line 116
     const/4 v0, 0x0
 
-    .line 138
+    .line 145
     :goto_0
     return-object v0
 
-    .line 111
+    .line 118
     :cond_0
     const/4 v0, 0x0
 
-    .line 112
+    .line 119
     .local v0, dr:Landroid/graphics/drawable/Drawable;
     iget-object v6, p1, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
@@ -815,7 +1135,7 @@
 
     move-result-object v1
 
-    .line 113
+    .line 120
     .local v1, file:Ljava/lang/String;
     iget-object v6, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
 
@@ -829,14 +1149,14 @@
 
     move-result-object v2
 
-    .line 115
+    .line 122
     .local v2, info:Lmiui/content/res/ThemeZipFile$ThemeFileInfo;
     if-eqz v2, :cond_3
 
-    .line 117
+    .line 124
     const/4 v4, 0x0
 
-    .line 118
+    .line 125
     .local v4, opts:Landroid/graphics/BitmapFactory$Options;
     :try_start_0
     iget v6, v2, Lmiui/content/res/ThemeZipFile$ThemeFileInfo;->mDensity:I
@@ -849,14 +1169,14 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 119
+    .line 126
     new-instance v5, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v5}, Landroid/graphics/BitmapFactory$Options;-><init>()V
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 120
+    .line 127
     .end local v4           #opts:Landroid/graphics/BitmapFactory$Options;
     .local v5, opts:Landroid/graphics/BitmapFactory$Options;
     :try_start_1
@@ -868,14 +1188,14 @@
 
     move-object v4, v5
 
-    .line 123
+    .line 130
     .end local v5           #opts:Landroid/graphics/BitmapFactory$Options;
     .restart local v4       #opts:Landroid/graphics/BitmapFactory$Options;
     :cond_1
     :try_start_2
     iget-object v3, v2, Lmiui/content/res/ThemeZipFile$ThemeFileInfo;->mInput:Ljava/io/InputStream;
 
-    .line 124
+    .line 131
     .local v3, is:Ljava/io/InputStream;
     const-string v6, ".9.png"
 
@@ -885,12 +1205,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 125
+    .line 132
     invoke-static {v3}, Landroid/content/res/SimulateNinePngUtil;->convertIntoNinePngStream(Ljava/io/InputStream;)Ljava/io/InputStream;
 
     move-result-object v3
 
-    .line 127
+    .line 134
     :cond_2
     invoke-static {p0, p1, v3, v1, v4}, Landroid/graphics/drawable/Drawable;->createFromResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/drawable/Drawable;
     :try_end_2
@@ -898,7 +1218,7 @@
 
     move-result-object v0
 
-    .line 131
+    .line 138
     .end local v3           #is:Ljava/io/InputStream;
     :goto_1
     :try_start_3
@@ -910,13 +1230,13 @@
 
     goto :goto_0
 
-    .line 132
+    .line 139
     :catch_0
     move-exception v6
 
     goto :goto_0
 
-    .line 136
+    .line 143
     .end local v4           #opts:Landroid/graphics/BitmapFactory$Options;
     :cond_3
     iget-object v6, p0, Landroid/content/res/MiuiResources;->mSkipFiles:Landroid/util/SparseArray;
@@ -931,7 +1251,7 @@
 
     goto :goto_0
 
-    .line 128
+    .line 135
     .restart local v4       #opts:Landroid/graphics/BitmapFactory$Options;
     :catch_1
     move-exception v6
@@ -955,7 +1275,7 @@
     .parameter "array"
 
     .prologue
-    .line 216
+    .line 277
     iget-object v5, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
 
     if-eqz v5, :cond_1
@@ -964,37 +1284,37 @@
 
     if-nez v5, :cond_1
 
-    .line 233
+    .line 294
     :cond_0
     return-object p1
 
-    .line 219
+    .line 280
     :cond_1
     iget-object v0, p1, Landroid/content/res/TypedArray;->mData:[I
 
-    .line 220
+    .line 281
     .local v0, data:[I
     const/4 v2, 0x0
 
-    .line 221
+    .line 282
     .local v2, index:I
     :goto_0
     array-length v5, v0
 
     if-ge v2, v5, :cond_0
 
-    .line 222
+    .line 283
     add-int/lit8 v5, v2, 0x0
 
     aget v4, v0, v5
 
-    .line 223
+    .line 284
     .local v4, type:I
     add-int/lit8 v5, v2, 0x3
 
     aget v1, v0, v5
 
-    .line 224
+    .line 285
     .local v1, id:I
     const/16 v5, 0x10
 
@@ -1009,17 +1329,17 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 226
+    .line 287
     :cond_3
     invoke-virtual {p0, v1}, Landroid/content/res/MiuiResources;->getThemeInt(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 227
+    .line 288
     .local v3, themeInteger:Ljava/lang/Integer;
     if-eqz v3, :cond_4
 
-    .line 228
+    .line 289
     add-int/lit8 v5, v2, 0x1
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -1028,12 +1348,12 @@
 
     aput v6, v0, v5
 
-    .line 231
+    .line 292
     .end local v3           #themeInteger:Ljava/lang/Integer;
     :cond_4
     add-int/lit8 v2, v2, 0x6
 
-    .line 232
+    .line 293
     goto :goto_0
 .end method
 
@@ -1050,7 +1370,7 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 91
+    .line 98
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mSkipFiles:Landroid/util/SparseArray;
 
     invoke-virtual {v2, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -1059,17 +1379,17 @@
 
     if-nez v2, :cond_1
 
-    .line 92
+    .line 99
     invoke-virtual {p0, p1, p2, v4}, Landroid/content/res/MiuiResources;->getValue(ILandroid/util/TypedValue;Z)V
 
-    .line 93
+    .line 100
     iget-object v2, p2, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
     invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 94
+    .line 101
     .local v0, file:Ljava/lang/String;
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
 
@@ -1083,20 +1403,20 @@
 
     move-result-object v1
 
-    .line 96
+    .line 103
     .local v1, info:Lmiui/content/res/ThemeZipFile$ThemeFileInfo;
     if-eqz v1, :cond_0
 
-    .line 97
+    .line 104
     iget-object v2, v1, Lmiui/content/res/ThemeZipFile$ThemeFileInfo;->mInput:Ljava/io/InputStream;
 
-    .line 103
+    .line 110
     .end local v0           #file:Ljava/lang/String;
     .end local v1           #info:Lmiui/content/res/ThemeZipFile$ThemeFileInfo;
     :goto_0
     return-object v2
 
-    .line 100
+    .line 107
     .restart local v0       #file:Ljava/lang/String;
     .restart local v1       #info:Lmiui/content/res/ThemeZipFile$ThemeFileInfo;
     :cond_0
@@ -1108,7 +1428,7 @@
 
     invoke-virtual {v2, p1, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 103
+    .line 110
     .end local v0           #file:Ljava/lang/String;
     .end local v1           #info:Lmiui/content/res/ThemeZipFile$ThemeFileInfo;
     :cond_1
@@ -1126,27 +1446,27 @@
     .parameter "compat"
 
     .prologue
-    .line 144
+    .line 151
     invoke-virtual {p0}, Landroid/content/res/MiuiResources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v1
 
-    .line 145
+    .line 152
     .local v1, currentConfig:Landroid/content/res/Configuration;
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     invoke-virtual {v1, p1}, Landroid/content/res/Configuration;->diff(Landroid/content/res/Configuration;)I
 
     move-result v0
 
-    .line 147
+    .line 154
     .local v0, configChanges:I
     :goto_0
     invoke-super {p0, p1, p2, p3}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
 
-    .line 149
+    .line 156
     if-eqz p1, :cond_0
 
     sget-object v2, Landroid/content/res/MiuiResources;->sConfig:Landroid/content/res/Configuration;
@@ -1157,21 +1477,21 @@
 
     if-eqz v2, :cond_0
 
-    .line 150
+    .line 157
     const/high16 v2, 0x3f80
 
     sput v2, Landroid/util/TypedValue;->miui_font_scale:F
 
-    .line 151
+    .line 158
     sget-object v2, Landroid/content/res/MiuiResources;->sConfig:Landroid/content/res/Configuration;
 
     invoke-virtual {v2, p1}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
 
-    .line 154
+    .line 161
     :cond_0
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     and-int/lit16 v2, v0, 0x200
 
@@ -1181,9 +1501,9 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
-    .line 157
+    .line 164
     :cond_1
     invoke-static {}, Lmiui/content/res/ThemeResources;->getSystem()Lmiui/content/res/ThemeResourcesSystem;
 
@@ -1195,34 +1515,49 @@
 
     if-eqz v2, :cond_2
 
-    .line 158
+    .line 165
     invoke-static {}, Landroid/content/res/Resources;->clearPreloadedCache()V
 
-    .line 161
+    .line 168
     :cond_2
     invoke-static {}, Lmiui/content/res/IconCustomizer;->clearCache()V
 
-    .line 162
+    .line 169
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mIntegers:Landroid/util/SparseArray;
 
     invoke-virtual {v2}, Landroid/util/SparseArray;->clear()V
 
-    .line 163
+    .line 170
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mCharSequences:Landroid/util/SparseArray;
 
     invoke-virtual {v2}, Landroid/util/SparseArray;->clear()V
 
-    .line 164
+    .line 171
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mSkipFiles:Landroid/util/SparseArray;
 
     invoke-virtual {v2}, Landroid/util/SparseArray;->clear()V
 
-    .line 166
+    .line 173
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
 
     invoke-virtual {v2}, Lmiui/content/res/ThemeResources;->checkUpdate()Z
 
-    .line 167
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    .line 174
+    iget-object v2, p0, Landroid/content/res/MiuiResources;->mIsPreloadOverlayed:Landroid/util/SparseArray;
+
+    if-eqz v2, :cond_3
+
+    .line 175
+    iget-object v2, p0, Landroid/content/res/MiuiResources;->mIsPreloadOverlayed:Landroid/util/SparseArray;
+
+    invoke-virtual {v2}, Landroid/util/SparseArray;->clear()V
+
+    .line 178
+    :cond_3
     iget-object v2, p0, Landroid/content/res/MiuiResources;->mThemeResources:Lmiui/content/res/ThemeResources;
 
     invoke-virtual {v2}, Lmiui/content/res/ThemeResources;->hasValues()Z
@@ -1231,16 +1566,16 @@
 
     iput-boolean v2, p0, Landroid/content/res/MiuiResources;->mHasValues:Z
 
-    .line 169
-    :cond_3
+    .line 180
+    :cond_4
     invoke-direct {p0}, Landroid/content/res/MiuiResources;->updateMiuiFontScale()V
 
-    .line 170
+    .line 181
     return-void
 
-    .line 145
+    .line 152
     .end local v0           #configChanges:I
-    :cond_4
+    :cond_5
     const/4 v0, 0x0
 
     goto :goto_0

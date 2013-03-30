@@ -324,15 +324,15 @@
     if-nez v4, :cond_1
 
     .line 60
-    .end local v1 #dis:Ljava/io/DataInputStream;
-    .end local v2 #line:Ljava/lang/String;
+    .end local v1           #dis:Ljava/io/DataInputStream;
+    .end local v2           #line:Ljava/lang/String;
     :cond_0
     :goto_1
     return-object v0
 
     .line 45
-    .restart local v1 #dis:Ljava/io/DataInputStream;
-    .restart local v2 #line:Ljava/lang/String;
+    .restart local v1       #dis:Ljava/io/DataInputStream;
+    .restart local v2       #line:Ljava/lang/String;
     :cond_1
     invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -373,9 +373,9 @@
     goto :goto_0
 
     .line 53
-    .end local v1 #dis:Ljava/io/DataInputStream;
-    .end local v2 #line:Ljava/lang/String;
-    .end local v3 #values:[Ljava/lang/String;
+    .end local v1           #dis:Ljava/io/DataInputStream;
+    .end local v2           #line:Ljava/lang/String;
+    .end local v3           #values:[Ljava/lang/String;
     :catch_0
     move-exception v4
 

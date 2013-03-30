@@ -1808,6 +1808,40 @@
     throw v1
 .end method
 
+.method public getDimensionPixelSize(I)I
+    .locals 1
+    .parameter "id"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/content/res/Resources$NotFoundException;
+        }
+    .end annotation
+
+    .prologue
+    .line 617
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->hasOverlayed(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 618
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getOverlayed(I)I
+
+    move-result v0
+
+    .line 620
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSizeOrig(I)I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
 .method public getDimensionPixelSizeOrig(I)I
     .locals 5
     .parameter "id"
@@ -2253,6 +2287,40 @@
     throw v1
 .end method
 
+.method public getInteger(I)I
+    .locals 1
+    .parameter "id"
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/content/res/Resources$NotFoundException;
+        }
+    .end annotation
+
+    .prologue
+    .line 857
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->hasOverlayed(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 858
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getOverlayed(I)I
+
+    move-result v0
+
+    .line 860
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getIntegerOrig(I)I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
 .method public getIntegerOrig(I)I
     .locals 5
     .parameter "id"
@@ -2419,6 +2487,50 @@
     move-exception v2
 
     goto :goto_0
+.end method
+
+.method getOverlayed(I)I
+    .locals 1
+    .parameter "id"
+
+    .prologue
+    .line 233
+    iget-object v0, p0, Landroid/content/res/Resources;->mOverlay:Landroid/content/res/ResourcesOverlay;
+
+    invoke-virtual {v0, p1}, Landroid/content/res/ResourcesOverlay;->getOverlayed(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method getPreloadedDrawable(JI)Landroid/graphics/drawable/Drawable$ConstantState;
+    .locals 2
+    .parameter "key"
+    .parameter "id"
+
+    .prologue
+    sget-object v1, Landroid/content/res/Resources;->sPreloadedDrawables:Landroid/util/LongSparseArray;
+
+    invoke-virtual {v1, p1, p2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/Drawable$ConstantState;
+
+    .local v0, cs:Landroid/graphics/drawable/Drawable$ConstantState;
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0, p3}, Landroid/content/res/Resources;->isPreloadOverlayed(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x0
+
+    :cond_0
+    return-object v0
 .end method
 
 .method public getQuantityString(II)Ljava/lang/String;
@@ -3305,6 +3417,54 @@
     return-object v0
 .end method
 
+.method hasOverlayed(I)Z
+    .locals 1
+    .parameter "id"
+
+    .prologue
+    .line 230
+    iget-object v0, p0, Landroid/content/res/Resources;->mOverlay:Landroid/content/res/ResourcesOverlay;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/content/res/Resources;->mOverlay:Landroid/content/res/ResourcesOverlay;
+
+    invoke-virtual {v0, p1}, Landroid/content/res/ResourcesOverlay;->hasOverlayed(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method isPreloadOverlayed(I)Z
+    .locals 1
+    .parameter "id"
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method isPreloading()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/content/res/Resources;->mPreloading:Z
+
+    return v0
+.end method
+
 .method loadColorStateList(Landroid/util/TypedValue;I)Landroid/content/res/ColorStateList;
     .locals 12
     .parameter "value"
@@ -3833,15 +3993,13 @@
     .end local v4           #dr:Landroid/graphics/drawable/Drawable;
     .restart local v3       #dr:Landroid/graphics/drawable/Drawable;
     :cond_5
-    sget-object v13, Landroid/content/res/Resources;->sPreloadedDrawables:Landroid/util/LongSparseArray;
+    move-object/from16 v0, p0
 
-    invoke-virtual {v13, v9, v10}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
+    move/from16 v1, p2
 
-    move-result-object v13
+    invoke-virtual {v0, v9, v10, v1}, Landroid/content/res/Resources;->getPreloadedDrawable(JI)Landroid/graphics/drawable/Drawable$ConstantState;
 
-    check-cast v13, Landroid/graphics/drawable/Drawable$ConstantState;
-
-    move-object v2, v13
+    move-result-object v2
 
     goto :goto_2
 
@@ -5314,6 +5472,31 @@
     return-void
 .end method
 
+.method public setOverlay(Ljava/lang/String;)V
+    .locals 1
+    .parameter "pktname"
+
+    .prologue
+    .line 236
+    iget-object v0, p0, Landroid/content/res/Resources;->mOverlay:Landroid/content/res/ResourcesOverlay;
+
+    if-eqz v0, :cond_0
+
+    .line 240
+    :goto_0
+    return-void
+
+    .line 239
+    :cond_0
+    new-instance v0, Landroid/content/res/ResourcesOverlay;
+
+    invoke-direct {v0, p1}, Landroid/content/res/ResourcesOverlay;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Landroid/content/res/Resources;->mOverlay:Landroid/content/res/ResourcesOverlay;
+
+    goto :goto_0
+.end method
+
 .method public final startPreloading()V
     .locals 3
 
@@ -5927,141 +6110,4 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     throw v2
-.end method
-
-.method public setOverlay(Ljava/lang/String;)V
-    .locals 1
-    .parameter "pktname"
-
-    .prologue
-    .line 236
-    iget-object v0, p0, Landroid/content/res/Resources;->mOverlay:Landroid/content/res/ResourcesOverlay;
-
-    if-eqz v0, :cond_0
-
-    .line 240
-    :goto_0
-    return-void
-
-    .line 239
-    :cond_0
-    new-instance v0, Landroid/content/res/ResourcesOverlay;
-
-    invoke-direct {v0, p1}, Landroid/content/res/ResourcesOverlay;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Landroid/content/res/Resources;->mOverlay:Landroid/content/res/ResourcesOverlay;
-
-    goto :goto_0
-.end method
-
-.method hasOverlayed(I)Z
-    .locals 1
-    .parameter "id"
-
-    .prologue
-    .line 230
-    iget-object v0, p0, Landroid/content/res/Resources;->mOverlay:Landroid/content/res/ResourcesOverlay;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/content/res/Resources;->mOverlay:Landroid/content/res/ResourcesOverlay;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/ResourcesOverlay;->hasOverlayed(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method getOverlayed(I)I
-    .locals 1
-    .parameter "id"
-
-    .prologue
-    .line 233
-    iget-object v0, p0, Landroid/content/res/Resources;->mOverlay:Landroid/content/res/ResourcesOverlay;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/ResourcesOverlay;->getOverlayed(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getDimensionPixelSize(I)I
-    .locals 1
-    .parameter "id"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .prologue
-    .line 617
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->hasOverlayed(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 618
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getOverlayed(I)I
-
-    move-result v0
-
-    .line 620
-    :goto_0
-    return v0
-
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSizeOrig(I)I
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method public getInteger(I)I
-    .locals 1
-    .parameter "id"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .prologue
-    .line 857
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->hasOverlayed(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 858
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getOverlayed(I)I
-
-    move-result v0
-
-    .line 860
-    :goto_0
-    return v0
-
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getIntegerOrig(I)I
-
-    move-result v0
-
-    goto :goto_0
 .end method
