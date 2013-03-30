@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@100794866" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:textAppearance="@101515305" android:id="@id/locale" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

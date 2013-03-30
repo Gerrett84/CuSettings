@@ -1,0 +1,6 @@
+config_icon_width=7f0a0000
+config_icon_height=7f0a0001
+workspace_cell_width=7f0a000f
+workspace_cell_height=7f0a0010
+config_cell_count_x=7f0b0000
+config_cell_count_y=7f0b0001
