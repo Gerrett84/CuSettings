@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 945
+    .line 946
     iput-object p1, p0, Lcom/android/settings/RadioInfo$16;->this$0:Lcom/android/settings/RadioInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
 
     const/4 v2, 0x0
 
-    .line 948
+    .line 949
     const-string v3, "phone"
 
     const-string v4, "toggle %s: currently %s"
@@ -79,7 +79,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 950
+    .line 951
     iget-object v1, p0, Lcom/android/settings/RadioInfo$16;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->isLteRamDumpEnabled()Z
@@ -89,7 +89,7 @@
 
     if-nez v1, :cond_1
 
-    .line 951
+    .line 952
     .local v0, newValue:Z
     :goto_1
     const-string v2, "persist.radio.ramdump"
@@ -101,16 +101,16 @@
     :goto_2
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 952
+    .line 953
     iget-object v1, p0, Lcom/android/settings/RadioInfo$16;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->updateLteRamDumpState()V
     invoke-static {v1}, Lcom/android/settings/RadioInfo;->access$3600(Lcom/android/settings/RadioInfo;)V
 
-    .line 953
+    .line 954
     return-void
 
-    .line 948
+    .line 949
     .end local v0           #newValue:Z
     :cond_0
     const-string v1, "off"
@@ -120,10 +120,10 @@
     :cond_1
     move v0, v2
 
-    .line 950
+    .line 951
     goto :goto_1
 
-    .line 951
+    .line 952
     .restart local v0       #newValue:Z
     :cond_2
     const-string v1, "0"

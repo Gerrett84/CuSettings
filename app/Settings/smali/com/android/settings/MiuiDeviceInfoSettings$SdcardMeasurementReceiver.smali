@@ -32,22 +32,22 @@
     .parameter "isEmulated"
 
     .prologue
-    .line 520
+    .line 518
     iput-object p1, p0, Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 514
+    .line 512
     new-instance v0, Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
 
     invoke-direct {v0}, Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;-><init>()V
 
     iput-object v0, p0, Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;->mInfo:Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
 
-    .line 521
+    .line 519
     iput-boolean p2, p0, Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;->mIsEmulated:Z
 
-    .line 522
+    .line 520
     return-void
 .end method
 
@@ -57,7 +57,7 @@
     .locals 1
 
     .prologue
-    .line 517
+    .line 515
     iget-object v0, p0, Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;->mInfo:Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
 
     return-object v0
@@ -67,7 +67,7 @@
     .locals 1
 
     .prologue
-    .line 525
+    .line 523
     iget-boolean v0, p0, Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;->mIsEmulated:Z
 
     return v0
@@ -78,7 +78,7 @@
     .parameter "bundle"
 
     .prologue
-    .line 530
+    .line 528
     iget-object v0, p0, Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;->mInfo:Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
 
     const-string v1, "total_size"
@@ -89,7 +89,7 @@
 
     iput-wide v1, v0, Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;->total:J
 
-    .line 531
+    .line 529
     iget-object v0, p0, Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;->mInfo:Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
 
     const-string v1, "avail_size"
@@ -100,7 +100,7 @@
 
     iput-wide v1, v0, Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;->free:J
 
-    .line 532
+    .line 530
     iget-object v0, p0, Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
     #getter for: Lcom/android/settings/MiuiDeviceInfoSettings;->mUpdateHandler:Landroid/os/Handler;
@@ -112,7 +112,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 533
+    .line 531
     return-void
 .end method
 
@@ -121,6 +121,6 @@
     .parameter "bundle"
 
     .prologue
-    .line 538
+    .line 536
     return-void
 .end method

@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 60
+    .line 61
     iput-object p1, p0, Lcom/android/settings/display/BrightnessActivity$2;->this$0:Lcom/android/settings/display/BrightnessActivity;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,12 +40,12 @@
     .parameter "selfChange"
 
     .prologue
-    .line 63
+    .line 64
     iget-object v0, p0, Lcom/android/settings/display/BrightnessActivity$2;->this$0:Lcom/android/settings/display/BrightnessActivity;
 
     #calls: Lcom/android/settings/display/BrightnessActivity;->onBrightnessModeChanged()V
     invoke-static {v0}, Lcom/android/settings/display/BrightnessActivity;->access$200(Lcom/android/settings/display/BrightnessActivity;)V
 
-    .line 64
+    .line 65
     return-void
 .end method

@@ -32,7 +32,7 @@
     .locals 0
 
     .prologue
-    .line 300
+    .line 301
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +45,7 @@
     .parameter "in"
 
     .prologue
-    .line 303
+    .line 304
     new-instance v0, Lcom/android/settings/display/BrightnessActivity$SavedState;
 
     invoke-direct {v0, p1}, Lcom/android/settings/display/BrightnessActivity$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +58,7 @@
     .parameter "x0"
 
     .prologue
-    .line 300
+    .line 301
     invoke-virtual {p0, p1}, Lcom/android/settings/display/BrightnessActivity$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/settings/display/BrightnessActivity$SavedState;
 
     move-result-object v0
@@ -71,7 +71,7 @@
     .parameter "size"
 
     .prologue
-    .line 307
+    .line 308
     new-array v0, p1, [Lcom/android/settings/display/BrightnessActivity$SavedState;
 
     return-object v0
@@ -82,7 +82,7 @@
     .parameter "x0"
 
     .prologue
-    .line 300
+    .line 301
     invoke-virtual {p0, p1}, Lcom/android/settings/display/BrightnessActivity$SavedState$1;->newArray(I)[Lcom/android/settings/display/BrightnessActivity$SavedState;
 
     move-result-object v0

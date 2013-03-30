@@ -26,13 +26,13 @@
     .parameter "sdkAppName"
 
     .prologue
-    .line 113
+    .line 116
     iput-object p1, p0, Lcom/android/settings/permission/RootManageActivity$LBEConnection;->this$0:Lcom/android/settings/permission/RootManageActivity;
 
-    .line 114
+    .line 117
     invoke-direct {p0, p2, p3}, Lcom/lbe/security/sdk/SDKConnection;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 115
+    .line 118
     return-void
 .end method
 
@@ -43,14 +43,14 @@
     .parameter "service"
 
     .prologue
-    .line 119
+    .line 122
     if-nez p1, :cond_0
 
-    .line 128
+    .line 131
     :goto_0
     return-void
 
-    .line 122
+    .line 125
     :cond_0
     iget-object v0, p0, Lcom/android/settings/permission/RootManageActivity$LBEConnection;->this$0:Lcom/android/settings/permission/RootManageActivity;
 
@@ -61,7 +61,7 @@
     #setter for: Lcom/android/settings/permission/RootManageActivity;->mHipSService:Lcom/lbe/security/service/privacy/HIPSService;
     invoke-static {v0, v1}, Lcom/android/settings/permission/RootManageActivity;->access$202(Lcom/android/settings/permission/RootManageActivity;Lcom/lbe/security/service/privacy/HIPSService;)Lcom/lbe/security/service/privacy/HIPSService;
 
-    .line 123
+    .line 126
     iget-object v0, p0, Lcom/android/settings/permission/RootManageActivity$LBEConnection;->this$0:Lcom/android/settings/permission/RootManageActivity;
 
     invoke-virtual {p1}, Lcom/lbe/security/sdk/SDKService;->getSDKHelper()Lcom/lbe/security/service/sdkhelper/SDKHelper;
@@ -71,7 +71,7 @@
     #setter for: Lcom/android/settings/permission/RootManageActivity;->mSDKHelper:Lcom/lbe/security/service/sdkhelper/SDKHelper;
     invoke-static {v0, v1}, Lcom/android/settings/permission/RootManageActivity;->access$302(Lcom/android/settings/permission/RootManageActivity;Lcom/lbe/security/service/sdkhelper/SDKHelper;)Lcom/lbe/security/service/sdkhelper/SDKHelper;
 
-    .line 124
+    .line 127
     iget-object v0, p0, Lcom/android/settings/permission/RootManageActivity$LBEConnection;->this$0:Lcom/android/settings/permission/RootManageActivity;
 
     #getter for: Lcom/android/settings/permission/RootManageActivity;->mSDKHelper:Lcom/lbe/security/service/sdkhelper/SDKHelper;
@@ -83,7 +83,7 @@
 
     invoke-virtual {v0, v1}, Lcom/lbe/security/service/sdkhelper/SDKHelper;->setPermissionFilter(I)V
 
-    .line 125
+    .line 128
     iget-object v0, p0, Lcom/android/settings/permission/RootManageActivity$LBEConnection;->this$0:Lcom/android/settings/permission/RootManageActivity;
 
     #getter for: Lcom/android/settings/permission/RootManageActivity;->mHipSService:Lcom/lbe/security/service/privacy/HIPSService;
@@ -95,13 +95,13 @@
 
     invoke-virtual {v0, v1}, Lcom/lbe/security/service/privacy/HIPSService;->setFilterSystemPackage(Z)V
 
-    .line 126
+    .line 129
     iget-object v0, p0, Lcom/android/settings/permission/RootManageActivity$LBEConnection;->this$0:Lcom/android/settings/permission/RootManageActivity;
 
     #calls: Lcom/android/settings/permission/RootManageActivity;->updateRootState()V
     invoke-static {v0}, Lcom/android/settings/permission/RootManageActivity;->access$400(Lcom/android/settings/permission/RootManageActivity;)V
 
-    .line 127
+    .line 130
     const-string v0, "LBE-Sec"
 
     const-string v1, "SDK Connected"
@@ -115,13 +115,13 @@
     .locals 2
 
     .prologue
-    .line 132
+    .line 135
     const-string v0, "LBE-Sec"
 
     const-string v1, "SDK Disconnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
+    .line 136
     return-void
 .end method

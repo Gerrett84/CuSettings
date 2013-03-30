@@ -44,7 +44,7 @@
     .parameter
 
     .prologue
-    .line 511
+    .line 512
     iput-object p1, p0, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker$1;->this$0:Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker;
 
     iput-object p2, p0, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker$1;->val$resolver:Landroid/content/ContentResolver;
@@ -65,7 +65,7 @@
     .parameter "args"
 
     .prologue
-    .line 514
+    .line 515
     iget-object v0, p0, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker$1;->val$resolver:Landroid/content/ContentResolver;
 
     const-string v1, "gps"
@@ -74,7 +74,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 518
+    .line 519
     iget-boolean v0, p0, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker$1;->val$desiredState:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -89,7 +89,7 @@
     .parameter "x0"
 
     .prologue
-    .line 511
+    .line 512
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1
@@ -105,7 +105,7 @@
     .parameter "result"
 
     .prologue
-    .line 523
+    .line 524
     iget-object v1, p0, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker$1;->this$0:Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker;
 
     iget-object v2, p0, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker$1;->val$context:Landroid/content/Context;
@@ -121,15 +121,15 @@
     :goto_0
     invoke-virtual {v1, v2, v0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker;->setCurrentState(Landroid/content/Context;I)V
 
-    .line 526
+    .line 527
     iget-object v0, p0, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker$1;->val$context:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/settings/widget/SettingsAppWidgetProvider;->updateWidget(Landroid/content/Context;)V
 
-    .line 527
+    .line 528
     return-void
 
-    .line 523
+    .line 524
     :cond_0
     const/4 v0, 0x0
 
@@ -141,7 +141,7 @@
     .parameter "x0"
 
     .prologue
-    .line 511
+    .line 512
     check-cast p1, Ljava/lang/Boolean;
 
     .end local p1

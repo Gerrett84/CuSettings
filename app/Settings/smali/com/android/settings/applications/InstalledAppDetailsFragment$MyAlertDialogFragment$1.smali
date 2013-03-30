@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 676
+    .line 677
     iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment$1;->this$0:Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "which"
 
     .prologue
-    .line 679
+    .line 680
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment$1;->this$0:Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment;
 
     invoke-virtual {v0}, Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment;->getOwner()Lcom/android/settings/applications/InstalledAppDetailsFragment;
@@ -53,6 +53,6 @@
     #calls: Lcom/android/settings/applications/InstalledAppDetailsFragment;->initiateClearUserData()V
     invoke-static {v0}, Lcom/android/settings/applications/InstalledAppDetailsFragment;->access$700(Lcom/android/settings/applications/InstalledAppDetailsFragment;)V
 
-    .line 680
+    .line 681
     return-void
 .end method

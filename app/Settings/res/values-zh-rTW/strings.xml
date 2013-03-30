@@ -460,7 +460,7 @@
     <string name="wifi_menu_connect">連線至網路</string>
     <string name="wifi_menu_forget">清除網路</string>
     <string name="wifi_menu_modify">修改網路</string>
-    <string name="wifi_empty_list_wifi_off">如要查看可用的網路，請開啟 Wi-Fi。</string>
+    <string name="wifi_empty_list_wifi_off">如要查看可用的網路，請開啟 Wi-Fi</string>
     <string name="wifi_empty_list_wifi_on">"正在搜尋  Wi-Fi 網路..."</string>
     <string name="wifi_other_network">其他網路...</string>
     <string name="wifi_more">更多</string>
@@ -1868,7 +1868,7 @@ PIN 碼可能不正確。"</string>
     <string name="trackball_settings">軌跡球</string>
     <string name="pref_volume_category_title">音量鍵</string>
     <string name="pref_volume_wake_title">音量鍵喚醒</string>
-    <string name="pref_volume_wake_summary">按一下增加／減小音量鍵來喚醒設備。用於不方便按電源鍵的設備</string>
+    <string name="pref_volume_wake_summary">按一下增加／減小音量鍵來喚醒設備</string>
     <string name="status_bar_settings">通知欄設定</string>
     <string name="complete_settings">全部設定</string>
     <string name="common_settings">常用設定</string>
@@ -2179,6 +2179,7 @@ Android File Transfer,
     <string name="private_sms_need_to_unlock">請輸入私密簡訊密碼</string>
     <string name="private_sms_reset_by_account">登錄小米帳號重置私密簡訊密碼</string>
     <string name="private_sms_recording_intro_header">繪製圖案設定私密簡訊密碼</string>
+    <string name="dirac_control">Dirac 音效</string>
     <string name="bluetooth_pbap_connection_permission_request">Pbap 連線要求</string>
     <string name="bluetooth_ftp_connection_permission_request">Ftp 連線要求</string>
     <string name="bluetooth_map_connection_permission_request">Map 連線要求</string>

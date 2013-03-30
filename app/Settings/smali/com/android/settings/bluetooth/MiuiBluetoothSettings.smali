@@ -63,11 +63,16 @@
 
     .line 80
     .local v1, bluetoothName:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mLocalAdapter:Lcom/android/settings/bluetooth/LocalBluetoothAdapter;
+
+    invoke-virtual {v3, v1}, Lcom/android/settings/bluetooth/LocalBluetoothAdapter;->setName(Ljava/lang/String;)V
+
+    .line 81
     iget-object v3, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mDeviceNameEditPreference:Lmiui/preference/ValuePreference;
 
     invoke-virtual {v3, v1}, Lmiui/preference/ValuePreference;->setValue(Ljava/lang/String;)V
 
-    .line 81
+    .line 82
     return-void
 .end method
 
@@ -151,17 +156,17 @@
     .parameter "cachedDevice"
 
     .prologue
-    .line 109
+    .line 110
     iget-object v0, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mDeviceListGroup:Landroid/preference/PreferenceGroup;
 
     instance-of v0, v0, Landroid/preference/PreferenceScreen;
 
     if-nez v0, :cond_0
 
-    .line 110
+    .line 111
     invoke-super {p0, p1}, Lcom/android/settings/bluetooth/BluetoothSettings;->createDevicePreference(Lcom/android/settings/bluetooth/CachedBluetoothDevice;)V
 
-    .line 112
+    .line 113
     :cond_0
     return-void
 .end method
@@ -183,7 +188,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200b3
+    const v1, 0x7f0200b0
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -223,17 +228,17 @@
 
     const/4 v3, 0x0
 
-    .line 116
+    .line 117
     iget-object v4, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mLocalAdapter:Lcom/android/settings/bluetooth/LocalBluetoothAdapter;
 
     if-nez v4, :cond_1
 
-    .line 125
+    .line 126
     :cond_0
     :goto_0
     return-void
 
-    .line 117
+    .line 118
     :cond_1
     iget-object v4, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mLocalAdapter:Lcom/android/settings/bluetooth/LocalBluetoothAdapter;
 
@@ -247,7 +252,7 @@
 
     move v1, v2
 
-    .line 118
+    .line 119
     .local v1, bluetoothIsEnabled:Z
     :goto_1
     const v4, 0x7f0c017a
@@ -256,22 +261,22 @@
 
     move-result-object v0
 
-    .line 119
+    .line 120
     .local v0, addItem:Landroid/view/MenuItem;
     iget-object v4, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mSearchIcon:Landroid/graphics/drawable/StateListDrawable;
 
     invoke-interface {v0, v4}, Landroid/view/MenuItem;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
 
-    .line 120
+    .line 121
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setEnabled(Z)Landroid/view/MenuItem;
 
-    .line 121
+    .line 122
     invoke-interface {v0, v2}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
-    .line 122
+    .line 123
     if-nez v1, :cond_0
 
-    .line 123
+    .line 124
     invoke-virtual {p0, v3}, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->updateProgressUi(Z)V
 
     goto :goto_0
@@ -281,7 +286,7 @@
     :cond_2
     move v1, v3
 
-    .line 117
+    .line 118
     goto :goto_1
 .end method
 
@@ -290,21 +295,21 @@
     .parameter "item"
 
     .prologue
-    .line 129
+    .line 130
     iget-object v1, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mLocalAdapter:Lcom/android/settings/bluetooth/LocalBluetoothAdapter;
 
     invoke-virtual {v1}, Lcom/android/settings/bluetooth/LocalBluetoothAdapter;->isDiscovering()Z
 
     move-result v0
 
-    .line 130
+    .line 131
     .local v0, isDiscovering:Z
     if-eqz v0, :cond_0
 
-    .line 131
+    .line 132
     const/4 v1, 0x1
 
-    .line 133
+    .line 134
     :goto_0
     return v1
 
@@ -363,19 +368,19 @@
     .parameter "scanState"
 
     .prologue
-    .line 85
+    .line 86
     invoke-direct {p0}, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->renameMyDevice()V
 
-    .line 86
+    .line 87
     invoke-virtual {p0}, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v2
 
-    .line 88
+    .line 89
     .local v2, preferenceScreen:Landroid/preference/PreferenceScreen;
     packed-switch p1, :pswitch_data_0
 
-    .line 99
+    .line 100
     :cond_0
     iget-object v3, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mMyDevicePreference:Landroid/preference/CheckBoxPreference;
 
@@ -383,20 +388,20 @@
 
     invoke-virtual {v3, v4}, Landroid/preference/CheckBoxPreference;->setSummary(I)V
 
-    .line 101
+    .line 102
     invoke-super {p0, p1, p2}, Lcom/android/settings/bluetooth/BluetoothSettings;->updateContent(IZ)V
 
-    .line 104
+    .line 105
     iget-object v3, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mMyDevicePreference:Landroid/preference/CheckBoxPreference;
 
     const v4, 0x7f0c07e0
 
     invoke-virtual {v3, v4}, Landroid/preference/CheckBoxPreference;->setTitle(I)V
 
-    .line 105
+    .line 106
     return-void
 
-    .line 90
+    .line 91
     :pswitch_0
     const/4 v0, 0x0
 
@@ -408,12 +413,12 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 91
+    .line 92
     invoke-virtual {v2, v0}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
 
     move-result-object v1
 
-    .line 92
+    .line 93
     .local v1, preference:Landroid/preference/Preference;
     invoke-virtual {v1}, Landroid/preference/Preference;->getOrder()I
 
@@ -423,16 +428,16 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 93
+    .line 94
     invoke-virtual {v2, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
-    .line 90
+    .line 91
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 88
+    .line 89
     :pswitch_data_0
     .packed-switch 0xc
         :pswitch_0
@@ -444,31 +449,31 @@
     .parameter "start"
 
     .prologue
-    .line 138
+    .line 139
     iget-object v0, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mSearchAnimDrawable:Landroid/graphics/drawable/AnimationDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 139
+    .line 140
     if-eqz p1, :cond_1
 
-    .line 140
+    .line 141
     iget-object v0, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mSearchAnimDrawable:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    .line 147
+    .line 148
     :cond_0
     :goto_0
     return-void
 
-    .line 142
+    .line 143
     :cond_1
     iget-object v0, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mSearchAnimDrawable:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->stop()V
 
-    .line 143
+    .line 144
     iget-object v0, p0, Lcom/android/settings/bluetooth/MiuiBluetoothSettings;->mSearchAnimDrawable:Landroid/graphics/drawable/AnimationDrawable;
 
     const/4 v1, 0x0

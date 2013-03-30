@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:sharedUserId="android.uid.system" android:versionCode="16" android:versionName="4.1.2-eng..20130321.160139" package="com.android.settings" coreApp="true"
+<manifest android:sharedUserId="android.uid.system" android:versionCode="16" android:versionName="4.1.2-eng.yumingyang.20130328.210643" package="com.android.settings" coreApp="true"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="16" />
     <original-package android:name="com.android.settings" />
@@ -985,7 +985,7 @@
                 <action android:name="miui.intent.action.USB_SHARE_NET_CONFIG" />
             </intent-filter>
         </service>
-        <activity android:theme="@style/EditorActivityTheme" android:name=".EditActivity" />
+        <activity android:theme="@style/EditorActivityTheme" android:name=".EditActivity" android:exported="true" />
         <activity android:name=".applications.PermissionInfoActivity" android:taskAffinity="com.android.settings" />
         <activity android:theme="@style/Theme.Light.Show.NoTitle" android:label="@string/runningservices_settings_title" android:name=".applications.ManageApplicationsActivity">
             <intent-filter>
@@ -1028,5 +1028,11 @@
             </intent-filter>
         </receiver>
         <activity android:name=".permission.AppPermissionsEditor" android:taskAffinity="com.android.settings" android:screenOrientation="portrait" />
+        <service android:name=".analytics.AnalyticService">
+            <intent-filter>
+                <action android:name="android.intent.action.COLLECT_ANALYTICS_DATA" />
+                <action android:name="android.intent.action.COLLECT_ANALYTICS_DATA_AWELOCKSCREEEN" />
+            </intent-filter>
+        </service>
     </application>
 </manifest>

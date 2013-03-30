@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 75
+    .line 78
     iput-object p1, p0, Lcom/android/settings/permission/RootManageActivity$2;->this$0:Lcom/android/settings/permission/RootManageActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 78
+    .line 81
     iget-object v0, p0, Lcom/android/settings/permission/RootManageActivity$2;->this$0:Lcom/android/settings/permission/RootManageActivity;
 
     #getter for: Lcom/android/settings/permission/RootManageActivity;->mRootEnable:Landroid/preference/CheckBoxPreference;
@@ -55,12 +55,12 @@
 
     invoke-virtual {v0, v1}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
-    .line 79
+    .line 82
     iget-object v0, p0, Lcom/android/settings/permission/RootManageActivity$2;->this$0:Lcom/android/settings/permission/RootManageActivity;
 
     #calls: Lcom/android/settings/permission/RootManageActivity;->enableRoot(Z)V
     invoke-static {v0, v1}, Lcom/android/settings/permission/RootManageActivity;->access$100(Lcom/android/settings/permission/RootManageActivity;Z)V
 
-    .line 80
+    .line 83
     return-void
 .end method

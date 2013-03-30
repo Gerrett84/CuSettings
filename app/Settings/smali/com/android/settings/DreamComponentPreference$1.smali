@@ -37,7 +37,7 @@
     .parameter
 
     .prologue
-    .line 100
+    .line 101
     iput-object p1, p0, Lcom/android/settings/DreamComponentPreference$1;->this$0:Lcom/android/settings/DreamComponentPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +53,7 @@
     .parameter "b"
 
     .prologue
-    .line 105
+    .line 106
     iget-object v4, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v4, :cond_1
@@ -62,7 +62,7 @@
 
     iget-object v0, v4, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 106
+    .line 107
     .local v0, aia:Landroid/content/pm/ApplicationInfo;
     :goto_0
     iget-object v4, p2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -73,7 +73,7 @@
 
     iget-object v1, v4, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 108
+    .line 109
     .local v1, aib:Landroid/content/pm/ApplicationInfo;
     :goto_1
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -82,7 +82,7 @@
 
     if-nez v4, :cond_3
 
-    .line 109
+    .line 110
     iget-object v4, p0, Lcom/android/settings/DreamComponentPreference$1;->this$0:Lcom/android/settings/DreamComponentPreference;
 
     #getter for: Lcom/android/settings/DreamComponentPreference;->pm:Landroid/content/pm/PackageManager;
@@ -94,7 +94,7 @@
 
     move-result-object v2
 
-    .line 110
+    .line 111
     .local v2, sa:Ljava/lang/CharSequence;
     iget-object v4, p0, Lcom/android/settings/DreamComponentPreference$1;->this$0:Lcom/android/settings/DreamComponentPreference;
 
@@ -107,7 +107,7 @@
 
     move-result-object v3
 
-    .line 121
+    .line 122
     .local v3, sb:Ljava/lang/CharSequence;
     :cond_0
     :goto_2
@@ -132,7 +132,7 @@
 
     return v4
 
-    .line 105
+    .line 106
     .end local v0           #aia:Landroid/content/pm/ApplicationInfo;
     .end local v1           #aib:Landroid/content/pm/ApplicationInfo;
     .end local v2           #sa:Ljava/lang/CharSequence;
@@ -144,7 +144,7 @@
 
     goto :goto_0
 
-    .line 106
+    .line 107
     .restart local v0       #aia:Landroid/content/pm/ApplicationInfo;
     :cond_2
     iget-object v4, p2, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -153,7 +153,7 @@
 
     goto :goto_1
 
-    .line 112
+    .line 113
     .restart local v1       #aib:Landroid/content/pm/ApplicationInfo;
     :cond_3
     iget-object v4, p0, Lcom/android/settings/DreamComponentPreference$1;->this$0:Lcom/android/settings/DreamComponentPreference;
@@ -167,11 +167,11 @@
 
     move-result-object v2
 
-    .line 113
+    .line 114
     .restart local v2       #sa:Ljava/lang/CharSequence;
     if-nez v2, :cond_4
 
-    .line 114
+    .line 115
     iget-object v4, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v4, :cond_5
@@ -180,7 +180,7 @@
 
     iget-object v2, v4, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 116
+    .line 117
     :cond_4
     :goto_3
     iget-object v4, p0, Lcom/android/settings/DreamComponentPreference$1;->this$0:Lcom/android/settings/DreamComponentPreference;
@@ -194,11 +194,11 @@
 
     move-result-object v3
 
-    .line 117
+    .line 118
     .restart local v3       #sb:Ljava/lang/CharSequence;
     if-nez v3, :cond_0
 
-    .line 118
+    .line 119
     iget-object v4, p2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v4, :cond_6
@@ -210,7 +210,7 @@
     :goto_4
     goto :goto_2
 
-    .line 114
+    .line 115
     .end local v3           #sb:Ljava/lang/CharSequence;
     :cond_5
     iget-object v4, p1, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -219,7 +219,7 @@
 
     goto :goto_3
 
-    .line 118
+    .line 119
     .restart local v3       #sb:Ljava/lang/CharSequence;
     :cond_6
     iget-object v4, p2, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -235,7 +235,7 @@
     .parameter "x1"
 
     .prologue
-    .line 100
+    .line 101
     check-cast p1, Landroid/content/pm/ResolveInfo;
 
     .end local p1

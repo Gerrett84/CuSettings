@@ -29,4 +29,5 @@
     <ListPreference android:entries="@array/haptic_feedback_level_entries" android:title="@string/haptic_feedback_level" android:key="haptic_feedback_level" android:dependency="haptic_feedback" android:entryValues="@array/haptic_feedback_level_values" />
     <ListPreference android:entries="@array/emergency_tone_entries" android:title="@string/emergency_tone_title" android:key="emergency_tone" android:entryValues="@array/emergency_tone_values" />
     <Preference android:title="@string/title_dolby_control" android:key="dolby_control" android:summary="@string/dolby_mode_off" android:fragment="com.android.settings.dolby.DolbySettings" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/dirac_control" android:key="dirac_control" android:defaultValue="true" />
 </PreferenceScreen>

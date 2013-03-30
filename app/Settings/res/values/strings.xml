@@ -471,7 +471,7 @@ Just bring the devices together (typically back to back) and then touch your scr
     <string name="wifi_menu_connect">Connect to network</string>
     <string name="wifi_menu_forget">Forget network</string>
     <string name="wifi_menu_modify">Modify network</string>
-    <string name="wifi_empty_list_wifi_off">To see available networks, turn Wi-Fi on.</string>
+    <string name="wifi_empty_list_wifi_off">To see available networks, turn Wi-Fi on</string>
     <string name="wifi_empty_list_wifi_on">Searching for Wi-Fi networks…</string>
     <string name="wifi_other_network">Other network…</string>
     <string name="wifi_more">More</string>
@@ -1951,7 +1951,7 @@ Note: Apps with the permission may cause system instability, loss of personal da
     <string name="trackball_settings">Trackball</string>
     <string name="pref_volume_category_title">Volume</string>
     <string name="pref_volume_wake_title">Volume rocker wake</string>
-    <string name="pref_volume_wake_summary">Pressing the volume up/down wakes the device (For devices with hard to press power key)</string>
+    <string name="pref_volume_wake_summary">Pressing the volume up/down wakes the device</string>
     <string name="status_bar_settings">Status bar</string>
     <string name="complete_settings">Complete settings</string>
     <string name="common_settings">Common settings</string>
@@ -2271,5 +2271,6 @@ Try the following:
     <string name="private_sms_need_to_unlock">Please enter private SMS password</string>
     <string name="private_sms_reset_by_account">Login to Xiaomi account and reset private SMS password</string>
     <string name="private_sms_recording_intro_header">Draw pattern to create password lock</string>
+    <string name="dirac_control">Dirac Control</string>
     <string name="note_settings">Note Settings</string>
 </resources>

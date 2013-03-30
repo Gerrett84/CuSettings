@@ -30,7 +30,7 @@
     .end annotation
 
     .prologue
-    .line 209
+    .line 210
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$PackageMoveObserver;->this$0:Lcom/android/settings/applications/InstalledAppDetailsFragment;
 
     #getter for: Lcom/android/settings/applications/InstalledAppDetailsFragment;->mHandler:Landroid/os/Handler;
@@ -44,11 +44,11 @@
 
     move-result-object v0
 
-    .line 210
+    .line 211
     .local v0, msg:Landroid/os/Message;
     iput p2, v0, Landroid/os/Message;->arg1:I
 
-    .line 211
+    .line 212
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$PackageMoveObserver;->this$0:Lcom/android/settings/applications/InstalledAppDetailsFragment;
 
     #getter for: Lcom/android/settings/applications/InstalledAppDetailsFragment;->mHandler:Landroid/os/Handler;
@@ -58,6 +58,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 212
+    .line 213
     return-void
 .end method

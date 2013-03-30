@@ -167,14 +167,14 @@
     .line 352
     iget-object v1, p1, Lcom/android/settings/VirusScanAppActivity$ViewHolder;->mScanStatus:Landroid/widget/ImageView;
 
-    const v2, 0x7f02015c
+    const v2, 0x7f020157
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     .line 353
     iget-object v1, p1, Lcom/android/settings/VirusScanAppActivity$ViewHolder;->mScanStatus:Landroid/widget/ImageView;
 
-    const v2, 0x7f02015b
+    const v2, 0x7f020156
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -214,7 +214,7 @@
     .line 361
     iget-object v1, p1, Lcom/android/settings/VirusScanAppActivity$ViewHolder;->mScanStatus:Landroid/widget/ImageView;
 
-    const v2, 0x7f02015a
+    const v2, 0x7f020155
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -241,7 +241,7 @@
     .line 368
     iget-object v1, p1, Lcom/android/settings/VirusScanAppActivity$ViewHolder;->mScanStatus:Landroid/widget/ImageView;
 
-    const v2, 0x7f02015d
+    const v2, 0x7f020158
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 

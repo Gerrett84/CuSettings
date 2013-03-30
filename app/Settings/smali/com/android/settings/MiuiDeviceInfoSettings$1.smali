@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 392
+    .line 390
     iput-object p1, p0, Lcom/android/settings/MiuiDeviceInfoSettings$1;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "filename"
 
     .prologue
-    .line 396
+    .line 394
     const-string v0, "cpu[0-9]{1}"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
@@ -52,10 +52,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 397
+    .line 395
     const/4 v0, 0x1
 
-    .line 399
+    .line 397
     :goto_0
     return v0
 

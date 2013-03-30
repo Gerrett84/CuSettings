@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 212
+    .line 213
     iput-object p1, p0, Lcom/android/settings/DreamComponentPreference$2;->this$0:Lcom/android/settings/DreamComponentPreference;
 
     iput-object p2, p0, Lcom/android/settings/DreamComponentPreference$2;->val$list:Lcom/android/settings/DreamComponentPreference$DreamListAdapter;
@@ -48,7 +48,7 @@
     .parameter "which"
 
     .prologue
-    .line 215
+    .line 216
     iget-object v5, p0, Lcom/android/settings/DreamComponentPreference$2;->val$list:Lcom/android/settings/DreamComponentPreference$DreamListAdapter;
 
     invoke-virtual {v5, p2}, Lcom/android/settings/DreamComponentPreference$DreamListAdapter;->getItem(I)Ljava/lang/Object;
@@ -57,7 +57,7 @@
 
     check-cast v4, Landroid/content/pm/ResolveInfo;
 
-    .line 216
+    .line 217
     .local v4, ri:Landroid/content/pm/ResolveInfo;
     iget-object v5, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -69,7 +69,7 @@
 
     iget-object v3, v5, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    .line 218
+    .line 219
     .local v3, pn:Ljava/lang/String;
     :goto_0
     iget-object v5, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -80,14 +80,14 @@
 
     iget-object v2, v5, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 219
+    .line 220
     .local v2, n:Ljava/lang/String;
     :goto_1
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-direct {v0, v3, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 221
+    .line 222
     .local v0, cn:Landroid/content/ComponentName;
     iget-object v5, p0, Lcom/android/settings/DreamComponentPreference$2;->this$0:Lcom/android/settings/DreamComponentPreference;
 
@@ -104,7 +104,9 @@
 
     invoke-virtual {v5, v6}, Lcom/android/settings/DreamComponentPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 224
+    .line 225
+    new-instance v1, Landroid/service/dreams/IDreamManagerProxy;
+
     const-string v5, "dreams"
 
     invoke-static {v5}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -113,22 +115,24 @@
 
     invoke-static {v5}, Landroid/service/dreams/IDreamManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/dreams/IDreamManager;
 
-    move-result-object v1
+    move-result-object v5
 
-    .line 227
-    .local v1, dm:Landroid/service/dreams/IDreamManager;
+    invoke-direct {v1, v5}, Landroid/service/dreams/IDreamManagerProxy;-><init>(Landroid/service/dreams/IDreamManager;)V
+
+    .line 228
+    .local v1, dm:Landroid/service/dreams/IDreamManagerProxy;
     :try_start_0
-    invoke-interface {v1, v0}, Landroid/service/dreams/IDreamManager;->setDreamComponent(Landroid/content/ComponentName;)V
+    invoke-virtual {v1, v0}, Landroid/service/dreams/IDreamManagerProxy;->setDreamComponent(Landroid/content/ComponentName;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 231
+    .line 232
     :goto_2
     return-void
 
-    .line 216
+    .line 217
     .end local v0           #cn:Landroid/content/ComponentName;
-    .end local v1           #dm:Landroid/service/dreams/IDreamManager;
+    .end local v1           #dm:Landroid/service/dreams/IDreamManagerProxy;
     .end local v2           #n:Ljava/lang/String;
     .end local v3           #pn:Ljava/lang/String;
     :cond_0
@@ -140,7 +144,7 @@
 
     goto :goto_0
 
-    .line 218
+    .line 219
     .restart local v3       #pn:Ljava/lang/String;
     :cond_1
     iget-object v5, v4, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -149,9 +153,9 @@
 
     goto :goto_1
 
-    .line 228
+    .line 229
     .restart local v0       #cn:Landroid/content/ComponentName;
-    .restart local v1       #dm:Landroid/service/dreams/IDreamManager;
+    .restart local v1       #dm:Landroid/service/dreams/IDreamManagerProxy;
     .restart local v2       #n:Ljava/lang/String;
     :catch_0
     move-exception v5

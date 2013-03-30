@@ -49,7 +49,7 @@
 
     const/4 v2, 0x3
 
-    .line 8304
+    .line 8300
     const/16 v0, 0x9
 
     new-array v0, v0, [I
@@ -58,7 +58,7 @@
 
     sput-object v0, Lcom/android/settings/R$styleable;->BatteryHistoryChart:[I
 
-    .line 8397
+    .line 8393
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -67,14 +67,14 @@
 
     sput-object v0, Lcom/android/settings/R$styleable;->ChartGridView:[I
 
-    .line 8459
+    .line 8455
     new-array v0, v2, [I
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/android/settings/R$styleable;->ChartNetworkSeriesView:[I
 
-    .line 8527
+    .line 8523
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -83,21 +83,21 @@
 
     sput-object v0, Lcom/android/settings/R$styleable;->ChartSweepView:[I
 
-    .line 8627
+    .line 8623
     new-array v0, v5, [I
 
     fill-array-data v0, :array_4
 
     sput-object v0, Lcom/android/settings/R$styleable;->ChartView:[I
 
-    .line 8678
+    .line 8674
     new-array v0, v2, [I
 
     fill-array-data v0, :array_5
 
     sput-object v0, Lcom/android/settings/R$styleable;->EqualizerView:[I
 
-    .line 8735
+    .line 8731
     new-array v0, v4, [I
 
     const v1, 0x7f010001
@@ -106,21 +106,21 @@
 
     sput-object v0, Lcom/android/settings/R$styleable;->IconPreferenceScreen:[I
 
-    .line 8760
+    .line 8756
     new-array v0, v5, [I
 
     fill-array-data v0, :array_6
 
     sput-object v0, Lcom/android/settings/R$styleable;->PercentageBarChart:[I
 
-    .line 8812
+    .line 8808
     new-array v0, v2, [I
 
     fill-array-data v0, :array_7
 
     sput-object v0, Lcom/android/settings/R$styleable;->RankPreference:[I
 
-    .line 8859
+    .line 8855
     new-array v0, v4, [I
 
     const/high16 v1, 0x7f01
@@ -131,7 +131,7 @@
 
     return-void
 
-    .line 8304
+    .line 8300
     :array_0
     .array-data 0x4
         0x34t 0x0t 0x1t 0x1t
@@ -145,7 +145,7 @@
         0x64t 0x1t 0x1t 0x1t
     .end array-data
 
-    .line 8397
+    .line 8393
     :array_1
     .array-data 0x4
         0xbt 0x0t 0x1t 0x7ft
@@ -154,7 +154,7 @@
         0xet 0x0t 0x1t 0x7ft
     .end array-data
 
-    .line 8459
+    .line 8455
     :array_2
     .array-data 0x4
         0xft 0x0t 0x1t 0x7ft
@@ -162,7 +162,7 @@
         0x11t 0x0t 0x1t 0x7ft
     .end array-data
 
-    .line 8527
+    .line 8523
     :array_3
     .array-data 0x4
         0x6t 0x0t 0x1t 0x7ft
@@ -173,14 +173,14 @@
         0xbt 0x0t 0x1t 0x7ft
     .end array-data
 
-    .line 8627
+    .line 8623
     :array_4
     .array-data 0x4
         0x4t 0x0t 0x1t 0x7ft
         0x5t 0x0t 0x1t 0x7ft
     .end array-data
 
-    .line 8678
+    .line 8674
     :array_5
     .array-data 0x4
         0x15t 0x0t 0x1t 0x7ft
@@ -188,14 +188,14 @@
         0x17t 0x0t 0x1t 0x7ft
     .end array-data
 
-    .line 8760
+    .line 8756
     :array_6
     .array-data 0x4
         0x2t 0x0t 0x1t 0x7ft
         0x3t 0x0t 0x1t 0x7ft
     .end array-data
 
-    .line 8812
+    .line 8808
     :array_7
     .array-data 0x4
         0x12t 0x0t 0x1t 0x7ft
@@ -208,7 +208,7 @@
     .locals 0
 
     .prologue
-    .line 8277
+    .line 8273
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

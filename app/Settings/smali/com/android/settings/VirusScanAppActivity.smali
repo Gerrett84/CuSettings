@@ -308,7 +308,7 @@
     invoke-virtual {v2, v3, v4}, Landroid/app/Notification$Builder;->setWhen(J)Landroid/app/Notification$Builder;
 
     .line 239
-    const v3, 0x7f020157
+    const v3, 0x7f020152
 
     invoke-virtual {v2, v3}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -481,7 +481,7 @@
 
     .line 633
     .local v0, builder:Landroid/app/AlertDialog$Builder;
-    const v1, 0x7f020157
+    const v1, 0x7f020152
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIcon(I)Landroid/app/AlertDialog$Builder;
 

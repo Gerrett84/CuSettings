@@ -41,12 +41,12 @@
     .parameter "context"
 
     .prologue
-    .line 129
+    .line 130
     iput-object p1, p0, Lcom/android/settings/DreamComponentPreference$DreamListAdapter;->this$0:Lcom/android/settings/DreamComponentPreference;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 130
+    .line 131
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.MAIN"
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    .line 133
+    .line 134
     .local v0, choosy:Landroid/content/Intent;
     const-string v1, "layout_inflater"
 
@@ -71,14 +71,14 @@
 
     iput-object v1, p0, Lcom/android/settings/DreamComponentPreference$DreamListAdapter;->inflater:Landroid/view/LayoutInflater;
 
-    .line 135
+    .line 136
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/android/settings/DreamComponentPreference$DreamListAdapter;->results:Ljava/util/ArrayList;
 
-    .line 142
+    .line 143
     iget-object v1, p0, Lcom/android/settings/DreamComponentPreference$DreamListAdapter;->results:Ljava/util/ArrayList;
 
     #getter for: Lcom/android/settings/DreamComponentPreference;->pm:Landroid/content/pm/PackageManager;
@@ -94,14 +94,14 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 146
+    .line 147
     iget-object v1, p0, Lcom/android/settings/DreamComponentPreference$DreamListAdapter;->results:Ljava/util/ArrayList;
 
     iget-object v2, p1, Lcom/android/settings/DreamComponentPreference;->sResolveInfoComparator:Ljava/util/Comparator;
 
     invoke-static {v1, v2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 161
+    .line 162
     return-void
 .end method
 
@@ -111,7 +111,7 @@
     .locals 1
 
     .prologue
-    .line 165
+    .line 166
     iget-object v0, p0, Lcom/android/settings/DreamComponentPreference$DreamListAdapter;->results:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -126,7 +126,7 @@
     .parameter "position"
 
     .prologue
-    .line 170
+    .line 171
     iget-object v0, p0, Lcom/android/settings/DreamComponentPreference$DreamListAdapter;->results:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -141,7 +141,7 @@
     .parameter "position"
 
     .prologue
-    .line 175
+    .line 176
     int-to-long v0, p1
 
     return-wide v0
@@ -154,12 +154,12 @@
     .parameter "parent"
 
     .prologue
-    .line 196
+    .line 197
     if-eqz p2, :cond_0
 
     move-object v1, p2
 
-    .line 199
+    .line 200
     .local v1, row:Landroid/view/View;
     :goto_0
     iget-object v2, p0, Lcom/android/settings/DreamComponentPreference$DreamListAdapter;->results:Ljava/util/ArrayList;
@@ -170,7 +170,7 @@
 
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
-    .line 200
+    .line 201
     .local v0, ri:Landroid/content/pm/ResolveInfo;
     const v2, 0x7f09000c
 
@@ -193,7 +193,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 201
+    .line 202
     const v2, 0x7f090010
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -215,10 +215,10 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 202
+    .line 203
     return-object v1
 
-    .line 196
+    .line 197
     .end local v0           #ri:Landroid/content/pm/ResolveInfo;
     .end local v1           #row:Landroid/view/View;
     :cond_0

@@ -39,38 +39,38 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 500
+    .line 501
     iput-object p1, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->this$0:Lcom/android/settings/vpn2/VpnSettings;
 
-    .line 501
+    .line 502
     invoke-direct {p0, p2}, Lmiui/preference/RadioButtonPreference;-><init>(Landroid/content/Context;)V
 
-    .line 497
+    .line 498
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->mState:I
 
-    .line 502
+    .line 503
     const v0, 0x7f040083
 
     invoke-virtual {p0, v0}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->setWidgetLayoutResource(I)V
 
-    .line 503
+    .line 504
     invoke-virtual {p0, v1}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->setPersistent(Z)V
 
-    .line 504
+    .line 505
     invoke-virtual {p0, v1}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->setOrder(I)V
 
-    .line 505
+    .line 506
     invoke-virtual {p0, p1}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 507
+    .line 508
     iput-object p3, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->mProfile:Lcom/android/settings/vpn2/VpnProfile;
 
-    .line 508
+    .line 509
     invoke-virtual {p0}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->update()V
 
-    .line 509
+    .line 510
     return-void
 .end method
 
@@ -84,10 +84,10 @@
     .end annotation
 
     .prologue
-    .line 556
+    .line 557
     const/4 v1, -0x1
 
-    .line 557
+    .line 558
     .local v1, result:I
     instance-of v2, p1, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;
 
@@ -95,10 +95,10 @@
 
     move-object v0, p1
 
-    .line 558
+    .line 559
     check-cast v0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;
 
-    .line 559
+    .line 560
     .local v0, another:Lcom/android/settings/vpn2/VpnSettings$VpnPreference;
     iget-object v2, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->mProfile:Lcom/android/settings/vpn2/VpnProfile;
 
@@ -112,7 +112,7 @@
 
     move-result v1
 
-    .line 561
+    .line 562
     .end local v0           #another:Lcom/android/settings/vpn2/VpnSettings$VpnPreference;
     :cond_0
     return v1
@@ -123,7 +123,7 @@
     .parameter "x0"
 
     .prologue
-    .line 494
+    .line 495
     check-cast p1, Landroid/preference/Preference;
 
     .end local p1
@@ -138,7 +138,7 @@
     .locals 1
 
     .prologue
-    .line 512
+    .line 513
     iget-object v0, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->mProfile:Lcom/android/settings/vpn2/VpnProfile;
 
     return-object v0
@@ -152,10 +152,10 @@
     .end annotation
 
     .prologue
-    .line 542
+    .line 543
     invoke-super {p0, p1}, Lmiui/preference/RadioButtonPreference;->onBindView(Landroid/view/View;)V
 
-    .line 543
+    .line 544
     const v1, 0x7f09011d
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -164,7 +164,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 544
+    .line 545
     .local v0, detailArrow:Landroid/widget/ImageView;
     new-instance v1, Lcom/android/settings/vpn2/VpnSettings$VpnPreference$1;
 
@@ -172,7 +172,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 551
+    .line 552
     return-void
 .end method
 
@@ -180,12 +180,12 @@
     .locals 4
 
     .prologue
-    .line 526
+    .line 527
     iget v2, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->mState:I
 
     if-gez v2, :cond_0
 
-    .line 527
+    .line 528
     invoke-virtual {p0}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -200,7 +200,7 @@
 
     move-result-object v1
 
-    .line 529
+    .line 530
     .local v1, types:[Ljava/lang/String;
     iget-object v2, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->mProfile:Lcom/android/settings/vpn2/VpnProfile;
 
@@ -210,7 +210,7 @@
 
     invoke-virtual {p0, v2}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 535
+    .line 536
     .end local v1           #types:[Ljava/lang/String;
     :goto_0
     iget-object v2, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->mProfile:Lcom/android/settings/vpn2/VpnProfile;
@@ -219,13 +219,13 @@
 
     invoke-virtual {p0, v2}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 536
+    .line 537
     invoke-virtual {p0}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->notifyHierarchyChanged()V
 
-    .line 537
+    .line 538
     return-void
 
-    .line 531
+    .line 532
     :cond_0
     invoke-virtual {p0}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->getContext()Landroid/content/Context;
 
@@ -241,7 +241,7 @@
 
     move-result-object v0
 
-    .line 533
+    .line 534
     .local v0, states:[Ljava/lang/String;
     iget v2, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->mState:I
 
@@ -257,13 +257,13 @@
     .parameter "state"
 
     .prologue
-    .line 521
+    .line 522
     iput p1, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->mState:I
 
-    .line 522
+    .line 523
     invoke-virtual {p0}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->update()V
 
-    .line 523
+    .line 524
     return-void
 .end method
 
@@ -272,12 +272,12 @@
     .parameter "profile"
 
     .prologue
-    .line 516
+    .line 517
     iput-object p1, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->mProfile:Lcom/android/settings/vpn2/VpnProfile;
 
-    .line 517
+    .line 518
     invoke-virtual {p0}, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->update()V
 
-    .line 518
+    .line 519
     return-void
 .end method

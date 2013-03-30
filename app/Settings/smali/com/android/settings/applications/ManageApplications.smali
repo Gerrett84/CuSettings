@@ -832,7 +832,7 @@
     .end annotation
 
     .prologue
-    const v7, 0x7f0200d7
+    const v7, 0x7f0200d4
 
     const/4 v6, 0x4
 

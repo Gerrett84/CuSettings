@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic $SwitchMap$com$android$internal$telephony$Phone$State:[I
+.field static final synthetic $SwitchMap$com$android$internal$telephony$PhoneConstants$State:[I
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 3
 
     .prologue
-    .line 553
-    invoke-static {}, Lcom/android/internal/telephony/Phone$State;->values()[Lcom/android/internal/telephony/Phone$State;
+    .line 554
+    invoke-static {}, Lcom/android/internal/telephony/PhoneConstants$State;->values()[Lcom/android/internal/telephony/PhoneConstants$State;
 
     move-result-object v0
 
@@ -32,14 +32,14 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/settings/RadioInfo$23;->$SwitchMap$com$android$internal$telephony$Phone$State:[I
+    sput-object v0, Lcom/android/settings/RadioInfo$23;->$SwitchMap$com$android$internal$telephony$PhoneConstants$State:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/settings/RadioInfo$23;->$SwitchMap$com$android$internal$telephony$Phone$State:[I
+    sget-object v0, Lcom/android/settings/RadioInfo$23;->$SwitchMap$com$android$internal$telephony$PhoneConstants$State:[I
 
-    sget-object v1, Lcom/android/internal/telephony/Phone$State;->IDLE:Lcom/android/internal/telephony/Phone$State;
+    sget-object v1, Lcom/android/internal/telephony/PhoneConstants$State;->IDLE:Lcom/android/internal/telephony/PhoneConstants$State;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/Phone$State;->ordinal()I
+    invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneConstants$State;->ordinal()I
 
     move-result v1
 
@@ -51,11 +51,11 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/android/settings/RadioInfo$23;->$SwitchMap$com$android$internal$telephony$Phone$State:[I
+    sget-object v0, Lcom/android/settings/RadioInfo$23;->$SwitchMap$com$android$internal$telephony$PhoneConstants$State:[I
 
-    sget-object v1, Lcom/android/internal/telephony/Phone$State;->RINGING:Lcom/android/internal/telephony/Phone$State;
+    sget-object v1, Lcom/android/internal/telephony/PhoneConstants$State;->RINGING:Lcom/android/internal/telephony/PhoneConstants$State;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/Phone$State;->ordinal()I
+    invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneConstants$State;->ordinal()I
 
     move-result v1
 
@@ -67,11 +67,11 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/android/settings/RadioInfo$23;->$SwitchMap$com$android$internal$telephony$Phone$State:[I
+    sget-object v0, Lcom/android/settings/RadioInfo$23;->$SwitchMap$com$android$internal$telephony$PhoneConstants$State:[I
 
-    sget-object v1, Lcom/android/internal/telephony/Phone$State;->OFFHOOK:Lcom/android/internal/telephony/Phone$State;
+    sget-object v1, Lcom/android/internal/telephony/PhoneConstants$State;->OFFHOOK:Lcom/android/internal/telephony/PhoneConstants$State;
 
-    invoke-virtual {v1}, Lcom/android/internal/telephony/Phone$State;->ordinal()I
+    invoke-virtual {v1}, Lcom/android/internal/telephony/PhoneConstants$State;->ordinal()I
 
     move-result v1
 

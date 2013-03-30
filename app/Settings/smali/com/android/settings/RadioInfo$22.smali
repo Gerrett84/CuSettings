@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1009
+    .line 1010
     iput-object p1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .parameter "id"
 
     .prologue
-    .line 1011
+    .line 1012
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->mHandler:Landroid/os/Handler;
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    .line 1012
+    .line 1013
     .local v0, msg:Landroid/os/Message;
     if-ltz p3, :cond_0
 
@@ -67,7 +67,7 @@
 
     if-gt p3, v1, :cond_0
 
-    .line 1013
+    .line 1014
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
@@ -77,7 +77,7 @@
 
     invoke-interface {v1, p3, v0}, Lcom/android/internal/telephony/Phone;->setPreferredNetworkType(ILandroid/os/Message;)V
 
-    .line 1015
+    .line 1016
     :cond_0
     return-void
 .end method
@@ -87,6 +87,6 @@
     .parameter "parent"
 
     .prologue
-    .line 1018
+    .line 1019
     return-void
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 852
+    .line 853
     iput-object p1, p0, Lcom/android/settings/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageStatsObserver$Stub;-><init>()V
@@ -40,10 +40,10 @@
     .parameter "succeeded"
 
     .prologue
-    .line 854
+    .line 855
     const/4 v9, 0x0
 
-    .line 855
+    .line 856
     .local v9, sizeChanged:Z
     move-object/from16 v0, p0
 
@@ -55,7 +55,7 @@
 
     monitor-enter v11
 
-    .line 857
+    .line 858
     :try_start_0
     move-object/from16 v0, p0
 
@@ -75,27 +75,27 @@
 
     check-cast v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;
 
-    .line 858
+    .line 859
     .local v1, entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
     if-eqz v1, :cond_2
 
-    .line 859
+    .line 860
     monitor-enter v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 860
+    .line 861
     const/4 v10, 0x0
 
     :try_start_1
     iput-boolean v10, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->sizeStale:Z
 
-    .line 861
+    .line 862
     const-wide/16 v12, 0x0
 
     iput-wide v12, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->sizeLoadStart:J
 
-    .line 862
+    .line 863
     move-object/from16 v0, p1
 
     iget-wide v12, v0, Landroid/content/pm/PackageStats;->externalCodeSize:J
@@ -106,7 +106,7 @@
 
     add-long v2, v12, v14
 
-    .line 864
+    .line 865
     .local v2, externalCodeSize:J
     move-object/from16 v0, p1
 
@@ -124,7 +124,7 @@
 
     add-long v4, v12, v14
 
-    .line 866
+    .line 867
     .local v4, externalDataSize:J
     add-long v12, v2, v4
 
@@ -143,7 +143,7 @@
 
     add-long v7, v12, v14
 
-    .line 868
+    .line 869
     .local v7, newSize:J
     iget-wide v12, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->size:J
 
@@ -203,45 +203,45 @@
 
     if-eqz v10, :cond_1
 
-    .line 875
+    .line 876
     :cond_0
     iput-wide v7, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->size:J
 
-    .line 876
+    .line 877
     move-object/from16 v0, p1
 
     iget-wide v12, v0, Landroid/content/pm/PackageStats;->cacheSize:J
 
     iput-wide v12, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->cacheSize:J
 
-    .line 877
+    .line 878
     move-object/from16 v0, p1
 
     iget-wide v12, v0, Landroid/content/pm/PackageStats;->codeSize:J
 
     iput-wide v12, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->codeSize:J
 
-    .line 878
+    .line 879
     move-object/from16 v0, p1
 
     iget-wide v12, v0, Landroid/content/pm/PackageStats;->dataSize:J
 
     iput-wide v12, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->dataSize:J
 
-    .line 879
+    .line 880
     iput-wide v2, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->externalCodeSize:J
 
-    .line 880
+    .line 881
     iput-wide v4, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->externalDataSize:J
 
-    .line 881
+    .line 882
     move-object/from16 v0, p1
 
     iget-wide v12, v0, Landroid/content/pm/PackageStats;->externalCacheSize:J
 
     iput-wide v12, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->externalCacheSize:J
 
-    .line 882
+    .line 883
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/settings/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;
@@ -257,7 +257,7 @@
 
     iput-object v10, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->sizeStr:Ljava/lang/String;
 
-    .line 883
+    .line 884
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/settings/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;
@@ -273,7 +273,7 @@
 
     iput-wide v12, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->internalSize:J
 
-    .line 884
+    .line 885
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/settings/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;
@@ -289,7 +289,7 @@
 
     iput-object v10, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->internalSizeStr:Ljava/lang/String;
 
-    .line 885
+    .line 886
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/settings/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;
@@ -305,7 +305,7 @@
 
     iput-wide v12, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->externalSize:J
 
-    .line 886
+    .line 887
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/settings/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;
@@ -321,19 +321,19 @@
 
     iput-object v10, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->externalSizeStr:Ljava/lang/String;
 
-    .line 889
+    .line 890
     const/4 v9, 0x1
 
-    .line 891
+    .line 892
     :cond_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 892
+    .line 893
     if-eqz v9, :cond_2
 
-    .line 893
+    .line 894
     :try_start_2
     move-object/from16 v0, p0
 
@@ -353,7 +353,7 @@
 
     move-result-object v6
 
-    .line 895
+    .line 896
     .local v6, msg:Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -365,7 +365,7 @@
 
     invoke-virtual {v10, v6}, Lcom/android/settings/applications/ApplicationsState$MainHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 898
+    .line 899
     .end local v2           #externalCodeSize:J
     .end local v4           #externalDataSize:J
     .end local v6           #msg:Landroid/os/Message;
@@ -399,7 +399,7 @@
 
     if-eqz v10, :cond_4
 
-    .line 900
+    .line 901
     :cond_3
     move-object/from16 v0, p0
 
@@ -411,7 +411,7 @@
 
     iput-object v12, v10, Lcom/android/settings/applications/ApplicationsState;->mCurComputingSizePkg:Ljava/lang/String;
 
-    .line 901
+    .line 902
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/android/settings/applications/ApplicationsState$BackgroundHandler$1;->this$1:Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;
@@ -420,16 +420,16 @@
 
     invoke-virtual {v10, v12}, Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;->sendEmptyMessage(I)Z
 
-    .line 904
+    .line 905
     :cond_4
     monitor-exit v11
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 905
+    .line 906
     return-void
 
-    .line 891
+    .line 892
     :catchall_0
     move-exception v10
 
@@ -441,7 +441,7 @@
     :try_start_4
     throw v10
 
-    .line 904
+    .line 905
     .end local v1           #entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
     :catchall_1
     move-exception v10

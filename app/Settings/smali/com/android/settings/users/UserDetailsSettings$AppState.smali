@@ -24,12 +24,12 @@
     .parameter "enabled"
 
     .prologue
-    .line 75
+    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
+    .line 77
     iput-boolean p1, p0, Lcom/android/settings/users/UserDetailsSettings$AppState;->enabled:Z
 
-    .line 77
+    .line 78
     return-void
 .end method

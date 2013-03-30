@@ -659,7 +659,7 @@
     .line 365
     .end local v0           #res:I
     :pswitch_1
-    const v0, 0x7f02013f
+    const v0, 0x7f02013a
 
     .line 366
     .restart local v0       #res:I
@@ -668,7 +668,7 @@
     .line 368
     .end local v0           #res:I
     :pswitch_2
-    const v0, 0x7f020140
+    const v0, 0x7f02013b
 
     .line 369
     .restart local v0       #res:I

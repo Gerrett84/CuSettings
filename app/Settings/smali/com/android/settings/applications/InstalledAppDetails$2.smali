@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 969
+    .line 970
     iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetails$2;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 972
+    .line 973
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetails$2;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
     invoke-virtual {p0}, Lcom/android/settings/applications/InstalledAppDetails$2;->getResultCode()I
@@ -55,10 +55,10 @@
     #calls: Lcom/android/settings/applications/InstalledAppDetails;->updateForceStopButton(Z)V
     invoke-static {v1, v0}, Lcom/android/settings/applications/InstalledAppDetails;->access$1300(Lcom/android/settings/applications/InstalledAppDetails;Z)V
 
-    .line 973
+    .line 974
     return-void
 
-    .line 972
+    .line 973
     :cond_0
     const/4 v0, 0x0
 

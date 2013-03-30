@@ -71,14 +71,14 @@
     .end annotation
 
     .prologue
-    .line 139
+    .line 140
     .local p1, pattern:Ljava/util/List;,"Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
     invoke-direct {p0}, Lcom/android/settings/ConfirmSmsLockPattern$ConfirmSmsLockFragment;->handleConfirmPurpose()V
 
-    .line 140
+    .line 141
     invoke-super {p0, p1}, Lcom/android/settings/ConfirmLockPattern$ConfirmLockPatternFragment;->accessLockPattern(Ljava/util/List;)V
 
-    .line 141
+    .line 142
     return-void
 .end method
 
@@ -96,7 +96,7 @@
     .end annotation
 
     .prologue
-    .line 145
+    .line 146
     .local p1, pattern:Ljava/util/List;,"Ljava/util/List<Lcom/android/internal/widget/LockPatternView$Cell;>;"
     iget-object v0, p0, Lcom/android/settings/ConfirmSmsLockPattern$ConfirmSmsLockFragment;->mLockPatternUtils:Lmiui/security/MiuiLockPatternUtils;
 
@@ -142,13 +142,35 @@
 .end method
 
 .method protected getInStealthMode()Z
-    .locals 1
+    .locals 3
 
     .prologue
-    .line 134
     const/4 v0, 0x1
 
+    .line 134
+    invoke-virtual {p0}, Lcom/android/settings/ConfirmSmsLockPattern$ConfirmSmsLockFragment;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "private_sms_lock_pattern_visible_pattern"
+
+    invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    if-eq v1, v0, :cond_0
+
+    :goto_0
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method protected getIntentOnSuccess()Landroid/content/Intent;

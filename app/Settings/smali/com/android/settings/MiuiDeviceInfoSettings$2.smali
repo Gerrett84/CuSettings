@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 542
+    .line 540
     iput-object p1, p0, Lcom/android/settings/MiuiDeviceInfoSettings$2;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,16 +41,16 @@
     .prologue
     const-wide/16 v3, 0x0
 
-    .line 545
+    .line 543
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 564
+    .line 562
     :goto_0
     return-void
 
-    .line 547
+    .line 545
     :pswitch_0
     iget-object v2, p0, Lcom/android/settings/MiuiDeviceInfoSettings$2;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
@@ -61,7 +61,7 @@
 
     iput-wide v3, v2, Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;->free:J
 
-    .line 548
+    .line 546
     iget-object v2, p0, Lcom/android/settings/MiuiDeviceInfoSettings$2;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
     #getter for: Lcom/android/settings/MiuiDeviceInfoSettings;->mSDCardInfo:Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
@@ -71,7 +71,7 @@
 
     iput-wide v3, v2, Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;->total:J
 
-    .line 549
+    .line 547
     iget-object v2, p0, Lcom/android/settings/MiuiDeviceInfoSettings$2;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
     #getter for: Lcom/android/settings/MiuiDeviceInfoSettings;->mEmulatedInfo:Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
@@ -81,7 +81,7 @@
 
     iput-wide v3, v2, Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;->free:J
 
-    .line 550
+    .line 548
     iget-object v2, p0, Lcom/android/settings/MiuiDeviceInfoSettings$2;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
     #getter for: Lcom/android/settings/MiuiDeviceInfoSettings;->mEmulatedInfo:Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
@@ -91,7 +91,7 @@
 
     iput-wide v3, v2, Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;->total:J
 
-    .line 551
+    .line 549
     iget-object v2, p0, Lcom/android/settings/MiuiDeviceInfoSettings$2;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
     #getter for: Lcom/android/settings/MiuiDeviceInfoSettings;->receiverList:Ljava/util/ArrayList;
@@ -117,7 +117,7 @@
 
     check-cast v1, Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;
 
-    .line 552
+    .line 550
     .local v1, receiver:Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;
     invoke-virtual {v1}, Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;->isEmulated()Z
 
@@ -125,7 +125,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 553
+    .line 551
     iget-object v2, p0, Lcom/android/settings/MiuiDeviceInfoSettings$2;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
     #getter for: Lcom/android/settings/MiuiDeviceInfoSettings;->mEmulatedInfo:Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
@@ -145,7 +145,7 @@
 
     iput-wide v3, v2, Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;->total:J
 
-    .line 554
+    .line 552
     iget-object v2, p0, Lcom/android/settings/MiuiDeviceInfoSettings$2;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
     #getter for: Lcom/android/settings/MiuiDeviceInfoSettings;->mEmulatedInfo:Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
@@ -167,7 +167,7 @@
 
     goto :goto_1
 
-    .line 556
+    .line 554
     :cond_0
     iget-object v2, p0, Lcom/android/settings/MiuiDeviceInfoSettings$2;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
@@ -188,7 +188,7 @@
 
     iput-wide v3, v2, Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;->total:J
 
-    .line 557
+    .line 555
     iget-object v2, p0, Lcom/android/settings/MiuiDeviceInfoSettings$2;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
 
     #getter for: Lcom/android/settings/MiuiDeviceInfoSettings;->mSDCardInfo:Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
@@ -210,7 +210,7 @@
 
     goto :goto_1
 
-    .line 560
+    .line 558
     .end local v1           #receiver:Lcom/android/settings/MiuiDeviceInfoSettings$SdcardMeasurementReceiver;
     :cond_1
     iget-object v2, p0, Lcom/android/settings/MiuiDeviceInfoSettings$2;->this$0:Lcom/android/settings/MiuiDeviceInfoSettings;
@@ -220,7 +220,7 @@
 
     goto/16 :goto_0
 
-    .line 545
+    .line 543
     nop
 
     :pswitch_data_0

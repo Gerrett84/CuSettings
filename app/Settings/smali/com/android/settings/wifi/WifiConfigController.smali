@@ -4301,7 +4301,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f020110
+    const v4, 0x7f02010b
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -4829,7 +4829,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f020110
+    const v4, 0x7f02010b
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -5016,7 +5016,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f02010e
+    const v4, 0x7f020109
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundResource(I)V
 

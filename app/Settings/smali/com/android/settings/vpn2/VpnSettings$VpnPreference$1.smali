@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 544
+    .line 545
     iput-object p1, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference$1;->this$1:Lcom/android/settings/vpn2/VpnSettings$VpnPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "v"
 
     .prologue
-    .line 548
+    .line 549
     iget-object v0, p0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference$1;->this$1:Lcom/android/settings/vpn2/VpnSettings$VpnPreference;
 
     iget-object v0, v0, Lcom/android/settings/vpn2/VpnSettings$VpnPreference;->this$0:Lcom/android/settings/vpn2/VpnSettings;
@@ -55,6 +55,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/vpn2/VpnSettings;->editProfile(Lcom/android/settings/vpn2/VpnProfile;)V
 
-    .line 549
+    .line 550
     return-void
 .end method

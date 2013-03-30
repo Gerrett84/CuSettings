@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 331
+    .line 332
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;-><init>(Lcom/android/settings/widget/SettingsAppWidgetProvider$1;)V
@@ -32,7 +32,7 @@
     .parameter "x0"
 
     .prologue
-    .line 331
+    .line 332
     invoke-direct {p0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$WifiStateTracker;-><init>()V
 
     return-void
@@ -43,40 +43,40 @@
     .parameter "wifiState"
 
     .prologue
-    .line 396
+    .line 397
     packed-switch p0, :pswitch_data_0
 
-    .line 406
+    .line 407
     const/4 v0, 0x4
 
     :goto_0
     return v0
 
-    .line 398
+    .line 399
     :pswitch_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 400
+    .line 401
     :pswitch_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 402
+    .line 403
     :pswitch_2
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 404
+    .line 405
     :pswitch_3
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 396
+    .line 397
     nop
 
     :pswitch_data_0
@@ -95,7 +95,7 @@
     .parameter "context"
 
     .prologue
-    .line 344
+    .line 345
     const-string v1, "wifi"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -104,11 +104,11 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    .line 345
+    .line 346
     .local v0, wifiManager:Landroid/net/wifi/WifiManager;
     if-eqz v0, :cond_0
 
-    .line 346
+    .line 347
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getWifiState()I
 
     move-result v1
@@ -117,7 +117,7 @@
 
     move-result v1
 
-    .line 348
+    .line 349
     :goto_0
     return v1
 
@@ -131,7 +131,7 @@
     .locals 1
 
     .prologue
-    .line 332
+    .line 333
     const v0, 0x7f0901d0
 
     return v0
@@ -142,7 +142,7 @@
     .parameter "on"
 
     .prologue
-    .line 335
+    .line 336
     if-eqz p1, :cond_0
 
     const v0, 0x7f020069
@@ -160,7 +160,7 @@
     .locals 1
 
     .prologue
-    .line 333
+    .line 334
     const v0, 0x7f0901d1
 
     return v0
@@ -170,7 +170,7 @@
     .locals 1
 
     .prologue
-    .line 340
+    .line 341
     const/4 v0, 0x0
 
     return v0
@@ -182,7 +182,7 @@
     .parameter "intent"
 
     .prologue
-    .line 384
+    .line 385
     const-string v1, "android.net.wifi.WIFI_STATE_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -195,11 +195,11 @@
 
     if-nez v1, :cond_0
 
-    .line 389
+    .line 390
     :goto_0
     return-void
 
-    .line 387
+    .line 388
     :cond_0
     const-string v1, "wifi_state"
 
@@ -209,7 +209,7 @@
 
     move-result v0
 
-    .line 388
+    .line 389
     .local v0, wifiState:I
     invoke-static {v0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$WifiStateTracker;->wifiStateToFiveState(I)I
 
@@ -226,7 +226,7 @@
     .parameter "desiredState"
 
     .prologue
-    .line 353
+    .line 354
     const-string v1, "wifi"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -235,22 +235,22 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    .line 355
+    .line 356
     .local v0, wifiManager:Landroid/net/wifi/WifiManager;
     if-nez v0, :cond_0
 
-    .line 356
+    .line 357
     const-string v1, "SettingsAppWidgetProvider"
 
     const-string v2, "No wifiManager."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
+    .line 381
     :goto_0
     return-void
 
-    .line 364
+    .line 365
     :cond_0
     new-instance v1, Lcom/android/settings/widget/SettingsAppWidgetProvider$WifiStateTracker$1;
 

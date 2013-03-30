@@ -50,7 +50,7 @@
     .locals 1
 
     .prologue
-    .line 299
+    .line 300
     new-instance v0, Lcom/android/settings/display/BrightnessActivity$SavedState$1;
 
     invoke-direct {v0}, Lcom/android/settings/display/BrightnessActivity$SavedState$1;-><init>()V
@@ -64,10 +64,10 @@
     .locals 0
 
     .prologue
-    .line 278
+    .line 279
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 280
+    .line 281
     return-void
 .end method
 
@@ -80,10 +80,10 @@
 
     const/4 v1, 0x1
 
-    .line 282
+    .line 283
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 283
+    .line 284
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -95,14 +95,14 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/settings/display/BrightnessActivity$SavedState;->automatic:Z
 
-    .line 284
+    .line 285
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/settings/display/BrightnessActivity$SavedState;->progress:I
 
-    .line 285
+    .line 286
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -112,33 +112,33 @@
     :goto_1
     iput-boolean v1, p0, Lcom/android/settings/display/BrightnessActivity$SavedState;->oldAutomatic:Z
 
-    .line 286
+    .line 287
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/settings/display/BrightnessActivity$SavedState;->oldProgress:I
 
-    .line 287
+    .line 288
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/settings/display/BrightnessActivity$SavedState;->curBrightness:I
 
-    .line 288
+    .line 289
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 283
+    .line 284
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 285
+    .line 286
     goto :goto_1
 .end method
 
@@ -148,7 +148,7 @@
     .locals 1
 
     .prologue
-    .line 313
+    .line 314
     const/4 v0, 0x0
 
     return v0
@@ -164,7 +164,7 @@
 
     const/4 v2, 0x0
 
-    .line 292
+    .line 293
     iget-boolean v0, p0, Lcom/android/settings/display/BrightnessActivity$SavedState;->automatic:Z
 
     if-eqz v0, :cond_0
@@ -174,12 +174,12 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 293
+    .line 294
     iget v0, p0, Lcom/android/settings/display/BrightnessActivity$SavedState;->progress:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 294
+    .line 295
     iget-boolean v0, p0, Lcom/android/settings/display/BrightnessActivity$SavedState;->oldAutomatic:Z
 
     if-eqz v0, :cond_1
@@ -187,28 +187,28 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 295
+    .line 296
     iget v0, p0, Lcom/android/settings/display/BrightnessActivity$SavedState;->oldProgress:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 296
+    .line 297
     iget v0, p0, Lcom/android/settings/display/BrightnessActivity$SavedState;->curBrightness:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 297
+    .line 298
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 292
+    .line 293
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 294
+    .line 295
     goto :goto_1
 .end method

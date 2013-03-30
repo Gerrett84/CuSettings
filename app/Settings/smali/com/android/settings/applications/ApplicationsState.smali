@@ -471,21 +471,21 @@
     .parameter "size"
 
     .prologue
-    .line 836
+    .line 837
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-ltz v0, :cond_0
 
-    .line 837
+    .line 838
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1, p2}, Landroid/text/format/Formatter;->formatFileSize(Landroid/content/Context;J)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 839
+    .line 840
     :goto_0
     return-object v0
 
@@ -500,10 +500,10 @@
     .parameter "ps"
 
     .prologue
-    .line 828
+    .line 829
     if-eqz p1, :cond_0
 
-    .line 829
+    .line 830
     iget-wide v0, p1, Landroid/content/pm/PackageStats;->externalCodeSize:J
 
     iget-wide v2, p1, Landroid/content/pm/PackageStats;->externalDataSize:J
@@ -518,7 +518,7 @@
 
     add-long/2addr v0, v2
 
-    .line 832
+    .line 833
     :goto_0
     return-wide v0
 
@@ -533,17 +533,17 @@
     .parameter "ps"
 
     .prologue
-    .line 821
+    .line 822
     if-eqz p1, :cond_0
 
-    .line 822
+    .line 823
     iget-wide v0, p1, Landroid/content/pm/PackageStats;->codeSize:J
 
     iget-wide v2, p1, Landroid/content/pm/PackageStats;->dataSize:J
 
     add-long/2addr v0, v2
 
-    .line 824
+    .line 825
     :goto_0
     return-wide v0
 
@@ -593,7 +593,7 @@
     .parameter "pkgName"
 
     .prologue
-    .line 747
+    .line 748
     :try_start_0
     iget-object v2, p0, Lcom/android/settings/applications/ApplicationsState;->mEntriesMap:Ljava/util/HashMap;
 
@@ -601,20 +601,20 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 750
+    .line 751
     :try_start_1
     iget-boolean v1, p0, Lcom/android/settings/applications/ApplicationsState;->mResumed:Z
 
     if-nez v1, :cond_0
 
-    .line 755
+    .line 756
     monitor-exit v2
 
-    .line 776
+    .line 777
     :goto_0
     return-void
 
-    .line 757
+    .line 758
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/settings/applications/ApplicationsState;->indexOfApplicationInfoLocked(Ljava/lang/String;)I
 
@@ -622,12 +622,12 @@
 
     if-ltz v1, :cond_1
 
-    .line 760
+    .line 761
     monitor-exit v2
 
     goto :goto_0
 
-    .line 773
+    .line 774
     :catchall_0
     move-exception v1
 
@@ -640,13 +640,13 @@
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 774
+    .line 775
     :catch_0
     move-exception v1
 
     goto :goto_0
 
-    .line 762
+    .line 763
     :cond_1
     :try_start_3
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mPm:Landroid/content/pm/PackageManager;
@@ -657,13 +657,13 @@
 
     move-result-object v0
 
-    .line 765
+    .line 766
     .local v0, info:Landroid/content/pm/ApplicationInfo;
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mApplications:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 766
+    .line 767
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mBackgroundHandler:Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;
 
     const/4 v3, 0x2
@@ -674,14 +674,14 @@
 
     if-nez v1, :cond_2
 
-    .line 767
+    .line 768
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mBackgroundHandler:Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;
 
     const/4 v3, 0x2
 
     invoke-virtual {v1, v3}, Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;->sendEmptyMessage(I)Z
 
-    .line 769
+    .line 770
     :cond_2
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mMainHandler:Lcom/android/settings/applications/ApplicationsState$MainHandler;
 
@@ -693,14 +693,14 @@
 
     if-nez v1, :cond_3
 
-    .line 770
+    .line 771
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mMainHandler:Lcom/android/settings/applications/ApplicationsState$MainHandler;
 
     const/4 v3, 0x2
 
     invoke-virtual {v1, v3}, Lcom/android/settings/applications/ApplicationsState$MainHandler;->sendEmptyMessage(I)Z
 
-    .line 773
+    .line 774
     :cond_3
     monitor-exit v2
     :try_end_3
@@ -1002,20 +1002,20 @@
     .parameter "entry"
 
     .prologue
-    .line 704
+    .line 705
     iget-object v0, p1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->icon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 710
+    .line 711
     :goto_0
     return-void
 
-    .line 707
+    .line 708
     :cond_0
     monitor-enter p1
 
-    .line 708
+    .line 709
     :try_start_0
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState;->mContext:Landroid/content/Context;
 
@@ -1023,7 +1023,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/android/settings/applications/ApplicationsState$AppEntry;->ensureIconLocked(Landroid/content/Context;Landroid/content/pm/PackageManager;)Z
 
-    .line 709
+    .line 710
     monitor-exit p1
 
     goto :goto_0
@@ -1041,14 +1041,17 @@
 .method getEntry(Ljava/lang/String;)Lcom/android/settings/applications/ApplicationsState$AppEntry;
     .locals 5
     .parameter "packageName"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
-    .line 687
+    .line 688
     iget-object v4, p0, Lcom/android/settings/applications/ApplicationsState;->mEntriesMap:Ljava/util/HashMap;
 
     monitor-enter v4
 
-    .line 688
+    .line 689
     :try_start_0
     iget-object v3, p0, Lcom/android/settings/applications/ApplicationsState;->mEntriesMap:Ljava/util/HashMap;
 
@@ -1058,11 +1061,17 @@
 
     check-cast v0, Lcom/android/settings/applications/ApplicationsState$AppEntry;
 
-    .line 689
+    .line 690
     .local v0, entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
     if-nez v0, :cond_0
 
-    .line 690
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 691
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -1075,7 +1084,7 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 691
+    .line 692
     iget-object v3, p0, Lcom/android/settings/applications/ApplicationsState;->mApplications:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1084,7 +1093,7 @@
 
     check-cast v2, Landroid/content/pm/ApplicationInfo;
 
-    .line 692
+    .line 693
     .local v2, info:Landroid/content/pm/ApplicationInfo;
     iget-object v3, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -1094,12 +1103,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 693
+    .line 694
     invoke-virtual {p0, v2}, Lcom/android/settings/applications/ApplicationsState;->getEntryLocked(Landroid/content/pm/ApplicationInfo;)Lcom/android/settings/applications/ApplicationsState$AppEntry;
 
     move-result-object v0
 
-    .line 699
+    .line 700
     .end local v1           #i:I
     .end local v2           #info:Landroid/content/pm/ApplicationInfo;
     :cond_0
@@ -1107,7 +1116,7 @@
 
     return-object v0
 
-    .line 690
+    .line 691
     .restart local v1       #i:I
     .restart local v2       #info:Landroid/content/pm/ApplicationInfo;
     :cond_1
@@ -1115,7 +1124,7 @@
 
     goto :goto_0
 
-    .line 700
+    .line 701
     .end local v0           #entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
     .end local v1           #i:I
     .end local v2           #info:Landroid/content/pm/ApplicationInfo;
@@ -1134,7 +1143,7 @@
     .parameter "info"
 
     .prologue
-    .line 805
+    .line 806
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mEntriesMap:Ljava/util/HashMap;
 
     iget-object v2, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
@@ -1145,11 +1154,11 @@
 
     check-cast v0, Lcom/android/settings/applications/ApplicationsState$AppEntry;
 
-    .line 807
+    .line 808
     .local v0, entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
     if-nez v0, :cond_1
 
-    .line 809
+    .line 810
     new-instance v0, Lcom/android/settings/applications/ApplicationsState$AppEntry;
 
     .end local v0           #entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
@@ -1165,7 +1174,7 @@
 
     invoke-direct {v0, v1, p1, v2, v3}, Lcom/android/settings/applications/ApplicationsState$AppEntry;-><init>(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;J)V
 
-    .line 810
+    .line 811
     .restart local v0       #entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mEntriesMap:Ljava/util/HashMap;
 
@@ -1173,23 +1182,23 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 811
+    .line 812
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mAppEntries:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 815
+    .line 816
     :cond_0
     :goto_0
     return-object v0
 
-    .line 812
+    .line 813
     :cond_1
     iget-object v1, v0, Lcom/android/settings/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     if-eq v1, p1, :cond_0
 
-    .line 813
+    .line 814
     iput-object p1, v0, Lcom/android/settings/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
     goto :goto_0
@@ -1200,7 +1209,7 @@
     .parameter "pkgName"
 
     .prologue
-    .line 737
+    .line 738
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mApplications:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -1213,7 +1222,7 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 738
+    .line 739
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mApplications:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1230,19 +1239,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 742
+    .line 743
     .end local v0           #i:I
     :goto_1
     return v0
 
-    .line 737
+    .line 738
     .restart local v0       #i:I
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 742
+    .line 743
     :cond_1
     const/4 v0, -0x1
 
@@ -1254,13 +1263,13 @@
     .parameter "pkgName"
 
     .prologue
-    .line 800
+    .line 801
     invoke-virtual {p0, p1}, Lcom/android/settings/applications/ApplicationsState;->removePackage(Ljava/lang/String;)V
 
-    .line 801
+    .line 802
     invoke-virtual {p0, p1}, Lcom/android/settings/applications/ApplicationsState;->addPackage(Ljava/lang/String;)V
 
-    .line 802
+    .line 803
     return-void
 .end method
 
@@ -1393,22 +1402,22 @@
     .parameter "pkgName"
 
     .prologue
-    .line 779
+    .line 780
     iget-object v3, p0, Lcom/android/settings/applications/ApplicationsState;->mEntriesMap:Ljava/util/HashMap;
 
     monitor-enter v3
 
-    .line 781
+    .line 782
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/settings/applications/ApplicationsState;->indexOfApplicationInfoLocked(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 783
+    .line 784
     .local v1, idx:I
     if-ltz v1, :cond_1
 
-    .line 784
+    .line 785
     iget-object v2, p0, Lcom/android/settings/applications/ApplicationsState;->mEntriesMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1417,27 +1426,27 @@
 
     check-cast v0, Lcom/android/settings/applications/ApplicationsState$AppEntry;
 
-    .line 786
+    .line 787
     .local v0, entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
     if-eqz v0, :cond_0
 
-    .line 787
+    .line 788
     iget-object v2, p0, Lcom/android/settings/applications/ApplicationsState;->mEntriesMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 788
+    .line 789
     iget-object v2, p0, Lcom/android/settings/applications/ApplicationsState;->mAppEntries:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 790
+    .line 791
     :cond_0
     iget-object v2, p0, Lcom/android/settings/applications/ApplicationsState;->mApplications:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 791
+    .line 792
     iget-object v2, p0, Lcom/android/settings/applications/ApplicationsState;->mMainHandler:Lcom/android/settings/applications/ApplicationsState$MainHandler;
 
     const/4 v4, 0x2
@@ -1448,22 +1457,22 @@
 
     if-nez v2, :cond_1
 
-    .line 792
+    .line 793
     iget-object v2, p0, Lcom/android/settings/applications/ApplicationsState;->mMainHandler:Lcom/android/settings/applications/ApplicationsState$MainHandler;
 
     const/4 v4, 0x2
 
     invoke-virtual {v2, v4}, Lcom/android/settings/applications/ApplicationsState$MainHandler;->sendEmptyMessage(I)Z
 
-    .line 796
+    .line 797
     .end local v0           #entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
     :cond_1
     monitor-exit v3
 
-    .line 797
+    .line 798
     return-void
 
-    .line 796
+    .line 797
     .end local v1           #idx:I
     :catchall_0
     move-exception v2
@@ -1480,12 +1489,12 @@
     .parameter "packageName"
 
     .prologue
-    .line 714
+    .line 715
     iget-object v2, p0, Lcom/android/settings/applications/ApplicationsState;->mEntriesMap:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 715
+    .line 716
     :try_start_0
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mEntriesMap:Ljava/util/HashMap;
 
@@ -1495,11 +1504,11 @@
 
     check-cast v0, Lcom/android/settings/applications/ApplicationsState$AppEntry;
 
-    .line 716
+    .line 717
     .local v0, entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
     if-eqz v0, :cond_0
 
-    .line 717
+    .line 718
     iget-object v1, p0, Lcom/android/settings/applications/ApplicationsState;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v3, p0, Lcom/android/settings/applications/ApplicationsState;->mBackgroundHandler:Lcom/android/settings/applications/ApplicationsState$BackgroundHandler;
@@ -1508,14 +1517,14 @@
 
     invoke-virtual {v1, p1, v3}, Landroid/content/pm/PackageManager;->getPackageSizeInfo(Ljava/lang/String;Landroid/content/pm/IPackageStatsObserver;)V
 
-    .line 720
+    .line 721
     :cond_0
     monitor-exit v2
 
-    .line 721
+    .line 722
     return-void
 
-    .line 720
+    .line 721
     .end local v0           #entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
     :catchall_0
     move-exception v1
@@ -1531,16 +1540,16 @@
     .locals 7
 
     .prologue
-    .line 724
+    .line 725
     const-wide/16 v1, 0x0
 
-    .line 726
+    .line 727
     .local v1, sum:J
     iget-object v4, p0, Lcom/android/settings/applications/ApplicationsState;->mEntriesMap:Ljava/util/HashMap;
 
     monitor-enter v4
 
-    .line 728
+    .line 729
     :try_start_0
     iget-object v3, p0, Lcom/android/settings/applications/ApplicationsState;->mAppEntries:Ljava/util/ArrayList;
 
@@ -1554,7 +1563,7 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 729
+    .line 730
     iget-object v3, p0, Lcom/android/settings/applications/ApplicationsState;->mAppEntries:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1567,19 +1576,19 @@
 
     add-long/2addr v1, v5
 
-    .line 728
+    .line 729
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 732
+    .line 733
     :cond_0
     monitor-exit v4
 
-    .line 733
+    .line 734
     return-wide v1
 
-    .line 732
+    .line 733
     .end local v0           #i:I
     :catchall_0
     move-exception v3

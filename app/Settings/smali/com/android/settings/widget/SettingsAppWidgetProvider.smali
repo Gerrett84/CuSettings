@@ -50,7 +50,7 @@
 
     const/4 v3, 0x0
 
-    .line 54
+    .line 55
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "com.android.settings"
@@ -61,52 +61,52 @@
 
     sput-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->THIS_APPWIDGET:Landroid/content/ComponentName;
 
-    .line 58
+    .line 59
     sput-object v3, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sLocalBluetoothAdapter:Lcom/android/settings/bluetooth/LocalBluetoothAdapter;
 
-    .line 81
+    .line 82
     new-array v0, v4, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->IND_DRAWABLE_OFF:[I
 
-    .line 87
+    .line 88
     new-array v0, v4, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->IND_DRAWABLE_MID:[I
 
-    .line 93
+    .line 94
     new-array v0, v4, [I
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->IND_DRAWABLE_ON:[I
 
-    .line 110
+    .line 111
     new-instance v0, Lcom/android/settings/widget/SettingsAppWidgetProvider$WifiStateTracker;
 
     invoke-direct {v0, v3}, Lcom/android/settings/widget/SettingsAppWidgetProvider$WifiStateTracker;-><init>(Lcom/android/settings/widget/SettingsAppWidgetProvider$1;)V
 
     sput-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sWifiState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
-    .line 111
+    .line 112
     new-instance v0, Lcom/android/settings/widget/SettingsAppWidgetProvider$BluetoothStateTracker;
 
     invoke-direct {v0, v3}, Lcom/android/settings/widget/SettingsAppWidgetProvider$BluetoothStateTracker;-><init>(Lcom/android/settings/widget/SettingsAppWidgetProvider$1;)V
 
     sput-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sBluetoothState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
-    .line 112
+    .line 113
     new-instance v0, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker;
 
     invoke-direct {v0, v3}, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker;-><init>(Lcom/android/settings/widget/SettingsAppWidgetProvider$1;)V
 
     sput-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sGpsState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
-    .line 113
+    .line 114
     new-instance v0, Lcom/android/settings/widget/SettingsAppWidgetProvider$SyncStateTracker;
 
     invoke-direct {v0, v3}, Lcom/android/settings/widget/SettingsAppWidgetProvider$SyncStateTracker;-><init>(Lcom/android/settings/widget/SettingsAppWidgetProvider$1;)V
@@ -115,7 +115,7 @@
 
     return-void
 
-    .line 81
+    .line 82
     nop
 
     :array_0
@@ -125,7 +125,7 @@
         0x19t 0x0t 0x2t 0x7ft
     .end array-data
 
-    .line 87
+    .line 88
     :array_1
     .array-data 0x4
         0x15t 0x0t 0x2t 0x7ft
@@ -133,7 +133,7 @@
         0x16t 0x0t 0x2t 0x7ft
     .end array-data
 
-    .line 93
+    .line 94
     :array_2
     .array-data 0x4
         0x1bt 0x0t 0x2t 0x7ft
@@ -146,10 +146,10 @@
     .locals 0
 
     .prologue
-    .line 51
+    .line 52
     invoke-direct {p0}, Landroid/appwidget/AppWidgetProvider;-><init>()V
 
-    .line 874
+    .line 875
     return-void
 .end method
 
@@ -157,7 +157,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 52
     sget-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->IND_DRAWABLE_OFF:[I
 
     return-object v0
@@ -167,7 +167,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 52
     sget-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->IND_DRAWABLE_ON:[I
 
     return-object v0
@@ -177,7 +177,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 52
     sget-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->IND_DRAWABLE_MID:[I
 
     return-object v0
@@ -187,7 +187,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 52
     sget-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sLocalBluetoothAdapter:Lcom/android/settings/bluetooth/LocalBluetoothAdapter;
 
     return-object v0
@@ -198,7 +198,7 @@
     .parameter "x0"
 
     .prologue
-    .line 51
+    .line 52
     sput-object p0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sLocalBluetoothAdapter:Lcom/android/settings/bluetooth/LocalBluetoothAdapter;
 
     return-object p0
@@ -209,7 +209,7 @@
     .parameter "context"
 
     .prologue
-    .line 639
+    .line 640
     new-instance v0, Landroid/widget/RemoteViews;
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -220,7 +220,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
-    .line 641
+    .line 642
     .local v0, views:Landroid/widget/RemoteViews;
     const v1, 0x7f0901cf
 
@@ -232,7 +232,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
-    .line 643
+    .line 644
     const v1, 0x7f0901db
 
     const/4 v2, 0x1
@@ -243,7 +243,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
-    .line 646
+    .line 647
     const v1, 0x7f0901d8
 
     const/4 v2, 0x2
@@ -254,7 +254,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
-    .line 649
+    .line 650
     const v1, 0x7f0901d5
 
     const/4 v2, 0x3
@@ -265,7 +265,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
-    .line 651
+    .line 652
     const v1, 0x7f0901d2
 
     const/4 v2, 0x4
@@ -276,10 +276,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/RemoteViews;->setOnClickPendingIntent(ILandroid/app/PendingIntent;)V
 
-    .line 655
+    .line 656
     invoke-static {v0, p0}, Lcom/android/settings/widget/SettingsAppWidgetProvider;->updateButtons(Landroid/widget/RemoteViews;Landroid/content/Context;)V
 
-    .line 656
+    .line 657
     return-object v0
 .end method
 
@@ -288,12 +288,12 @@
     .parameter "context"
 
     .prologue
-    .line 590
+    .line 591
     sget-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sSettingsObserver:Lcom/android/settings/widget/SettingsAppWidgetProvider$SettingsObserver;
 
     if-nez v0, :cond_0
 
-    .line 591
+    .line 592
     new-instance v0, Lcom/android/settings/widget/SettingsAppWidgetProvider$SettingsObserver;
 
     new-instance v1, Landroid/os/Handler;
@@ -308,12 +308,12 @@
 
     sput-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sSettingsObserver:Lcom/android/settings/widget/SettingsAppWidgetProvider$SettingsObserver;
 
-    .line 593
+    .line 594
     sget-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sSettingsObserver:Lcom/android/settings/widget/SettingsAppWidgetProvider$SettingsObserver;
 
     invoke-virtual {v0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$SettingsObserver;->startObserving()V
 
-    .line 595
+    .line 596
     :cond_0
     return-void
 .end method
@@ -323,7 +323,7 @@
     .parameter "context"
 
     .prologue
-    .line 782
+    .line 783
     :try_start_0
     const-string v2, "power"
 
@@ -335,11 +335,11 @@
 
     move-result-object v1
 
-    .line 784
+    .line 785
     .local v1, power:Landroid/os/IPowerManager;
     if-eqz v1, :cond_0
 
-    .line 785
+    .line 786
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -352,16 +352,16 @@
 
     move-result v0
 
-    .line 791
+    .line 792
     .end local v1           #power:Landroid/os/IPowerManager;
     :goto_0
     return v0
 
-    .line 789
+    .line 790
     :catch_0
     move-exception v2
 
-    .line 791
+    .line 792
     :cond_0
     const/4 v0, 0x0
 
@@ -377,7 +377,7 @@
 
     const/4 v4, 0x0
 
-    .line 802
+    .line 803
     :try_start_0
     const-string v5, "power"
 
@@ -389,11 +389,11 @@
 
     move-result-object v2
 
-    .line 804
+    .line 805
     .local v2, power:Landroid/os/IPowerManager;
     if-eqz v2, :cond_1
 
-    .line 805
+    .line 806
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
@@ -406,11 +406,11 @@
 
     move-result v0
 
-    .line 807
+    .line 808
     .local v0, brightnessMode:I
     if-ne v0, v3, :cond_0
 
-    .line 812
+    .line 813
     .end local v0           #brightnessMode:I
     .end local v2           #power:Landroid/os/IPowerManager;
     :goto_0
@@ -421,16 +421,16 @@
     :cond_0
     move v3, v4
 
-    .line 807
+    .line 808
     goto :goto_0
 
-    .line 809
+    .line 810
     .end local v0           #brightnessMode:I
     .end local v2           #power:Landroid/os/IPowerManager;
     :catch_0
     move-exception v1
 
-    .line 810
+    .line 811
     .local v1, e:Ljava/lang/Exception;
     const-string v3, "SettingsAppWidgetProvider"
 
@@ -458,7 +458,7 @@
     :cond_1
     move v3, v4
 
-    .line 812
+    .line 813
     goto :goto_0
 .end method
 
@@ -470,22 +470,22 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 721
+    .line 722
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 722
+    .line 723
     const-class v1, Lcom/android/settings/widget/SettingsAppWidgetProvider;
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 723
+    .line 724
     const-string v1, "android.intent.category.ALTERNATIVE"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 724
+    .line 725
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -510,12 +510,12 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 725
+    .line 726
     invoke-static {p0, v3, v0, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    .line 727
+    .line 728
     return-object v0
 .end method
 
@@ -527,8 +527,10 @@
     .end annotation
 
     .prologue
-    .line 823
+    .line 824
     :try_start_0
+    new-instance v4, Landroid/os/IPowerManagerProxy;
+
     const-string v5, "power"
 
     invoke-static {v5}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -537,18 +539,20 @@
 
     invoke-static {v5}, Landroid/os/IPowerManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IPowerManager;
 
-    move-result-object v4
+    move-result-object v5
 
-    .line 825
-    .local v4, power:Landroid/os/IPowerManager;
-    if-eqz v4, :cond_1
+    invoke-direct {v4, v5}, Landroid/os/IPowerManagerProxy;-><init>(Landroid/os/IPowerManager;)V
 
     .line 826
+    .local v4, power:Landroid/os/IPowerManagerProxy;
+    if-eqz v4, :cond_1
+
+    .line 827
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 827
+    .line 828
     .local v2, cr:Landroid/content/ContentResolver;
     const-string v5, "screen_brightness"
 
@@ -556,11 +560,11 @@
 
     move-result v0
 
-    .line 829
+    .line 830
     .local v0, brightness:I
     const/4 v1, 0x0
 
-    .line 831
+    .line 832
     .local v1, brightnessMode:I
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -574,26 +578,26 @@
 
     if-eqz v5, :cond_0
 
-    .line 833
+    .line 834
     const-string v5, "screen_brightness_mode"
 
     invoke-static {v2, v5}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 839
+    .line 840
     :cond_0
     const/4 v5, 0x1
 
     if-ne v1, v5, :cond_2
 
-    .line 840
+    .line 841
     sget v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->MINIMUM_BACKLIGHT:I
 
-    .line 841
+    .line 842
     const/4 v1, 0x0
 
-    .line 851
+    .line 852
     :goto_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -607,7 +611,7 @@
 
     if-eqz v5, :cond_5
 
-    .line 854
+    .line 855
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
@@ -616,58 +620,58 @@
 
     invoke-static {v5, v6, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 861
+    .line 862
     :goto_1
     if-nez v1, :cond_1
 
-    .line 862
-    invoke-interface {v4, v0}, Landroid/os/IPowerManager;->setBacklightBrightness(I)V
-
     .line 863
+    invoke-virtual {v4, v0}, Landroid/os/IPowerManagerProxy;->setBacklightBrightness(I)V
+
+    .line 864
     const-string v5, "screen_brightness"
 
     invoke-static {v2, v5, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 871
+    .line 872
     .end local v0           #brightness:I
     .end local v1           #brightnessMode:I
     .end local v2           #cr:Landroid/content/ContentResolver;
-    .end local v4           #power:Landroid/os/IPowerManager;
+    .end local v4           #power:Landroid/os/IPowerManagerProxy;
     :cond_1
     :goto_2
     return-void
 
-    .line 842
+    .line 843
     .restart local v0       #brightness:I
     .restart local v1       #brightnessMode:I
     .restart local v2       #cr:Landroid/content/ContentResolver;
-    .restart local v4       #power:Landroid/os/IPowerManager;
+    .restart local v4       #power:Landroid/os/IPowerManagerProxy;
     :cond_2
     const/16 v5, 0x66
 
     if-ge v0, v5, :cond_3
 
-    .line 843
+    .line 844
     const/16 v0, 0x66
 
     goto :goto_0
 
-    .line 844
+    .line 845
     :cond_3
     const/16 v5, 0xff
 
     if-ge v0, v5, :cond_4
 
-    .line 845
+    .line 846
     const/16 v0, 0xff
 
     goto :goto_0
 
-    .line 847
+    .line 848
     :cond_4
     const/4 v1, 0x1
 
-    .line 848
+    .line 849
     sget v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->MINIMUM_BACKLIGHT:I
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -675,21 +679,21 @@
 
     goto :goto_0
 
-    .line 859
+    .line 860
     :cond_5
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 866
+    .line 867
     .end local v0           #brightness:I
     .end local v1           #brightnessMode:I
     .end local v2           #cr:Landroid/content/ContentResolver;
-    .end local v4           #power:Landroid/os/IPowerManager;
+    .end local v4           #power:Landroid/os/IPowerManagerProxy;
     :catch_0
     move-exception v3
 
-    .line 867
+    .line 868
     .local v3, e:Landroid/os/RemoteException;
     const-string v5, "SettingsAppWidgetProvider"
 
@@ -715,12 +719,12 @@
 
     goto :goto_2
 
-    .line 868
+    .line 869
     .end local v3           #e:Landroid/os/RemoteException;
     :catch_1
     move-exception v3
 
-    .line 869
+    .line 870
     .local v3, e:Landroid/provider/Settings$SettingNotFoundException;
     const-string v5, "SettingsAppWidgetProvider"
 
@@ -761,83 +765,83 @@
 
     const v2, 0x7f0901dc
 
-    .line 679
+    .line 680
     sget-object v1, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sWifiState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v1, p1, p0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->setImageViewResources(Landroid/content/Context;Landroid/widget/RemoteViews;)V
 
-    .line 680
+    .line 681
     sget-object v1, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sBluetoothState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v1, p1, p0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->setImageViewResources(Landroid/content/Context;Landroid/widget/RemoteViews;)V
 
-    .line 681
+    .line 682
     sget-object v1, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sGpsState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v1, p1, p0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->setImageViewResources(Landroid/content/Context;Landroid/widget/RemoteViews;)V
 
-    .line 682
+    .line 683
     sget-object v1, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sSyncState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v1, p1, p0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->setImageViewResources(Landroid/content/Context;Landroid/widget/RemoteViews;)V
 
-    .line 684
+    .line 685
     invoke-static {p1}, Lcom/android/settings/widget/SettingsAppWidgetProvider;->getBrightnessMode(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 685
+    .line 686
     const v1, 0x7f020060
 
     invoke-virtual {p0, v2, v1}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
-    .line 687
+    .line 688
     invoke-virtual {p0, v3, v5}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
-    .line 711
+    .line 712
     :goto_0
     return-void
 
-    .line 690
+    .line 691
     :cond_0
     invoke-static {p1}, Lcom/android/settings/widget/SettingsAppWidgetProvider;->getBrightness(Landroid/content/Context;)I
 
     move-result v0
 
-    .line 692
+    .line 693
     .local v0, brightness:I
     const/16 v1, 0xcc
 
     if-le v0, v1, :cond_1
 
-    .line 693
+    .line 694
     const v1, 0x7f020061
 
     invoke-virtual {p0, v2, v1}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
-    .line 703
+    .line 704
     :goto_1
     if-le v0, v4, :cond_3
 
-    .line 704
+    .line 705
     invoke-virtual {p0, v3, v5}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     goto :goto_0
 
-    .line 695
+    .line 696
     :cond_1
     if-le v0, v4, :cond_2
 
-    .line 696
+    .line 697
     const v1, 0x7f020062
 
     invoke-virtual {p0, v2, v1}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
     goto :goto_1
 
-    .line 699
+    .line 700
     :cond_2
     const v1, 0x7f020063
 
@@ -845,7 +849,7 @@
 
     goto :goto_1
 
-    .line 707
+    .line 708
     :cond_3
     const v1, 0x7f020019
 
@@ -859,27 +863,27 @@
     .parameter "context"
 
     .prologue
-    .line 665
+    .line 666
     invoke-static {p0}, Lcom/android/settings/widget/SettingsAppWidgetProvider;->buildUpdate(Landroid/content/Context;)Landroid/widget/RemoteViews;
 
     move-result-object v1
 
-    .line 667
+    .line 668
     .local v1, views:Landroid/widget/RemoteViews;
     invoke-static {p0}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
 
     move-result-object v0
 
-    .line 668
+    .line 669
     .local v0, gm:Landroid/appwidget/AppWidgetManager;
     sget-object v2, Lcom/android/settings/widget/SettingsAppWidgetProvider;->THIS_APPWIDGET:Landroid/content/ComponentName;
 
     invoke-virtual {v0, v2, v1}, Landroid/appwidget/AppWidgetManager;->updateAppWidget(Landroid/content/ComponentName;Landroid/widget/RemoteViews;)V
 
-    .line 669
+    .line 670
     invoke-static {p0}, Lcom/android/settings/widget/SettingsAppWidgetProvider;->checkObserver(Landroid/content/Context;)V
 
-    .line 670
+    .line 671
     return-void
 .end method
 
@@ -890,15 +894,15 @@
     .parameter
 
     .prologue
-    .line 623
+    .line 624
     const-class v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;
 
-    .line 624
+    .line 625
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 625
+    .line 626
     new-instance v2, Landroid/content/ComponentName;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -917,22 +921,22 @@
 
     invoke-virtual {v1, v2, v0, v3}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
 
-    .line 629
+    .line 630
     sget-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sSettingsObserver:Lcom/android/settings/widget/SettingsAppWidgetProvider$SettingsObserver;
 
     if-eqz v0, :cond_0
 
-    .line 630
+    .line 631
     sget-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sSettingsObserver:Lcom/android/settings/widget/SettingsAppWidgetProvider$SettingsObserver;
 
     invoke-virtual {v0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$SettingsObserver;->stopObserving()V
 
-    .line 631
+    .line 632
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sSettingsObserver:Lcom/android/settings/widget/SettingsAppWidgetProvider$SettingsObserver;
 
-    .line 633
+    .line 634
     :cond_0
     return-void
 .end method
@@ -944,15 +948,15 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 610
+    .line 611
     const-class v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;
 
-    .line 611
+    .line 612
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 612
+    .line 613
     new-instance v2, Landroid/content/ComponentName;
 
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -967,10 +971,10 @@
 
     invoke-virtual {v1, v2, v4, v4}, Landroid/content/pm/PackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;II)V
 
-    .line 616
+    .line 617
     invoke-static {p1}, Lcom/android/settings/widget/SettingsAppWidgetProvider;->checkObserver(Landroid/content/Context;)V
 
-    .line 617
+    .line 618
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -983,7 +987,7 @@
 
     sput v0, Lcom/android/settings/widget/SettingsAppWidgetProvider;->MINIMUM_BACKLIGHT:I
 
-    .line 619
+    .line 620
     return-void
 .end method
 
@@ -993,15 +997,15 @@
     .parameter "intent"
 
     .prologue
-    .line 738
+    .line 739
     invoke-super {p0, p1, p2}, Landroid/appwidget/AppWidgetProvider;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 739
+    .line 740
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 740
+    .line 741
     .local v0, action:Ljava/lang/String;
     const-string v3, "android.net.wifi.WIFI_STATE_CHANGED"
 
@@ -1011,21 +1015,21 @@
 
     if-eqz v3, :cond_2
 
-    .line 741
+    .line 742
     sget-object v3, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sWifiState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v3, p1, p2}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->onActualStateChange(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 771
+    .line 772
     :cond_0
     :goto_0
     invoke-static {p1}, Lcom/android/settings/widget/SettingsAppWidgetProvider;->updateWidget(Landroid/content/Context;)V
 
-    .line 772
+    .line 773
     :cond_1
     return-void
 
-    .line 742
+    .line 743
     :cond_2
     const-string v3, "android.bluetooth.adapter.action.STATE_CHANGED"
 
@@ -1035,14 +1039,14 @@
 
     if-eqz v3, :cond_3
 
-    .line 743
+    .line 744
     sget-object v3, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sBluetoothState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v3, p1, p2}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->onActualStateChange(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 744
+    .line 745
     :cond_3
     const-string v3, "android.location.PROVIDERS_CHANGED"
 
@@ -1052,14 +1056,14 @@
 
     if-eqz v3, :cond_4
 
-    .line 745
+    .line 746
     sget-object v3, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sGpsState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v3, p1, p2}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->onActualStateChange(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 746
+    .line 747
     :cond_4
     sget-object v3, Landroid/content/SyncStorageEngine;->SYNC_CONNECTION_SETTING_CHANGED_INTENT:Landroid/content/Intent;
 
@@ -1073,14 +1077,14 @@
 
     if-eqz v3, :cond_5
 
-    .line 748
+    .line 749
     sget-object v3, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sSyncState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v3, p1, p2}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->onActualStateChange(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 749
+    .line 750
     :cond_5
     const-string v3, "android.intent.category.ALTERNATIVE"
 
@@ -1090,12 +1094,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 750
+    .line 751
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 751
+    .line 752
     .local v2, data:Landroid/net/Uri;
     invoke-virtual {v2}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
@@ -1105,61 +1109,61 @@
 
     move-result v1
 
-    .line 752
+    .line 753
     .local v1, buttonId:I
     if-nez v1, :cond_6
 
-    .line 753
+    .line 754
     sget-object v3, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sWifiState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v3, p1}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->toggleState(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 754
+    .line 755
     :cond_6
     const/4 v3, 0x1
 
     if-ne v1, v3, :cond_7
 
-    .line 755
+    .line 756
     invoke-direct {p0, p1}, Lcom/android/settings/widget/SettingsAppWidgetProvider;->toggleBrightness(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 756
+    .line 757
     :cond_7
     const/4 v3, 0x2
 
     if-ne v1, v3, :cond_8
 
-    .line 757
+    .line 758
     sget-object v3, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sSyncState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v3, p1}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->toggleState(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 758
+    .line 759
     :cond_8
     const/4 v3, 0x3
 
     if-ne v1, v3, :cond_9
 
-    .line 759
+    .line 760
     sget-object v3, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sGpsState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v3, p1}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->toggleState(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 760
+    .line 761
     :cond_9
     const/4 v3, 0x4
 
     if-ne v1, v3, :cond_0
 
-    .line 761
+    .line 762
     sget-object v3, Lcom/android/settings/widget/SettingsAppWidgetProvider;->sBluetoothState:Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;
 
     invoke-virtual {v3, p1}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;->toggleState(Landroid/content/Context;)V
@@ -1174,12 +1178,12 @@
     .parameter "appWidgetIds"
 
     .prologue
-    .line 601
+    .line 602
     invoke-static {p1}, Lcom/android/settings/widget/SettingsAppWidgetProvider;->buildUpdate(Landroid/content/Context;)Landroid/widget/RemoteViews;
 
     move-result-object v1
 
-    .line 603
+    .line 604
     .local v1, view:Landroid/widget/RemoteViews;
     const/4 v0, 0x0
 
@@ -1189,17 +1193,17 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 604
+    .line 605
     aget v2, p3, v0
 
     invoke-virtual {p2, v2, v1}, Landroid/appwidget/AppWidgetManager;->updateAppWidget(ILandroid/widget/RemoteViews;)V
 
-    .line 603
+    .line 604
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 606
+    .line 607
     :cond_0
     return-void
 .end method

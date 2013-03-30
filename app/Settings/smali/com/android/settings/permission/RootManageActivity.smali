@@ -18,6 +18,8 @@
 
 .field private mRootEnable:Landroid/preference/CheckBoxPreference;
 
+.field private mRootManager:Landroid/preference/Preference;
+
 .field private mSDKHelper:Lcom/lbe/security/service/sdkhelper/SDKHelper;
 
 
@@ -29,7 +31,7 @@
     .line 23
     invoke-direct {p0}, Landroid/preference/PreferenceActivity;-><init>()V
 
-    .line 112
+    .line 115
     return-void
 .end method
 
@@ -118,15 +120,15 @@
     .parameter "enabled"
 
     .prologue
-    .line 96
+    .line 99
     iget-object v0, p0, Lcom/android/settings/permission/RootManageActivity;->mSDKHelper:Lcom/lbe/security/service/sdkhelper/SDKHelper;
 
     invoke-virtual {v0, p1}, Lcom/lbe/security/service/sdkhelper/SDKHelper;->setROOTEnabled(Z)V
 
-    .line 97
+    .line 100
     invoke-direct {p0}, Lcom/android/settings/permission/RootManageActivity;->updateRootState()V
 
-    .line 98
+    .line 101
     return-void
 .end method
 
@@ -138,14 +140,14 @@
 
     const/4 v1, 0x0
 
-    .line 101
+    .line 104
     const v2, 0x7f0c06d5
 
     invoke-virtual {p0, v2}, Lcom/android/settings/permission/RootManageActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 102
+    .line 105
     .local v8, titleText:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/settings/permission/RootManageActivity;->mSDKHelper:Lcom/lbe/security/service/sdkhelper/SDKHelper;
 
@@ -153,11 +155,11 @@
 
     move-result v7
 
-    .line 103
+    .line 106
     .local v7, isRootEnabled:Z
     if-eqz v7, :cond_0
 
-    .line 104
+    .line 107
     new-instance v0, Lcom/lbe/security/service/privacy/PackageFilter;
 
     invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -172,7 +174,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/lbe/security/service/privacy/PackageFilter;-><init>(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Boolean;[I)V
 
-    .line 105
+    .line 108
     .local v0, packageFilter:Lcom/lbe/security/service/privacy/PackageFilter;
     iget-object v1, p0, Lcom/android/settings/permission/RootManageActivity;->mHipSService:Lcom/lbe/security/service/privacy/HIPSService;
 
@@ -180,7 +182,7 @@
 
     move-result v6
 
-    .line 106
+    .line 109
     .local v6, count:I
     const v1, 0x7f0c06d4
 
@@ -198,7 +200,7 @@
 
     move-result-object v8
 
-    .line 108
+    .line 111
     .end local v0           #packageFilter:Lcom/lbe/security/service/privacy/PackageFilter;
     .end local v6           #count:I
     :cond_0
@@ -206,12 +208,12 @@
 
     invoke-virtual {v1, v8}, Landroid/preference/CheckBoxPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 109
+    .line 112
     iget-object v1, p0, Lcom/android/settings/permission/RootManageActivity;->mRootEnable:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1, v7}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
-    .line 110
+    .line 113
     return-void
 .end method
 
@@ -224,15 +226,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 35
+    .line 36
     invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 36
+    .line 37
     const v1, 0x7f06003c
 
     invoke-virtual {p0, v1}, Lcom/android/settings/permission/RootManageActivity;->addPreferencesFromResource(I)V
 
-    .line 37
+    .line 38
     const-string v1, "root_enable"
 
     invoke-virtual {p0, v1}, Lcom/android/settings/permission/RootManageActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
@@ -243,40 +245,54 @@
 
     iput-object v1, p0, Lcom/android/settings/permission/RootManageActivity;->mRootEnable:Landroid/preference/CheckBoxPreference;
 
-    .line 38
+    .line 39
+    const-string v1, "root_manage"
+
+    invoke-virtual {p0, v1}, Lcom/android/settings/permission/RootManageActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/android/settings/permission/RootManageActivity;->mRootManager:Landroid/preference/Preference;
+
+    .line 40
     sget-boolean v1, Lmiui/os/Build;->IS_STABLE_VERSION:Z
 
     if-eqz v1, :cond_0
 
-    .line 39
+    .line 41
     iget-object v1, p0, Lcom/android/settings/permission/RootManageActivity;->mRootEnable:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1, v2}, Landroid/preference/CheckBoxPreference;->setEnabled(Z)V
 
-    .line 40
+    .line 42
     iget-object v1, p0, Lcom/android/settings/permission/RootManageActivity;->mRootEnable:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1, v2}, Landroid/preference/CheckBoxPreference;->setChecked(Z)V
 
-    .line 41
+    .line 43
+    iget-object v1, p0, Lcom/android/settings/permission/RootManageActivity;->mRootManager:Landroid/preference/Preference;
+
+    invoke-virtual {v1, v2}, Landroid/preference/Preference;->setEnabled(Z)V
+
+    .line 44
     const-string v1, "root_summary"
 
     invoke-virtual {p0, v1}, Lcom/android/settings/permission/RootManageActivity;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    .line 42
+    .line 45
     .local v0, summary:Landroid/preference/Preference;
     const v1, 0x7f0c06dc
 
     invoke-virtual {v0, v1}, Landroid/preference/Preference;->setSummary(I)V
 
-    .line 48
+    .line 51
     .end local v0           #summary:Landroid/preference/Preference;
     :goto_0
     return-void
 
-    .line 46
+    .line 49
     :cond_0
     new-instance v1, Lcom/android/settings/permission/RootManageActivity$LBEConnection;
 
@@ -286,7 +302,7 @@
 
     iput-object v1, p0, Lcom/android/settings/permission/RootManageActivity;->mLBEConnection:Lcom/android/settings/permission/RootManageActivity$LBEConnection;
 
-    .line 47
+    .line 50
     iget-object v1, p0, Lcom/android/settings/permission/RootManageActivity;->mLBEConnection:Lcom/android/settings/permission/RootManageActivity$LBEConnection;
 
     invoke-static {v1}, Lcom/lbe/security/sdk/SDKService;->bindSDKService(Lcom/lbe/security/sdk/SDKConnection;)Z
@@ -298,21 +314,21 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 55
     iget-object v0, p0, Lcom/android/settings/permission/RootManageActivity;->mHipSService:Lcom/lbe/security/service/privacy/HIPSService;
 
     if-eqz v0, :cond_0
 
-    .line 53
+    .line 56
     iget-object v0, p0, Lcom/android/settings/permission/RootManageActivity;->mLBEConnection:Lcom/android/settings/permission/RootManageActivity$LBEConnection;
 
     invoke-static {v0}, Lcom/lbe/security/sdk/SDKService;->unbindSDKService(Lcom/lbe/security/sdk/SDKConnection;)V
 
-    .line 55
+    .line 58
     :cond_0
     invoke-super {p0}, Landroid/preference/PreferenceActivity;->onDestroy()V
 
-    .line 56
+    .line 59
     return-void
 .end method
 
@@ -324,16 +340,16 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 61
+    .line 64
     iget-object v1, p0, Lcom/android/settings/permission/RootManageActivity;->mSDKHelper:Lcom/lbe/security/service/sdkhelper/SDKHelper;
 
     if-nez v1, :cond_0
 
-    .line 92
+    .line 95
     :goto_0
     return v0
 
-    .line 64
+    .line 67
     :cond_0
     const-string v1, "root_enable"
 
@@ -347,7 +363,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 65
+    .line 68
     iget-object v1, p0, Lcom/android/settings/permission/RootManageActivity;->mRootEnable:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v1}, Landroid/preference/CheckBoxPreference;->isChecked()Z
@@ -356,22 +372,22 @@
 
     if-eqz v1, :cond_1
 
-    .line 66
+    .line 69
     new-instance v1, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 67
+    .line 70
     const v2, 0x7f0c06ea
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
-    .line 68
+    .line 71
     const v2, 0x7f0c06eb
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 69
+    .line 72
     const/high16 v2, 0x104
 
     new-instance v3, Lcom/android/settings/permission/RootManageActivity$1;
@@ -380,7 +396,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 75
+    .line 78
     const v2, 0x104000a
 
     new-instance v3, Lcom/android/settings/permission/RootManageActivity$2;
@@ -389,12 +405,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 82
+    .line 85
     invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
     goto :goto_0
 
-    .line 84
+    .line 87
     :cond_1
     const/4 v1, 0x0
 
@@ -402,7 +418,7 @@
 
     goto :goto_0
 
-    .line 87
+    .line 90
     :cond_2
     const-string v0, "root_manage"
 
@@ -416,24 +432,24 @@
 
     if-eqz v0, :cond_3
 
-    .line 88
+    .line 91
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/android/settings/permission/PermDetailActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 89
+    .line 92
     const-string v1, "permission"
 
     const/16 v2, 0x200
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 90
+    .line 93
     invoke-virtual {p2, v0}, Landroid/preference/Preference;->setIntent(Landroid/content/Intent;)V
 
-    .line 92
+    .line 95
     :cond_3
     invoke-super {p0, p1, p2}, Landroid/preference/PreferenceActivity;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
 

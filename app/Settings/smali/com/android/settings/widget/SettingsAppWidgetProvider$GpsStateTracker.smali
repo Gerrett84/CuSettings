@@ -19,7 +19,7 @@
     .locals 1
 
     .prologue
-    .line 485
+    .line 486
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$StateTracker;-><init>(Lcom/android/settings/widget/SettingsAppWidgetProvider$1;)V
@@ -32,7 +32,7 @@
     .parameter "x0"
 
     .prologue
-    .line 485
+    .line 486
     invoke-direct {p0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker;-><init>()V
 
     return-void
@@ -45,12 +45,12 @@
     .parameter "context"
 
     .prologue
-    .line 495
+    .line 496
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 496
+    .line 497
     .local v1, resolver:Landroid/content/ContentResolver;
     const-string v2, "gps"
 
@@ -58,7 +58,7 @@
 
     move-result v0
 
-    .line 498
+    .line 499
     .local v0, on:Z
     if-eqz v0, :cond_0
 
@@ -77,7 +77,7 @@
     .locals 1
 
     .prologue
-    .line 486
+    .line 487
     const v0, 0x7f0901d6
 
     return v0
@@ -88,7 +88,7 @@
     .parameter "on"
 
     .prologue
-    .line 489
+    .line 490
     if-eqz p1, :cond_0
 
     const v0, 0x7f020065
@@ -106,7 +106,7 @@
     .locals 1
 
     .prologue
-    .line 487
+    .line 488
     const v0, 0x7f0901d7
 
     return v0
@@ -118,14 +118,14 @@
     .parameter "unused"
 
     .prologue
-    .line 505
+    .line 506
     invoke-virtual {p0, p1}, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker;->getActualState(Landroid/content/Context;)I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker;->setCurrentState(Landroid/content/Context;I)V
 
-    .line 506
+    .line 507
     return-void
 .end method
 
@@ -135,12 +135,12 @@
     .parameter "desiredState"
 
     .prologue
-    .line 510
+    .line 511
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 511
+    .line 512
     .local v0, resolver:Landroid/content/ContentResolver;
     new-instance v1, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker$1;
 
@@ -152,6 +152,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/settings/widget/SettingsAppWidgetProvider$GpsStateTracker$1;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 529
+    .line 530
     return-void
 .end method
