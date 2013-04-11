@@ -68,16 +68,16 @@
     .parameter "messageResId"
 
     .prologue
-    .line 417
+    .line 497
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 418
+    .line 498
     iput p1, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mIconResId:I
 
-    .line 419
+    .line 499
     iput p2, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mMessageResId:I
 
-    .line 420
+    .line 500
     return-void
 .end method
 
@@ -91,7 +91,7 @@
     .parameter "inflater"
 
     .prologue
-    .line 444
+    .line 524
     const v2, 0x603000c
 
     const/4 v3, 0x0
@@ -102,7 +102,7 @@
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 446
+    .line 526
     .local v1, v:Landroid/view/ViewGroup;
     const v2, 0x1020006
 
@@ -114,7 +114,7 @@
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mIconView:Landroid/widget/ImageView;
 
-    .line 447
+    .line 527
     const v2, 0x102000b
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -125,7 +125,7 @@
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mTextview:Landroid/widget/TextView;
 
-    .line 449
+    .line 529
     const v2, 0x60b0084
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -136,54 +136,68 @@
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 451
+    .line 531
     iget-object v2, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mIconView:Landroid/widget/ImageView;
 
     iget v3, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mIconResId:I
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 452
+    .line 532
     iget-object v2, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mTextview:Landroid/widget/TextView;
 
     iget v3, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mMessageResId:I
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
-    .line 454
+    .line 534
     const v0, 0x6010038
 
-    .line 455
+    .line 535
     .local v0, state:I
     const v2, 0x60c0011
 
     iget v3, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mMessageResId:I
 
-    if-ne v2, v3, :cond_0
+    if-ne v2, v3, :cond_1
 
-    .line 456
+    .line 536
     iget-object v2, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mTextview:Landroid/widget/TextView;
 
     const/4 v3, -0x1
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 457
-    const v0, 0x6010037
+    .line 537
+    const v0, 0x6010036
 
-    .line 459
+    .line 541
     :cond_0
+    :goto_0
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setAdditionalState(I)V
 
-    .line 461
+    .line 543
     return-object v1
+
+    .line 538
+    :cond_1
+    const v2, 0x60c0029
+
+    iget v3, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mMessageResId:I
+
+    if-ne v2, v3, :cond_0
+
+    .line 539
+    const v0, 0x6010037
+
+    goto :goto_0
 .end method
 
 .method public isEnabled()Z
     .locals 1
 
     .prologue
-    .line 423
+    .line 503
     const/4 v0, 0x1
 
     return v0
@@ -197,22 +211,22 @@
     .parameter "iconResId"
 
     .prologue
-    .line 427
+    .line 507
     iput p1, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mIconResId:I
 
-    .line 428
+    .line 508
     iget-object v0, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mIconView:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
-    .line 429
+    .line 509
     iget-object v0, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mIconView:Landroid/widget/ImageView;
 
     iget v1, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mIconResId:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 431
+    .line 511
     :cond_0
     return-void
 .end method
@@ -222,22 +236,22 @@
     .parameter "messageResId"
 
     .prologue
-    .line 434
+    .line 514
     iput p1, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mMessageResId:I
 
-    .line 435
+    .line 515
     iget-object v0, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mTextview:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    .line 436
+    .line 516
     iget-object v0, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mTextview:Landroid/widget/TextView;
 
     iget v1, p0, Lcom/android/internal/policy/impl/MiuiGlobalActions$SinglePressAction;->mMessageResId:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 438
+    .line 518
     :cond_0
     return-void
 .end method

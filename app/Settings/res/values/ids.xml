@@ -12,6 +12,7 @@
     <item type="id" name="android_beam_image">false</item>
     <item type="id" name="title">false</item>
     <item type="id" name="subtitle">false</item>
+    <item type="id" name="list">false</item>
     <item type="id" name="startup_count">false</item>
     <item type="id" name="man_add_application">false</item>
     <item type="id" name="icon">false</item>
@@ -48,8 +49,6 @@
     <item type="id" name="footerLeftButton">false</item>
     <item type="id" name="footerRightButton">false</item>
     <item type="id" name="buttonContainer">false</item>
-    <item type="id" name="leftSpacer">false</item>
-    <item type="id" name="rightSpacer">false</item>
     <item type="id" name="skip_button">false</item>
     <item type="id" name="emergencyCall">false</item>
     <item type="id" name="forgetPattern">false</item>
@@ -117,7 +116,9 @@
     <item type="id" name="admin_warning">false</item>
     <item type="id" name="admin_policies">false</item>
     <item type="id" name="buttonPanel">false</item>
+    <item type="id" name="leftSpacer">false</item>
     <item type="id" name="action_button">false</item>
+    <item type="id" name="rightSpacer">false</item>
     <item type="id" name="name">false</item>
     <item type="id" name="description">false</item>
     <item type="id" name="checkbox">false</item>
@@ -212,7 +213,6 @@
     <item type="id" name="msd_install_icon_1">false</item>
     <item type="id" name="msd_install_summary">false</item>
     <item type="id" name="msd_install_icon">false</item>
-    <item type="id" name="list">false</item>
     <item type="id" name="cancel_btn">false</item>
     <item type="id" name="show_owner_info_on_lockscreen_checkbox">false</item>
     <item type="id" name="owner_info_edit_text">false</item>

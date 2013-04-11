@@ -4,6 +4,7 @@
     <com.android.settings.applications.AppInfoPreference android:persistent="false" android:clickable="false" android:key="applications_info" />
     <PreferenceCategory>
         <CheckBoxPreference android:title="@string/app_notifications_switch_label" android:key="notification_switch" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/floating_window_switch_label" android:key="floating_window_switch" android:defaultValue="false" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/storage_label">
         <miui.preference.ValuePreference android:persistent="false" android:clickable="false" android:title="@string/total_size_label" android:key="total_size" />
