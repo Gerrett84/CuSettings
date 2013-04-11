@@ -92,7 +92,7 @@
         0xd0t 0x3t 0xct 0x7ft
         0xd1t 0x3t 0xct 0x7ft
         0xd2t 0x3t 0xct 0x7ft
-        0x7ct 0x8t 0xct 0x7ft
+        0x7ft 0x8t 0xct 0x7ft
     .end array-data
 .end method
 
@@ -215,7 +215,7 @@
 
     .line 296
     :pswitch_1
-    const v2, 0x7f0c087c
+    const v2, 0x7f0c087f
 
     invoke-virtual {p0, v2}, Lcom/android/settings/applications/ManageApplicationsActivity;->getString(I)Ljava/lang/String;
 
@@ -692,7 +692,7 @@
     .end local v0           #tab:Lcom/android/settings/applications/ManageApplicationsActivity$TabInfo;
     iget-object v2, p0, Lcom/android/settings/applications/ManageApplicationsActivity;->mApplicationsState:Lcom/android/settings/applications/ApplicationsState;
 
-    const v1, 0x7f0c087c
+    const v1, 0x7f0c087f
 
     invoke-virtual {p0, v1}, Lcom/android/settings/applications/ManageApplicationsActivity;->getString(I)Ljava/lang/String;
 

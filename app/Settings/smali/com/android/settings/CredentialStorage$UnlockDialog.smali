@@ -80,7 +80,7 @@
     .line 400
     .local v1, text:Ljava/lang/CharSequence;
     :goto_0
-    const v3, 0x7f090037
+    const v3, 0x7f090036
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -91,7 +91,7 @@
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 401
-    const v3, 0x7f09003a
+    const v3, 0x7f090039
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -112,7 +112,7 @@
     invoke-virtual {v3, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 404
-    const v3, 0x7f090038
+    const v3, 0x7f090037
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

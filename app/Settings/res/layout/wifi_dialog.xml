@@ -4,7 +4,7 @@
     <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <LinearLayout android:id="@id/info" style="@style/wifi_section" />
         <LinearLayout android:id="@id/type" android:visibility="gone" style="@style/wifi_section">
-            <LinearLayout android:background="@100794770" style="@style/input_item_horizontal">
+            <LinearLayout android:background="@miui:drawable/v5_group_single_item_bg_light" style="@style/input_item_horizontal">
                 <TextView android:background="@drawable/input_item_single" android:text="@string/wifi_ssid" style="@style/input_item_label" />
                 <EditText android:id="@id/ssid" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/input_item_content" />
             </LinearLayout>
@@ -65,7 +65,7 @@
                 <TextView android:visibility="gone" android:text="@string/proxy_warning_limited_support" style="@style/wifi_item_content" />
             </LinearLayout>
             <LinearLayout android:id="@id/proxy_fields" android:visibility="gone" android:layout_marginTop="10.0dip" style="@style/wifi_section">
-                <LinearLayout android:background="@100794766" style="@style/input_item_horizontal">
+                <LinearLayout android:background="@miui:drawable/v5_group_first_item_bg_light" style="@style/input_item_horizontal">
                     <TextView android:background="@drawable/input_item_first" android:text="@string/proxy_hostname_label" style="@style/input_item_label" />
                     <EditText android:id="@id/proxy_hostname" android:hint="@string/proxy_hostname_hint" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/input_item_content" />
                 </LinearLayout>
@@ -73,7 +73,7 @@
                     <TextView android:text="@string/proxy_port_label" style="@style/input_item_label" />
                     <EditText android:id="@id/proxy_port" android:hint="@string/proxy_port_hint" android:singleLine="true" android:inputType="number" style="@style/input_item_content" />
                 </LinearLayout>
-                <LinearLayout android:background="@100794768" style="@style/input_item_horizontal">>
+                <LinearLayout android:background="@miui:drawable/v5_group_last_item_bg_light" style="@style/input_item_horizontal">>
 <TextView android:background="@drawable/input_item_last" android:text="@string/proxy_exclusionlist_label" style="@style/input_item_label" />
                     <EditText android:id="@id/proxy_exclusionlist" android:hint="@string/proxy_exclusionlist_hint" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/input_item_content" />
                 </LinearLayout>
@@ -83,7 +83,7 @@
                 <Spinner android:entries="@array/wifi_ip_settings" android:id="@id/ip_settings" android:prompt="@string/wifi_ip_settings" style="@style/wifi_item_content" />
             </LinearLayout>
             <LinearLayout android:id="@id/staticip" android:visibility="gone" android:layout_marginTop="10.0dip" style="@style/wifi_section">
-                <LinearLayout android:background="@100794766" style="@style/input_item_horizontal">
+                <LinearLayout android:background="@miui:drawable/v5_group_first_item_bg_light" style="@style/input_item_horizontal">
                     <TextView android:background="@drawable/input_item_first" android:text="@string/wifi_ip_address" style="@style/input_item_label" />
                     <EditText android:id="@id/ipaddress" android:hint="@string/wifi_ip_address_hint" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/input_item_content" />
                 </LinearLayout>
@@ -99,7 +99,7 @@
                     <TextView android:text="@string/wifi_dns1" style="@style/input_item_label" />
                     <EditText android:id="@id/dns1" android:hint="@string/wifi_dns1_hint" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/input_item_content" />
                 </LinearLayout>
-                <LinearLayout android:background="@100794768" style="@style/input_item_horizontal"> >
+                <LinearLayout android:background="@miui:drawable/v5_group_last_item_bg_light" style="@style/input_item_horizontal"> >
 <TextView android:background="@drawable/input_item_last" android:text="@string/wifi_dns2" style="@style/input_item_label" />
                     <EditText android:id="@id/dns2" android:hint="@string/wifi_dns2_hint" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/input_item_content" />
                 </LinearLayout>

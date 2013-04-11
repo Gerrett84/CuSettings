@@ -41,7 +41,7 @@
     iput-object p1, p0, Lcom/android/settings/applications/RunningProcessesView$ViewHolder;->rootView:Landroid/view/View;
 
     .line 158
-    const v0, 0x7f090010
+    const v0, 0x7f090011
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -52,7 +52,7 @@
     iput-object v0, p0, Lcom/android/settings/applications/RunningProcessesView$ViewHolder;->icon:Landroid/widget/ImageView;
 
     .line 159
-    const v0, 0x7f090078
+    const v0, 0x7f090079
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -63,7 +63,7 @@
     iput-object v0, p0, Lcom/android/settings/applications/RunningProcessesView$ViewHolder;->name:Landroid/widget/TextView;
 
     .line 160
-    const v0, 0x7f090079
+    const v0, 0x7f09007a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -85,7 +85,7 @@
     iput-object v0, p0, Lcom/android/settings/applications/RunningProcessesView$ViewHolder;->size:Landroid/widget/TextView;
 
     .line 162
-    const v0, 0x7f09001d
+    const v0, 0x7f09001e
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -262,13 +262,6 @@
 
     .line 194
     :cond_1
-    iget-object v3, p0, Lcom/android/settings/applications/RunningProcessesView$ViewHolder;->icon:Landroid/widget/ImageView;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v3, v5}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 195
     iget-object v3, p0, Lcom/android/settings/applications/RunningProcessesView$ViewHolder;->rootView:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -277,7 +270,7 @@
 
     invoke-virtual {v1, v3, p3}, Lcom/android/settings/applications/RunningProcessesView$ActiveItem;->updateTime(Landroid/content/Context;Ljava/lang/StringBuilder;)V
 
-    .line 196
+    .line 195
     monitor-exit v4
 
     return-object v1
@@ -292,7 +285,7 @@
 
     goto :goto_0
 
-    .line 197
+    .line 196
     .end local v1           #ai:Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
     .end local v2           #pm:Landroid/content/pm/PackageManager;
     :catchall_0

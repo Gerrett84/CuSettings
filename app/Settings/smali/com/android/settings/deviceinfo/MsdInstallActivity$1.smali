@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 107
+    .line 112
     iput-object p1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity$1;->this$0:Lcom/android/settings/deviceinfo/MsdInstallActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "isChecked"
 
     .prologue
-    .line 111
+    .line 116
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity$1;->this$0:Lcom/android/settings/deviceinfo/MsdInstallActivity;
 
     #getter for: Lcom/android/settings/deviceinfo/MsdInstallActivity;->mNextButton:Landroid/widget/Button;
@@ -64,6 +64,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 112
+    .line 117
     return-void
 .end method

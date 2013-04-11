@@ -562,7 +562,7 @@
     if-nez v3, :cond_7
 
     .line 158
-    const v4, 0x7f0c0871
+    const v4, 0x7f0c0874
 
     invoke-virtual {p0, v4}, Lcom/android/settings/MiuiDriveModeSettings;->getString(I)Ljava/lang/String;
 
@@ -734,7 +734,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c0868
+    const v2, 0x7f0c086b
 
     invoke-virtual {v1, v2}, Landroid/app/ActionBar;->setTitle(I)V
 

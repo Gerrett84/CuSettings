@@ -381,7 +381,7 @@
     invoke-direct {p0, v3, v5, v6, v1}, Lcom/android/settings/display/ScreenColorActivity;->addPreference([Ljava/lang/String;[Ljava/lang/String;[II)V
 
     .line 66
-    const v5, 0x7f0c087f
+    const v5, 0x7f0c0882
 
     invoke-virtual {v0, v5}, Landroid/app/ActionBar;->setTitle(I)V
 
@@ -429,7 +429,7 @@
     invoke-direct {p0, v2, v5, v6, v1}, Lcom/android/settings/display/ScreenColorActivity;->addPreference([Ljava/lang/String;[Ljava/lang/String;[II)V
 
     .line 73
-    const v5, 0x7f0c0880
+    const v5, 0x7f0c0883
 
     invoke-virtual {v0, v5}, Landroid/app/ActionBar;->setTitle(I)V
 

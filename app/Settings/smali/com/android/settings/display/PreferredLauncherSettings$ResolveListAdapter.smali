@@ -246,7 +246,7 @@
     invoke-virtual {v0, v6}, Lmiui/widget/CheckedTextView;->setChecked(Z)V
 
     .line 189
-    const v6, 0x7f090010
+    const v6, 0x7f090011
 
     invoke-virtual {p2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -267,7 +267,7 @@
     invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 191
-    const v6, 0x7f090078
+    const v6, 0x7f090079
 
     invoke-virtual {p2, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

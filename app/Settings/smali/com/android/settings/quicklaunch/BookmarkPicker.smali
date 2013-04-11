@@ -73,7 +73,7 @@
     :array_0
     .array-data 0x4
         0xct 0x0t 0x9t 0x7ft
-        0x10t 0x0t 0x9t 0x7ft
+        0x11t 0x0t 0x9t 0x7ft
     .end array-data
 .end method
 
@@ -882,7 +882,7 @@
 
     move-result v1
 
-    const v2, 0x7f090010
+    const v2, 0x7f090011
 
     if-ne v1, v2, :cond_1
 

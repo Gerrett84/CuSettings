@@ -106,7 +106,7 @@
 
     .line 94
     :goto_0
-    const v14, 0x7f090010
+    const v14, 0x7f090011
 
     invoke-virtual {v13, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     .line 95
     .local v7, iconView:Landroid/widget/ImageView;
-    const v14, 0x7f090011
+    const v14, 0x7f090012
 
     invoke-virtual {v13, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -136,7 +136,7 @@
 
     .line 97
     .local v10, permLogView:Landroid/widget/TextView;
-    const v14, 0x7f090015
+    const v14, 0x7f090016
 
     invoke-virtual {v13, v14}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

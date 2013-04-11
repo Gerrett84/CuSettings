@@ -327,12 +327,12 @@
     <string name="unlock_change_lock_pin_title">更改解锁数字密码</string>
     <string name="unlock_change_lock_password_title">更改解锁密码</string>
     <string name="lockpassword_password_too_short">密码必须至少包含 %d 个字符</string>
-    <string name="lockpassword_pin_too_short">数字密码必须至少包含 %d 个数字</string>
+    <string name="lockpassword_pin_too_short">数字密码必须至少包含%d个数字</string>
     <string name="lockpassword_press_continue">完成后触摸“继续”</string>
     <string name="lockpassword_continue_label">继续</string>
     <string name="lockpassword_password_too_long">密码必须少于 %d 个字符。</string>
-    <string name="lockpassword_pin_too_long">数字密码必须少于 %d 个数字。</string>
-    <string name="lockpassword_pin_contains_non_digits">数字密码只能包含 0-9 的数字。</string>
+    <string name="lockpassword_pin_too_long">数字密码必须少于%d个数字。</string>
+    <string name="lockpassword_pin_contains_non_digits">数字密码只能包含0-9的数字。</string>
     <string name="lockpassword_pin_recently_used">设备管理员不允许使用最近用过的密码。</string>
     <string name="lockpassword_illegal_character">密码包含非法字符。</string>
     <string name="lockpassword_password_requires_alpha">密码必须包含至少 1 个字母。</string>
@@ -2121,6 +2121,11 @@ Android File Transfer,
  注：在 ubuntu 8.04 环境"</string>
     <string name="msd_install_status_undo">安装驱动程序</string>
     <string name="msd_install_status_done">我已安装驱动程序</string>
+    <string name="msd_driver_download">请手动下载驱动程序</string>
+    <string name="msd_driver_windows_xp_download">"请使用你的电脑，下载驱动程序并执行Setup.exe进行安装
+下载地址：http://miui.com/win"</string>
+    <string name="msd_driver_mac_download">"请使用你的电脑，下载驱动程序并执行AndroidFileTransfer.dmg进行安装
+下载地址：http://miui.com/mac"</string>
     <string name="vpn_settings_password">VPN 密码保护</string>
     <string name="vpn_safe">安全</string>
     <string name="vpn_configure">配置</string>
@@ -2173,6 +2178,8 @@ Android File Transfer,
     <string name="application_item_permission">允许</string>
     <string name="application_item_already_permission">已允许</string>
     <string name="application_forbid_auto_startup">禁用%s自后台启动</string>
+    <string name="floating_window_switch_label">显示悬浮窗</string>
+    <string name="app_floating_window_dlg">允许“%1$s“显示悬浮窗吗？</string>
     <string name="wps_category">快捷安全连接</string>
     <string name="wps_connect_title">连接WPS</string>
     <string name="wps_connect_summary">请确认无线路由器支持并开启WPS</string>

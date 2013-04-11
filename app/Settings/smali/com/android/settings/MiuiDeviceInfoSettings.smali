@@ -243,16 +243,32 @@
 
     check-cast v5, Lmiui/preference/ValuePreference;
 
+    .line 439
     .local v5, internalMemory:Lmiui/preference/ValuePreference;
     iget-object v11, p0, Lcom/android/settings/MiuiDeviceInfoSettings;->mEmulatedInfo:Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;
 
     iget-wide v1, v11, Lcom/android/settings/MiuiDeviceInfoSettings$SDCardInfo;->free:J
 
+    .line 440
     .local v1, availableSize:J
+    invoke-virtual {p0}, Lcom/android/settings/MiuiDeviceInfoSettings;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v11
+
+    const v12, 0x7f0a0011
+
+    invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v11
+
+    if-nez v11, :cond_0
+
+    .line 441
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
     move-result-object v6
 
+    .line 442
     .local v6, path:Ljava/io/File;
     new-instance v7, Landroid/os/StatFs;
 
@@ -286,6 +302,7 @@
     .end local v3           #blockSize:J
     .end local v6           #path:Ljava/io/File;
     .end local v7           #stat:Landroid/os/StatFs;
+    :cond_0
     const v11, 0x7f0c072c
 
     const/4 v12, 0x1

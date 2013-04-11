@@ -977,7 +977,7 @@
     iput-object v2, p0, Lcom/android/settings/applications/ManageApplications;->mRootView:Landroid/view/View;
 
     .line 887
-    const v5, 0x7f0900bd
+    const v5, 0x7f0900be
 
     invoke-virtual {v2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1004,7 +1004,7 @@
     invoke-virtual {v5, v0}, Landroid/support/v4/view/ViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
 
     .line 891
-    const v5, 0x7f0900be
+    const v5, 0x7f0900bf
 
     invoke-virtual {v2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

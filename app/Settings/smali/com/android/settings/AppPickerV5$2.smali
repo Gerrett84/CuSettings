@@ -1,92 +1,60 @@
-.class final Lcom/android/settings/AppPickerV5$2;
+.class Lcom/android/settings/AppPickerV5$2;
 .super Ljava/lang/Object;
 .source "AppPickerV5.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/settings/AppPickerV5;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/settings/AppPickerV5;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcom/android/settings/AppPickerV5$MyApplicationInfo;",
-        ">;"
-    }
 .end annotation
 
 
 # instance fields
-.field private final collator:Ljava/text/Collator;
+.field final synthetic this$0:Lcom/android/settings/AppPickerV5;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 1
+.method constructor <init>(Lcom/android/settings/AppPickerV5;)V
+    .locals 0
+    .parameter
 
     .prologue
-    .line 125
+    .line 61
+    iput-object p1, p0, Lcom/android/settings/AppPickerV5$2;->this$0:Lcom/android/settings/AppPickerV5;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 131
-    invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/settings/AppPickerV5$2;->collator:Ljava/text/Collator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Lcom/android/settings/AppPickerV5$MyApplicationInfo;Lcom/android/settings/AppPickerV5$MyApplicationInfo;)I
-    .locals 3
-    .parameter "a"
-    .parameter "b"
+.method public onDismiss(Landroid/content/DialogInterface;)V
+    .locals 2
+    .parameter "dialog"
 
     .prologue
-    .line 128
-    iget-object v0, p0, Lcom/android/settings/AppPickerV5$2;->collator:Ljava/text/Collator;
+    .line 64
+    iget-object v0, p0, Lcom/android/settings/AppPickerV5$2;->this$0:Lcom/android/settings/AppPickerV5;
 
-    iget-object v1, p1, Lcom/android/settings/AppPickerV5$MyApplicationInfo;->label:Ljava/lang/CharSequence;
+    const/4 v1, 0x0
 
-    iget-object v2, p2, Lcom/android/settings/AppPickerV5$MyApplicationInfo;->label:Ljava/lang/CharSequence;
+    #setter for: Lcom/android/settings/AppPickerV5;->mAlertDialog:Landroid/app/AlertDialog;
+    invoke-static {v0, v1}, Lcom/android/settings/AppPickerV5;->access$102(Lcom/android/settings/AppPickerV5;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 
-    invoke-virtual {v0, v1, v2}, Ljava/text/Collator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .line 65
+    iget-object v0, p0, Lcom/android/settings/AppPickerV5$2;->this$0:Lcom/android/settings/AppPickerV5;
 
-    move-result v0
+    invoke-virtual {v0}, Lcom/android/settings/AppPickerV5;->finish()V
 
-    return v0
-.end method
-
-.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 125
-    check-cast p1, Lcom/android/settings/AppPickerV5$MyApplicationInfo;
-
-    .end local p1
-    check-cast p2, Lcom/android/settings/AppPickerV5$MyApplicationInfo;
-
-    .end local p2
-    invoke-virtual {p0, p1, p2}, Lcom/android/settings/AppPickerV5$2;->compare(Lcom/android/settings/AppPickerV5$MyApplicationInfo;Lcom/android/settings/AppPickerV5$MyApplicationInfo;)I
-
-    move-result v0
-
-    return v0
+    .line 66
+    return-void
 .end method

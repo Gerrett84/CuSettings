@@ -16,7 +16,7 @@
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:key="user">
-        <Preference android:title="@101450104" android:key="user_manual" />
+        <Preference android:title="@miui:string/miui_user_manual_title" android:key="user_manual" />
         <PreferenceScreen android:title="@string/legal_information" android:key="container" android:fragment="com.android.settings.Legal" />
         <PreferenceScreen android:title="@string/settings_safetylegal_title" android:key="safetylegal">
             <intent android:action="android.settings.SAFETY" />

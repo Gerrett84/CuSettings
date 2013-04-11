@@ -1128,7 +1128,7 @@
     .local v0, context:Landroid/content/Context;
     iget-object v3, p0, Lcom/android/settings/vpn2/VpnDialog;->mView:Landroid/view/View;
 
-    const v6, 0x7f090078
+    const v6, 0x7f090079
 
     invoke-virtual {v3, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

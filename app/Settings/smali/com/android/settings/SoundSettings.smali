@@ -151,19 +151,19 @@
     .end annotation
 
     .prologue
-    .line 234
+    .line 240
     sget-boolean v1, Lmiui/os/Build;->IS_MITWO:Z
 
     if-nez v1, :cond_0
 
-    .line 235
+    .line 241
     const-string v1, "dolby_control"
 
     invoke-virtual {p0, v1}, Lcom/android/settings/SoundSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v0
 
-    .line 236
+    .line 242
     .local v0, dolby:Landroid/preference/Preference;
     invoke-virtual {p0}, Lcom/android/settings/SoundSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
@@ -171,7 +171,7 @@
 
     invoke-virtual {v1, v0}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
-    .line 238
+    .line 244
     .end local v0           #dolby:Landroid/preference/Preference;
     :cond_0
     return-void
@@ -181,7 +181,7 @@
     .locals 2
 
     .prologue
-    .line 262
+    .line 268
     new-instance v0, Ljava/lang/Thread;
 
     iget-object v1, p0, Lcom/android/settings/SoundSettings;->mRingtoneLookupRunnable:Ljava/lang/Runnable;
@@ -190,7 +190,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 263
+    .line 269
     return-void
 .end method
 
@@ -200,7 +200,7 @@
     .locals 1
 
     .prologue
-    .line 317
+    .line 323
     const v0, 0x7f0c065f
 
     return v0
@@ -782,7 +782,26 @@
     .line 229
     invoke-direct {p0}, Lcom/android/settings/SoundSettings;->initDolyPref()V
 
-    .line 230
+    .line 232
+    const-string v12, "dirac_control"
+
+    invoke-virtual {p0, v12}, Lcom/android/settings/SoundSettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
+
+    move-result-object v7
+
+    .line 233
+    .restart local v7       #pref:Landroid/preference/Preference;
+    if-eqz v7, :cond_f
+
+    .line 234
+    invoke-virtual {p0}, Lcom/android/settings/SoundSettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+
+    move-result-object v12
+
+    invoke-virtual {v12, v7}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+
+    .line 236
+    :cond_f
     return-void
 .end method
 
@@ -792,12 +811,12 @@
     .parameter "objValue"
 
     .prologue
-    .line 301
+    .line 307
     invoke-virtual {p1}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 302
+    .line 308
     .local v1, key:Ljava/lang/String;
     const-string v3, "emergency_tone"
 
@@ -807,7 +826,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 304
+    .line 310
     :try_start_0
     check-cast p2, Ljava/lang/String;
 
@@ -816,7 +835,7 @@
 
     move-result v2
 
-    .line 305
+    .line 311
     .local v2, value:I
     invoke-virtual {p0}, Lcom/android/settings/SoundSettings;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -828,7 +847,7 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 312
+    .line 318
     .end local v2           #value:I
     :cond_0
     :goto_0
@@ -836,11 +855,11 @@
 
     return v3
 
-    .line 307
+    .line 313
     :catch_0
     move-exception v0
 
-    .line 308
+    .line 314
     .local v0, e:Ljava/lang/NumberFormatException;
     const-string v3, "SoundSettings"
 
@@ -864,12 +883,12 @@
 
     const/4 v1, 0x0
 
-    .line 268
+    .line 274
     iget-object v2, p0, Lcom/android/settings/SoundSettings;->mVibrateWhenRinging:Landroid/preference/CheckBoxPreference;
 
     if-ne p2, v2, :cond_2
 
-    .line 269
+    .line 275
     invoke-virtual {p0}, Lcom/android/settings/SoundSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -887,7 +906,7 @@
     :goto_0
     invoke-static {v2, v3, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 297
+    .line 303
     :cond_0
     :goto_1
     invoke-super {p0, p1, p2}, Lcom/android/settings/SettingsPreferenceFragment;->onPreferenceTreeClick(Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z
@@ -900,16 +919,16 @@
     :cond_1
     move v0, v1
 
-    .line 269
+    .line 275
     goto :goto_0
 
-    .line 271
+    .line 277
     :cond_2
     iget-object v2, p0, Lcom/android/settings/SoundSettings;->mDtmfTone:Landroid/preference/CheckBoxPreference;
 
     if-ne p2, v2, :cond_4
 
-    .line 272
+    .line 278
     invoke-virtual {p0}, Lcom/android/settings/SoundSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -934,13 +953,13 @@
 
     goto :goto_3
 
-    .line 275
+    .line 281
     :cond_4
     iget-object v2, p0, Lcom/android/settings/SoundSettings;->mSoundEffects:Landroid/preference/CheckBoxPreference;
 
     if-ne p2, v2, :cond_7
 
-    .line 276
+    .line 282
     iget-object v2, p0, Lcom/android/settings/SoundSettings;->mSoundEffects:Landroid/preference/CheckBoxPreference;
 
     invoke-virtual {v2}, Landroid/preference/CheckBoxPreference;->isChecked()Z
@@ -949,12 +968,12 @@
 
     if-eqz v2, :cond_5
 
-    .line 277
+    .line 283
     iget-object v2, p0, Lcom/android/settings/SoundSettings;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v2}, Landroid/media/AudioManager;->loadSoundEffects()V
 
-    .line 281
+    .line 287
     :goto_4
     invoke-virtual {p0}, Lcom/android/settings/SoundSettings;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -975,7 +994,7 @@
 
     goto :goto_1
 
-    .line 279
+    .line 285
     :cond_5
     iget-object v2, p0, Lcom/android/settings/SoundSettings;->mAudioManager:Landroid/media/AudioManager;
 
@@ -986,16 +1005,16 @@
     :cond_6
     move v0, v1
 
-    .line 281
+    .line 287
     goto :goto_5
 
-    .line 284
+    .line 290
     :cond_7
     iget-object v2, p0, Lcom/android/settings/SoundSettings;->mHapticFeedback:Landroid/preference/CheckBoxPreference;
 
     if-ne p2, v2, :cond_9
 
-    .line 285
+    .line 291
     invoke-virtual {p0}, Lcom/android/settings/SoundSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -1020,13 +1039,13 @@
 
     goto :goto_6
 
-    .line 288
+    .line 294
     :cond_9
     iget-object v2, p0, Lcom/android/settings/SoundSettings;->mLockSounds:Landroid/preference/CheckBoxPreference;
 
     if-ne p2, v2, :cond_b
 
-    .line 289
+    .line 295
     invoke-virtual {p0}, Lcom/android/settings/SoundSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -1051,7 +1070,7 @@
 
     goto :goto_7
 
-    .line 292
+    .line 298
     :cond_b
     iget-object v0, p0, Lcom/android/settings/SoundSettings;->mMusicFx:Landroid/preference/Preference;
 
@@ -1064,13 +1083,13 @@
     .locals 0
 
     .prologue
-    .line 247
+    .line 253
     invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
 
-    .line 249
+    .line 255
     invoke-direct {p0}, Lcom/android/settings/SoundSettings;->lookupRingtoneNames()V
 
-    .line 250
+    .line 256
     return-void
 .end method
 
@@ -1081,7 +1100,7 @@
     .end annotation
 
     .prologue
-    .line 243
+    .line 249
     return-void
 .end method
 
@@ -1094,23 +1113,23 @@
     .end annotation
 
     .prologue
-    .line 254
+    .line 260
     invoke-virtual {p0}, Lcom/android/settings/SoundSettings;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 255
+    .line 261
     .local v0, context:Landroid/content/Context;
     if-eqz v0, :cond_0
 
-    .line 256
+    .line 262
     const/4 v2, 0x1
 
     invoke-static {v0, p1, v2}, Landroid/media/ExtraRingtone;->getRingtoneTitle(Landroid/content/Context;Landroid/net/Uri;Z)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 257
+    .line 263
     .local v1, summary:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/settings/SoundSettings;->mHandler:Landroid/os/Handler;
 
@@ -1122,7 +1141,7 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 259
+    .line 265
     .end local v1           #summary:Ljava/lang/String;
     :cond_0
     return-void

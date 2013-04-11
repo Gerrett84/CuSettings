@@ -115,7 +115,7 @@
 
     .line 126
     :goto_0
-    const v19, 0x7f090010
+    const v19, 0x7f090011
 
     invoke-virtual/range {v18 .. v19}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -125,7 +125,7 @@
 
     .line 127
     .local v9, iconView:Landroid/widget/ImageView;
-    const v19, 0x7f090011
+    const v19, 0x7f090012
 
     invoke-virtual/range {v18 .. v19}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -145,7 +145,7 @@
 
     .line 129
     .local v13, permView:Landroid/widget/TextView;
-    const v19, 0x7f090015
+    const v19, 0x7f090016
 
     invoke-virtual/range {v18 .. v19}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

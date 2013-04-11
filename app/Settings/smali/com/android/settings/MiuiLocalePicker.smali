@@ -108,7 +108,7 @@
 
     const v3, 0x7f040048
 
-    const v4, 0x7f0900b4
+    const v4, 0x7f0900b5
 
     move-object v0, p1
 

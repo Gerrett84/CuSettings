@@ -156,7 +156,7 @@
     invoke-virtual {p0, v6}, Lcom/android/settings/Display;->setContentView(I)V
 
     .line 42
-    const v6, 0x7f09007d
+    const v6, 0x7f09007e
 
     invoke-virtual {p0, v6}, Lcom/android/settings/Display;->findViewById(I)Landroid/view/View;
 
@@ -235,7 +235,7 @@
     invoke-virtual {v6, v0}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
     .line 55
-    const v6, 0x7f09007e
+    const v6, 0x7f09007f
 
     invoke-virtual {p0, v6}, Lcom/android/settings/Display;->findViewById(I)Landroid/view/View;
 
@@ -257,7 +257,7 @@
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 58
-    const v6, 0x7f09007f
+    const v6, 0x7f090080
 
     invoke-virtual {p0, v6}, Lcom/android/settings/Display;->findViewById(I)Landroid/view/View;
 

@@ -70,7 +70,7 @@
 
     iget-object v2, v2, Lcom/android/settings/BackgroundApplicationsManager$ListViewAdapter;->this$0:Lcom/android/settings/BackgroundApplicationsManager;
 
-    const v3, 0x7f0c0889
+    const v3, 0x7f0c088c
 
     invoke-virtual {v2, v3}, Lcom/android/settings/BackgroundApplicationsManager;->getText(I)Ljava/lang/CharSequence;
 

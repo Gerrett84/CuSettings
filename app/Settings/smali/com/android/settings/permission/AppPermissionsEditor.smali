@@ -130,7 +130,7 @@
 
     iput-object v0, p0, Lcom/android/settings/permission/AppPermissionsEditor;->mPermsListener:Landroid/preference/Preference$OnPreferenceChangeListener;
 
-    .line 374
+    .line 375
     return-void
 .end method
 
@@ -297,25 +297,7 @@
 
     .line 339
     .local v5, time:Ljava/lang/String;
-    const-string v6, "%s %s"
-
-    const/4 v7, 0x2
-
-    new-array v7, v7, [Ljava/lang/Object;
-
-    const/4 v8, 0x0
-
-    aput-object v0, v7, v8
-
-    const/4 v8, 0x1
-
-    aput-object v5, v7, v8
-
-    invoke-static {v6, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v6}, Lcom/android/settings/permission/PermissionLogPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v0}, Lcom/android/settings/permission/PermissionLogPreference;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 340
     invoke-virtual {v3}, Lcom/lbe/security/bean/EventLog;->getTitle()Ljava/lang/String;
@@ -324,7 +306,10 @@
 
     invoke-virtual {v4, v6}, Lcom/android/settings/permission/PermissionLogPreference;->setPermName(Ljava/lang/String;)V
 
-    .line 342
+    .line 341
+    invoke-virtual {v4, v5}, Lcom/android/settings/permission/PermissionLogPreference;->setTime(Ljava/lang/String;)V
+
+    .line 343
     :try_start_0
     iget-object v6, p0, Lcom/android/settings/permission/AppPermissionsEditor;->mSDKHelper:Lcom/lbe/security/service/sdkhelper/SDKHelper;
 
@@ -340,7 +325,7 @@
     :try_end_0
     .catch Lcom/lbe/security/sdk/SDKException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 346
+    .line 347
     :goto_1
     iget-object v6, p0, Lcom/android/settings/permission/AppPermissionsEditor;->mLogsCategory:Landroid/preference/PreferenceCategory;
 
@@ -348,11 +333,11 @@
 
     goto :goto_0
 
-    .line 343
+    .line 344
     :catch_0
     move-exception v1
 
-    .line 344
+    .line 345
     .local v1, e:Lcom/lbe/security/sdk/SDKException;
     const-string v6, "AppPermissionsEditor"
 
@@ -362,7 +347,7 @@
 
     goto :goto_1
 
-    .line 349
+    .line 350
     .end local v0           #data:Ljava/lang/String;
     .end local v1           #e:Lcom/lbe/security/sdk/SDKException;
     .end local v2           #i$:Ljava/util/Iterator;
@@ -378,7 +363,7 @@
 
     invoke-virtual {v6, v7}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
-    .line 351
+    .line 352
     :cond_1
     return-void
 .end method
@@ -639,42 +624,42 @@
     .parameter "action"
 
     .prologue
-    .line 360
+    .line 361
     packed-switch p1, :pswitch_data_0
 
-    .line 371
+    .line 372
     const/4 v0, -0x1
 
     :goto_0
     return v0
 
-    .line 362
+    .line 363
     :pswitch_0
     const v0, 0x7f020002
 
-    .line 363
+    .line 364
     .local v0, res:I
     goto :goto_0
 
-    .line 365
+    .line 366
     .end local v0           #res:I
     :pswitch_1
-    const v0, 0x7f02013a
+    const v0, 0x7f02013c
 
-    .line 366
+    .line 367
     .restart local v0       #res:I
     goto :goto_0
-
-    .line 368
-    .end local v0           #res:I
-    :pswitch_2
-    const v0, 0x7f02013b
 
     .line 369
+    .end local v0           #res:I
+    :pswitch_2
+    const v0, 0x7f02013d
+
+    .line 370
     .restart local v0       #res:I
     goto :goto_0
 
-    .line 360
+    .line 361
     nop
 
     :pswitch_data_0
@@ -691,12 +676,12 @@
     .parameter "format"
 
     .prologue
-    .line 354
+    .line 355
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     invoke-direct {v0, p3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 355
+    .line 356
     .local v0, formatter:Ljava/text/SimpleDateFormat;
     new-instance v1, Ljava/util/Date;
 

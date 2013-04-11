@@ -2,5 +2,5 @@
 <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <ImageView android:id="@id/signal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/wifi_signal" />
-    <ImageView android:id="@id/detail_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@100794585" />
+    <ImageView android:id="@id/detail_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@miui:drawable/v5_arrow_right" />
 </LinearLayout>

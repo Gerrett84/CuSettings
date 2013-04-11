@@ -287,7 +287,7 @@
 
     .line 169
     .local v0, h:Lcom/android/settings/DeviceAdminSettings$ViewHolder;
-    const v2, 0x7f090010
+    const v2, 0x7f090011
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -298,7 +298,7 @@
     iput-object v2, v0, Lcom/android/settings/DeviceAdminSettings$ViewHolder;->icon:Landroid/widget/ImageView;
 
     .line 170
-    const v2, 0x7f090078
+    const v2, 0x7f090079
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -309,7 +309,7 @@
     iput-object v2, v0, Lcom/android/settings/DeviceAdminSettings$ViewHolder;->name:Landroid/widget/TextView;
 
     .line 171
-    const v2, 0x7f09007a
+    const v2, 0x7f09007b
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -320,7 +320,7 @@
     iput-object v2, v0, Lcom/android/settings/DeviceAdminSettings$ViewHolder;->checkbox:Landroid/widget/CheckBox;
 
     .line 172
-    const v2, 0x7f090079
+    const v2, 0x7f09007a
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

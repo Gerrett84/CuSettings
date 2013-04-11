@@ -242,7 +242,7 @@
 
     .line 86
     .local v1, view:Landroid/view/View;
-    const v2, 0x7f090030
+    const v2, 0x7f090031
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -256,7 +256,7 @@
     invoke-virtual {v2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 88
-    const v2, 0x7f09002f
+    const v2, 0x7f090030
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -270,7 +270,7 @@
     invoke-virtual {v2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 92
-    const v2, 0x7f09002d
+    const v2, 0x7f09002e
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

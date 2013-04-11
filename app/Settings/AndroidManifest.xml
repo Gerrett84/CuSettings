@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:sharedUserId="android.uid.system" android:versionCode="16" android:versionName="4.1.2-eng.yumingyang.20130328.210643" package="com.android.settings" coreApp="true"
+<manifest android:sharedUserId="android.uid.system" android:versionCode="16" android:versionName="4.1.2-eng.yumingyang.20130403.161232" package="com.android.settings" coreApp="true"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="16" />
     <original-package android:name="com.android.settings" />
@@ -56,8 +56,8 @@
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="miui.permission.SHELL" />
-    <application android:theme="@101515335" android:label="@string/settings_label" android:icon="@mipmap/ic_launcher_settings" android:taskAffinity="" android:hardwareAccelerated="true" android:uiOptions="splitActionBarWhenNarrow">
-        <activity android:theme="@101515335" android:label="@string/settings_label_launcher" android:name="Settings" android:exported="true" android:taskAffinity="com.android.settings" android:launchMode="singleTask" />
+    <application android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/settings_label" android:icon="@mipmap/ic_launcher_settings" android:taskAffinity="" android:hardwareAccelerated="true" android:uiOptions="splitActionBarWhenNarrow">
+        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/settings_label_launcher" android:name="Settings" android:exported="true" android:taskAffinity="com.android.settings" android:launchMode="singleTask" />
         <activity android:theme="@style/Theme.Light.Show.NoTitle" android:name="MiuiSettings" android:taskAffinity="com.android.settings" android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,13 +68,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:theme="@101515332" android:label="@string/virus_scanner_title" android:icon="@drawable/virus_scan_icon" android:name=".VirusScanActivity" android:taskAffinity="com.android.settings.VirusScanActivity" android:launchMode="singleTop" android:screenOrientation="portrait">
+        <activity android:theme="@miui:style/V5.Theme.Light.NoTitle" android:label="@string/virus_scanner_title" android:icon="@drawable/virus_scan_icon" android:name=".VirusScanActivity" android:taskAffinity="com.android.settings.VirusScanActivity" android:launchMode="singleTop" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:theme="@101515332" android:name=".VirusScanAppActivity" android:taskAffinity="com.android.settings.VirusScanActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@miui:style/V5.Theme.Light.NoTitle" android:name=".VirusScanAppActivity" android:taskAffinity="com.android.settings.VirusScanActivity" android:screenOrientation="portrait" />
         <service android:name=".VirusScanService">
             <intent-filter>
                 <action android:name="com.android.service.VIRUS_SCAN_SERVICE" />
@@ -102,7 +102,7 @@
                 <action android:name="android.accounts.LOGIN_ACCOUNTS_PRE_CHANGED" />
             </intent-filter>
         </receiver>
-        <activity android:theme="@101515336" android:label="@string/password_guard" android:icon="@drawable/password_guard_icon" android:name=".MiuiPasswordGuardActivity" android:taskAffinity="com.android.settings.MiuiPasswordGuardActivity" android:launchMode="singleTop" android:screenOrientation="portrait">
+        <activity android:theme="@miui:style/V5.Theme.Light.Settings.NoTitle" android:label="@string/password_guard" android:icon="@drawable/password_guard_icon" android:name=".MiuiPasswordGuardActivity" android:taskAffinity="com.android.settings.MiuiPasswordGuardActivity" android:launchMode="singleTop" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -473,7 +473,7 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.applications.ManageApplications" />
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID" android:resource="@id/application_settings" />
         </activity-alias>
-        <activity android:theme="@101515335" android:label="@string/application_info_label" android:name=".applications.InstalledAppDetailsTop" android:exported="true" android:parentActivityName="Settings$ManageApplicationsActivity" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/application_info_label" android:name=".applications.InstalledAppDetailsTop" android:exported="true" android:parentActivityName="Settings$ManageApplicationsActivity" />
         <activity-alias android:label="@string/application_info_label" android:name=".applications.InstalledAppDetails" android:exported="true" android:targetActivity=".applications.InstalledAppDetailsTop">
             <intent-filter>
                 <action android:name="android.settings.APPLICATION_DETAILS_SETTINGS" />
@@ -540,8 +540,8 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.PrivacySettings" />
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID" android:resource="@id/privacy_settings" />
         </activity>
-        <activity android:theme="@101515322" android:name="SetFullBackupPassword" android:exported="false" />
-        <activity android:theme="@101515338" android:name="CredentialStorage" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity android:theme="@miui:style/V5.Theme.Light" android:name="SetFullBackupPassword" android:exported="false" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Translucent.NoTitle" android:name="CredentialStorage" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="com.android.credentials.UNLOCK" />
                 <action android:name="com.android.credentials.INSTALL" />
@@ -650,8 +650,8 @@
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID" android:resource="@id/storage_settings" />
         </activity>
         <activity android:theme="@android:style/Theme.Holo.Light.DialogWhenLarge" android:name=".deviceinfo.MiscFilesHandler" />
-        <activity android:theme="@101515322" android:label="@string/apn_edit" android:name="ApnEditor" />
-        <activity android:theme="@101515335" android:label="@string/apn_edit" android:name="MiuiApnEditor">
+        <activity android:theme="@miui:style/V5.Theme.Light" android:label="@string/apn_edit" android:name="ApnEditor" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/apn_edit" android:name="MiuiApnEditor">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
@@ -700,7 +700,7 @@
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID" android:resource="@id/development_settings" />
         </activity-alias>
         <activity android:theme="@android:style/Theme.Holo.Dialog" android:label="@string/select_application" android:name=".AppPicker" />
-        <activity android:theme="@101515325" android:label="@string/select_application" android:name=".AppPickerV5" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Translucent.NoTitle" android:name=".AppPickerV5" />
         <activity android:label="@string/storage_title_usb" android:name="Settings$UsbSettingsActivity" android:clearTaskOnLaunch="true" android:parentActivityName="Settings$StorageSettingsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -719,7 +719,7 @@
             <meta-data android:name="com.android.settings.PARENT_FRAGMENT_TITLE" android:resource="@string/storage_settings_title" />
             <meta-data android:name="com.android.settings.PARENT_FRAGMENT_CLASS" android:value="com.android.settings.Settings$StorageSettingsActivity" />
         </activity-alias>
-        <activity android:theme="@101515325" android:label="@string/bluetooth_pairing_request" android:name=".bluetooth.BluetoothPairingDialog" android:excludeFromRecents="true">
+        <activity android:theme="@miui:style/V5.Theme.Light.Dialog" android:label="@string/bluetooth_pairing_request" android:name=".bluetooth.BluetoothPairingDialog" android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -742,14 +742,14 @@
             </intent-filter>
         </receiver>
         <service android:name=".bluetooth.DockService" />
-        <activity android:theme="@101515325" android:label="@string/bluetooth_permission_request" android:name=".bluetooth.RequestPermissionActivity" android:permission="android.permission.BLUETOOTH" android:excludeFromRecents="true">
+        <activity android:theme="@miui:style/V5.Theme.Light.Dialog" android:label="@string/bluetooth_permission_request" android:name=".bluetooth.RequestPermissionActivity" android:permission="android.permission.BLUETOOTH" android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.bluetooth.adapter.action.REQUEST_DISCOVERABLE" />
                 <action android:name="android.bluetooth.adapter.action.REQUEST_ENABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@101515325" android:label="@string/bluetooth_pairing_request" android:name=".bluetooth.RequestPermissionHelperActivity" android:permission="android.permission.BLUETOOTH" android:excludeFromRecents="true" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Dialog" android:label="@string/bluetooth_pairing_request" android:name=".bluetooth.RequestPermissionHelperActivity" android:permission="android.permission.BLUETOOTH" android:excludeFromRecents="true" />
         <receiver android:name=".bluetooth.BluetoothPairingRequest">
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
@@ -762,14 +762,14 @@
                 <action android:name="android.bluetooth.device.action.CONNECTION_ACCESS_CANCEL" />
             </intent-filter>
         </receiver>
-        <activity android:theme="@101515325" android:label="@string/bluetooth_connection_permission_request" android:name=".bluetooth.BluetoothPermissionActivity" android:permission="android.permission.BLUETOOTH_ADMIN" android:excludeFromRecents="true">
+        <activity android:theme="@miui:style/V5.Theme.Light.Dialog" android:label="@string/bluetooth_connection_permission_request" android:name=".bluetooth.BluetoothPermissionActivity" android:permission="android.permission.BLUETOOTH_ADMIN" android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.CONNECTION_ACCESS_REQUEST" />
                 <action android:name="android.bluetooth.device.action.CONNECTION_ACCESS_CANCEL" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@101515326" android:label="@string/activity_picker_label" android:name="ActivityPicker" android:finishOnCloseSystemDialogs="true">
+        <activity android:theme="@miui:style/V5.Theme.Light.Dialog.Alert" android:label="@string/activity_picker_label" android:name="ActivityPicker" android:finishOnCloseSystemDialogs="true">
             <intent-filter>
                 <action android:name="android.intent.action.PICK_ACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -839,13 +839,13 @@
                 <data android:scheme="android_secret_code" android:host="4636" />
             </intent-filter>
         </receiver>
-        <activity android:theme="@101515326" android:label="@string/widget_picker_title" android:name="AppWidgetPickActivity" android:finishOnCloseSystemDialogs="true">
+        <activity android:theme="@miui:style/V5.Theme.Light.Dialog.Alert" android:label="@string/widget_picker_title" android:name="AppWidgetPickActivity" android:finishOnCloseSystemDialogs="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_PICK" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.Dialog.NoFrame" android:name="AllowBindAppWidgetActivity" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true">
+        <activity android:theme="@android:style/Theme.Holo.Dialog.Alert" android:name="AllowBindAppWidgetActivity" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_BIND" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -938,14 +938,14 @@
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID" android:resource="@id/access_control_settings" />
         </activity>
         <activity android:label="@string/brightness" android:name=".display.BrightnessActivity" android:launchMode="singleTop" />
-        <activity android:theme="@101515338" android:name=".display.ScreenTimeoutDialogActivity" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Translucent.NoTitle" android:name=".display.ScreenTimeoutDialogActivity" />
         <activity android:label="@string/title_font_size" android:name=".display.FontSizeSettings" />
         <activity android:label="@string/preferred_launcher_title" android:name=".display.PreferredLauncherSettings" />
         <activity android:label="@string/all_volume_title" android:name=".sound.RingerVolumeActivity" />
-        <activity android:theme="@101515338" android:name=".sound.RingtoneActivity" />
-        <activity android:theme="@101515338" android:name=".sound.SmsReceivedActivity" />
-        <activity android:theme="@101515338" android:name=".fuelgauge.BatteryIndicatorStyle" />
-        <activity android:theme="@101515338" android:name=".fuelgauge.PowerModeSettings" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Translucent.NoTitle" android:name=".sound.RingtoneActivity" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Translucent.NoTitle" android:name=".sound.SmsReceivedActivity" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Translucent.NoTitle" android:name=".fuelgauge.BatteryIndicatorStyle" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Translucent.NoTitle" android:name=".fuelgauge.PowerModeSettings" />
         <receiver android:label="@string/gadget_title" android:name=".widget.SettingsAppWidgetProvider" android:enabled="@bool/has_powercontrol_widget" android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -977,7 +977,7 @@
                 <action android:name="miui.intent.action.WIFI_SYNC" />
             </intent-filter>
         </service>
-        <activity android:theme="@101515338" android:name=".wifi.WifiConfigActivity" android:excludeFromRecents="true" android:launchMode="singleInstance" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Translucent.NoTitle" android:name=".wifi.WifiConfigActivity" android:excludeFromRecents="true" android:launchMode="singleInstance" />
         <provider android:label="@string/sync_wifi_label" android:icon="@drawable/sync_wifi" android:name=".wifi.WifiProvider" android:exported="true" android:authorities="wifi" />
         <service android:name=".UsbShareNetService">
             <intent-filter>
@@ -997,9 +997,9 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.applications.ManageApplicationsFragment" />
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID" android:resource="@id/application_settings" />
         </activity>
-        <activity android:theme="@101515335" android:label="@string/application_info_label" android:name=".applications.RunningServiceDetailsActivity" android:exported="true" />
+        <activity android:theme="@miui:style/V5.Theme.Light.Settings" android:label="@string/application_info_label" android:name=".applications.RunningServiceDetailsActivity" android:exported="true" />
         <activity android:name=".display.ScreenColorActivity" android:screenOrientation="portrait" />
-        <activity android:theme="@101515332" android:label="@string/auto_startup_application_manage" android:icon="@mipmap/ic_launcher_settings" android:name=".BackgroundApplicationsManager" android:taskAffinity="com.android.settings.BackgroundApplicationsManager" android:launchMode="singleTop" android:screenOrientation="portrait">
+        <activity android:theme="@miui:style/V5.Theme.Light.NoTitle" android:label="@string/auto_startup_application_manage" android:icon="@mipmap/ic_launcher_settings" android:name=".BackgroundApplicationsManager" android:taskAffinity="com.android.settings.BackgroundApplicationsManager" android:launchMode="singleTop" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -1020,7 +1020,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:theme="@101515322" android:label="@string/perm_hips" android:name=".permission.PermDetailActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@miui:style/V5.Theme.Light" android:label="@string/perm_hips" android:name=".permission.PermDetailActivity" android:screenOrientation="portrait" />
         <receiver android:name=".AnalyticsReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.COLLECT_ANALYTICS_DATA" />

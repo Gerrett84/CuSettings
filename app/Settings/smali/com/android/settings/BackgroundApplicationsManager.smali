@@ -191,7 +191,7 @@
     .line 96
     iget-object v0, p0, Lcom/android/settings/BackgroundApplicationsManager;->mCountView:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0884
+    const v1, 0x7f0c0887
 
     invoke-virtual {p0, v1}, Lcom/android/settings/BackgroundApplicationsManager;->getString(I)Ljava/lang/String;
 
@@ -303,7 +303,7 @@
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 53
-    const v2, 0x7f09000e
+    const v2, 0x7f09000f
 
     invoke-virtual {p0, v2}, Lcom/android/settings/BackgroundApplicationsManager;->findViewById(I)Landroid/view/View;
 
@@ -316,7 +316,7 @@
     .line 54
     iget-object v2, p0, Lcom/android/settings/BackgroundApplicationsManager;->mCountView:Landroid/widget/TextView;
 
-    const v3, 0x7f0c0884
+    const v3, 0x7f0c0887
 
     invoke-virtual {p0, v3}, Lcom/android/settings/BackgroundApplicationsManager;->getString(I)Ljava/lang/String;
 
@@ -347,7 +347,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 56
-    const v2, 0x7f09000f
+    const v2, 0x7f090010
 
     invoke-virtual {p0, v2}, Lcom/android/settings/BackgroundApplicationsManager;->findViewById(I)Landroid/view/View;
 

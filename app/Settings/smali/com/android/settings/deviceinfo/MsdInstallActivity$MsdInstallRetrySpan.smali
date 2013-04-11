@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 211
+    .line 236
     iput-object p1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity$MsdInstallRetrySpan;->this$0:Lcom/android/settings/deviceinfo/MsdInstallActivity;
 
     invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
@@ -39,13 +39,13 @@
     .parameter "widget"
 
     .prologue
-    .line 221
+    .line 246
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity$MsdInstallRetrySpan;->this$0:Lcom/android/settings/deviceinfo/MsdInstallActivity;
 
     #calls: Lcom/android/settings/deviceinfo/MsdInstallActivity;->init()V
     invoke-static {v0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->access$500(Lcom/android/settings/deviceinfo/MsdInstallActivity;)V
 
-    .line 222
+    .line 247
     return-void
 .end method
 
@@ -54,16 +54,16 @@
     .parameter "ds"
 
     .prologue
-    .line 215
+    .line 240
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
-    .line 216
+    .line 241
     const/high16 v0, -0x1
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 217
+    .line 242
     return-void
 .end method

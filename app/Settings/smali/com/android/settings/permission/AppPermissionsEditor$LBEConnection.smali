@@ -26,13 +26,13 @@
     .parameter "sdkAppName"
 
     .prologue
-    .line 375
+    .line 376
     iput-object p1, p0, Lcom/android/settings/permission/AppPermissionsEditor$LBEConnection;->this$0:Lcom/android/settings/permission/AppPermissionsEditor;
 
-    .line 376
+    .line 377
     invoke-direct {p0, p2, p3}, Lcom/lbe/security/sdk/SDKConnection;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 377
+    .line 378
     return-void
 .end method
 
@@ -43,7 +43,7 @@
     .parameter "service"
 
     .prologue
-    .line 381
+    .line 382
     iget-object v0, p0, Lcom/android/settings/permission/AppPermissionsEditor$LBEConnection;->this$0:Lcom/android/settings/permission/AppPermissionsEditor;
 
     invoke-virtual {p1}, Lcom/lbe/security/sdk/SDKService;->getSDKHelper()Lcom/lbe/security/service/sdkhelper/SDKHelper;
@@ -53,7 +53,7 @@
     #setter for: Lcom/android/settings/permission/AppPermissionsEditor;->mSDKHelper:Lcom/lbe/security/service/sdkhelper/SDKHelper;
     invoke-static {v0, v1}, Lcom/android/settings/permission/AppPermissionsEditor;->access$602(Lcom/android/settings/permission/AppPermissionsEditor;Lcom/lbe/security/service/sdkhelper/SDKHelper;)Lcom/lbe/security/service/sdkhelper/SDKHelper;
 
-    .line 382
+    .line 383
     iget-object v0, p0, Lcom/android/settings/permission/AppPermissionsEditor$LBEConnection;->this$0:Lcom/android/settings/permission/AppPermissionsEditor;
 
     invoke-virtual {p1}, Lcom/lbe/security/sdk/SDKService;->getHIPSService()Lcom/lbe/security/service/privacy/HIPSService;
@@ -63,20 +63,20 @@
     #setter for: Lcom/android/settings/permission/AppPermissionsEditor;->mHipSService:Lcom/lbe/security/service/privacy/HIPSService;
     invoke-static {v0, v1}, Lcom/android/settings/permission/AppPermissionsEditor;->access$102(Lcom/android/settings/permission/AppPermissionsEditor;Lcom/lbe/security/service/privacy/HIPSService;)Lcom/lbe/security/service/privacy/HIPSService;
 
-    .line 383
+    .line 384
     iget-object v0, p0, Lcom/android/settings/permission/AppPermissionsEditor$LBEConnection;->this$0:Lcom/android/settings/permission/AppPermissionsEditor;
 
     #calls: Lcom/android/settings/permission/AppPermissionsEditor;->initUI()V
     invoke-static {v0}, Lcom/android/settings/permission/AppPermissionsEditor;->access$200(Lcom/android/settings/permission/AppPermissionsEditor;)V
 
-    .line 384
+    .line 385
     const-string v0, "AppPermissionsEditor"
 
     const-string v1, "SDK Connected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
+    .line 386
     return-void
 .end method
 
@@ -84,13 +84,13 @@
     .locals 2
 
     .prologue
-    .line 389
+    .line 390
     const-string v0, "AppPermissionsEditor"
 
     const-string v1, "SDK Disconnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
+    .line 391
     return-void
 .end method

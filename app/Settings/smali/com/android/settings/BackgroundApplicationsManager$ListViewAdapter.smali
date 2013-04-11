@@ -162,7 +162,7 @@
     move-result-object p2
 
     .line 126
-    const v5, 0x7f090010
+    const v5, 0x7f090011
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -173,7 +173,7 @@
     iput-object v5, v1, Lcom/android/settings/BackgroundApplicationsManager$ViewHolder;->mIcon:Landroid/widget/ImageView;
 
     .line 127
-    const v5, 0x7f090011
+    const v5, 0x7f090012
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -184,7 +184,7 @@
     iput-object v5, v1, Lcom/android/settings/BackgroundApplicationsManager$ViewHolder;->mAppName:Landroid/widget/TextView;
 
     .line 128
-    const v5, 0x7f090012
+    const v5, 0x7f090013
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

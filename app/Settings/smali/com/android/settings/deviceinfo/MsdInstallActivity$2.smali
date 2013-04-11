@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 115
+    .line 120
     iput-object p1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity$2;->this$0:Lcom/android/settings/deviceinfo/MsdInstallActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,19 +42,19 @@
     .parameter "v"
 
     .prologue
-    .line 118
+    .line 123
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity$2;->this$0:Lcom/android/settings/deviceinfo/MsdInstallActivity;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->setResult(I)V
 
-    .line 119
+    .line 124
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity$2;->this$0:Lcom/android/settings/deviceinfo/MsdInstallActivity;
 
     invoke-virtual {v0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->finish()V
 
-    .line 120
+    .line 125
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity$2;->this$0:Lcom/android/settings/deviceinfo/MsdInstallActivity;
 
     const/4 v1, 0x0
@@ -63,6 +63,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->overridePendingTransition(II)V
 
-    .line 121
+    .line 126
     return-void
 .end method

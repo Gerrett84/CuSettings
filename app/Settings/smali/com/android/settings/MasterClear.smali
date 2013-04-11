@@ -90,7 +90,7 @@
     .line 136
     iget-object v3, p0, Lcom/android/settings/MasterClear;->mContentView:Landroid/view/View;
 
-    const v5, 0x7f0900c6
+    const v5, 0x7f0900c7
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -101,7 +101,7 @@
     .line 137
     iget-object v3, p0, Lcom/android/settings/MasterClear;->mContentView:Landroid/view/View;
 
-    const v5, 0x7f0900c7
+    const v5, 0x7f0900c8
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -141,7 +141,7 @@
     .line 151
     iget-object v3, p0, Lcom/android/settings/MasterClear;->mContentView:Landroid/view/View;
 
-    const v5, 0x7f0900c5
+    const v5, 0x7f0900c6
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -154,7 +154,7 @@
     .line 154
     iget-object v3, p0, Lcom/android/settings/MasterClear;->mContentView:Landroid/view/View;
 
-    const v5, 0x7f0900c2
+    const v5, 0x7f0900c3
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -249,7 +249,7 @@
 
     move-object/from16 v21, v0
 
-    const v22, 0x7f0900c3
+    const v22, 0x7f0900c4
 
     invoke-virtual/range {v21 .. v22}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -263,7 +263,7 @@
 
     move-object/from16 v21, v0
 
-    const v22, 0x7f0900c4
+    const v22, 0x7f0900c5
 
     invoke-virtual/range {v21 .. v22}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

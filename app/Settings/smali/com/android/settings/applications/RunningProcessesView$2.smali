@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 425
+    .line 424
     iput-object p1, p0, Lcom/android/settings/applications/RunningProcessesView$2;->this$0:Lcom/android/settings/applications/RunningProcessesView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "v"
 
     .prologue
-    .line 428
+    .line 427
     iget-object v0, p0, Lcom/android/settings/applications/RunningProcessesView$2;->this$0:Lcom/android/settings/applications/RunningProcessesView;
 
     iget-object v0, v0, Lcom/android/settings/applications/RunningProcessesView;->mAdapter:Lcom/android/settings/applications/RunningProcessesView$ServiceListAdapter;
@@ -51,6 +51,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/applications/RunningProcessesView$ServiceListAdapter;->setShowBackground(Z)V
 
-    .line 429
+    .line 428
     return-void
 .end method

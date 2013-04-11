@@ -285,7 +285,7 @@
 
     .line 177
     .local v7, view:Landroid/view/View;
-    const v8, 0x7f09001e
+    const v8, 0x7f09001f
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -295,7 +295,7 @@
 
     .line 178
     .local v5, messageView:Landroid/widget/TextView;
-    const v8, 0x7f090024
+    const v8, 0x7f090025
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -305,7 +305,7 @@
 
     .line 179
     .local v6, messageView2:Landroid/widget/TextView;
-    const v8, 0x7f090023
+    const v8, 0x7f090024
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -315,7 +315,7 @@
 
     .line 180
     .local v0, alphanumericPin:Landroid/widget/CheckBox;
-    const v8, 0x7f090021
+    const v8, 0x7f090022
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -580,7 +580,7 @@
 
     .line 222
     .local v2, name:Ljava/lang/String;
-    const v5, 0x7f09001e
+    const v5, 0x7f09001f
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -10,7 +10,7 @@
     <PreferenceScreen android:title="@string/terms_title" android:key="terms">
         <intent android:action="android.settings.TERMS" />
     </PreferenceScreen>
-    <Preference android:title="@101450100" android:key="miuiCopyright" />
-    <Preference android:title="@101450103" android:key="miuiUserAgreement" />
-    <Preference android:title="@101450102" android:key="miuiPrivacyPolicy" />
+    <Preference android:title="@miui:string/miui_copyright_title" android:key="miuiCopyright" />
+    <Preference android:title="@miui:string/miui_user_agreement_title" android:key="miuiUserAgreement" />
+    <Preference android:title="@miui:string/miui_privacy_policy_title" android:key="miuiPrivacyPolicy" />
 </PreferenceScreen>

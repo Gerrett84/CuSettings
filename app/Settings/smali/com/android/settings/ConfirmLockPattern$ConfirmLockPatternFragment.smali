@@ -495,7 +495,7 @@
 
     .line 131
     .local v3, view:Landroid/view/View;
-    const v4, 0x7f090026
+    const v4, 0x7f090027
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -506,7 +506,7 @@
     iput-object v4, p0, Lcom/android/settings/ConfirmLockPattern$ConfirmLockPatternFragment;->mHeaderTextView:Landroid/widget/TextView;
 
     .line 132
-    const v4, 0x7f09002d
+    const v4, 0x7f09002e
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -517,7 +517,7 @@
     iput-object v4, p0, Lcom/android/settings/ConfirmLockPattern$ConfirmLockPatternFragment;->mLockPatternView:Lmiui/widget/LockPatternView;
 
     .line 133
-    const v4, 0x7f09002e
+    const v4, 0x7f09002f
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -528,7 +528,7 @@
     iput-object v4, p0, Lcom/android/settings/ConfirmLockPattern$ConfirmLockPatternFragment;->mFooterTextView:Landroid/widget/TextView;
 
     .line 137
-    const v4, 0x7f09002c
+    const v4, 0x7f09002d
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -596,7 +596,7 @@
 
     .line 155
     .local v0, activity:Landroid/app/Activity;
-    const v4, 0x7f090036
+    const v4, 0x7f090035
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

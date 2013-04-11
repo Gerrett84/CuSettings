@@ -258,7 +258,7 @@
 
     .line 166
     :pswitch_data_0
-    .packed-switch 0x7f09002f
+    .packed-switch 0x7f090030
         :pswitch_1
         :pswitch_0
     .end packed-switch
@@ -316,7 +316,7 @@
 
     .line 96
     .local v7, view:Landroid/view/View;
-    const v8, 0x7f09002f
+    const v8, 0x7f090030
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -325,7 +325,7 @@
     invoke-virtual {v8, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 97
-    const v8, 0x7f090030
+    const v8, 0x7f090031
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -348,7 +348,7 @@
     invoke-virtual {v8, v9}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 101
-    const v8, 0x7f090028
+    const v8, 0x7f090029
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -369,7 +369,7 @@
     invoke-virtual {v8, p0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 105
-    const v8, 0x7f090029
+    const v8, 0x7f09002a
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -380,7 +380,7 @@
     iput-object v8, p0, Lcom/android/settings/ConfirmLockPassword$ConfirmLockPasswordFragment;->mKeyboardView:Lcom/android/internal/widget/PasswordEntryKeyboardView;
 
     .line 106
-    const v8, 0x7f090026
+    const v8, 0x7f090027
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

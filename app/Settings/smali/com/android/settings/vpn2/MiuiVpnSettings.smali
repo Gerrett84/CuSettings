@@ -897,7 +897,7 @@
     :cond_2
     iget-object v2, p0, Lcom/android/settings/vpn2/MiuiVpnSettings;->mVpnCategory:Landroid/preference/PreferenceCategory;
 
-    const v3, 0x7f0c0858
+    const v3, 0x7f0c085b
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceCategory;->setTitle(I)V
 

@@ -194,7 +194,7 @@
     const/4 v4, 0x0
 
     .line 470
-    const v2, 0x7f090015
+    const v2, 0x7f090016
 
     invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
 
@@ -347,7 +347,7 @@
     .line 407
     .end local v0           #pm:Landroid/os/PowerManager;
     :cond_0
-    const v1, 0x7f090042
+    const v1, 0x7f090041
 
     invoke-virtual {p0, v1}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
 
@@ -771,7 +771,7 @@
     const/4 v7, 0x0
 
     .line 488
-    const v5, 0x7f09003f
+    const v5, 0x7f09003e
 
     invoke-virtual {p0, v5}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
 
@@ -824,7 +824,7 @@
     if-nez v5, :cond_0
 
     .line 499
-    const v5, 0x7f09003c
+    const v5, 0x7f09003b
 
     invoke-virtual {p0, v5}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
 
@@ -849,7 +849,7 @@
     .line 506
     .end local v0           #emergencyCall:Landroid/view/View;
     :cond_0
-    const v5, 0x7f090040
+    const v5, 0x7f09003f
 
     invoke-virtual {p0, v5}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
 
@@ -1212,7 +1212,7 @@
     const/4 v4, 0x0
 
     .line 417
-    const v2, 0x7f09003d
+    const v2, 0x7f09003c
 
     invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
 
@@ -1223,7 +1223,7 @@
     invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 420
-    const v2, 0x7f090043
+    const v2, 0x7f090042
 
     invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
 
@@ -1256,7 +1256,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
     .line 432
-    const v2, 0x7f090015
+    const v2, 0x7f090016
 
     invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
 
@@ -1269,7 +1269,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
     .line 434
-    const v2, 0x7f090044
+    const v2, 0x7f090043
 
     invoke-virtual {p0, v2}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
 
@@ -1325,7 +1325,7 @@
     const/4 v6, 0x0
 
     .line 660
-    const v5, 0x7f09003c
+    const v5, 0x7f09003b
 
     invoke-virtual {p0, v5}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
 
@@ -1379,11 +1379,11 @@
 
     .line 684
     .local v4, textId:I
-    const v3, 0x7f020144
+    const v3, 0x7f020146
 
     .line 685
     .local v3, phoneCallIcon:I
-    const v5, 0x7f020144
+    const v5, 0x7f020146
 
     invoke-virtual {v0, v5, v6, v6, v6}, Landroid/widget/Button;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
@@ -1502,7 +1502,7 @@
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 459
-    const v5, 0x7f090015
+    const v5, 0x7f090016
 
     invoke-virtual {p0, v5}, Lcom/android/settings/CryptKeeper;->findViewById(I)Landroid/view/View;
 

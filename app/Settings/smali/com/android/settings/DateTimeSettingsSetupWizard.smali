@@ -322,7 +322,7 @@
     iput-object v3, p0, Lcom/android/settings/DateTimeSettingsSetupWizard;->mSelectedTimeZone:Ljava/util/TimeZone;
 
     .line 122
-    const v4, 0x7f090066
+    const v4, 0x7f090065
 
     invoke-virtual {p0, v4}, Lcom/android/settings/DateTimeSettingsSetupWizard;->findViewById(I)Landroid/view/View;
 
@@ -371,7 +371,7 @@
     .line 135
     .local v0, autoDateTimeEnabled:Z
     :goto_0
-    const v4, 0x7f090068
+    const v4, 0x7f090067
 
     invoke-virtual {p0, v4}, Lcom/android/settings/DateTimeSettingsSetupWizard;->findViewById(I)Landroid/view/View;
 
@@ -392,7 +392,7 @@
     invoke-virtual {v4, p0}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 139
-    const v4, 0x7f09006d
+    const v4, 0x7f09006c
 
     invoke-virtual {p0, v4}, Lcom/android/settings/DateTimeSettingsSetupWizard;->findViewById(I)Landroid/view/View;
 
@@ -413,7 +413,7 @@
     invoke-virtual {v7, v4}, Landroid/widget/TimePicker;->setEnabled(Z)V
 
     .line 141
-    const v4, 0x7f09006a
+    const v4, 0x7f090069
 
     invoke-virtual {p0, v4}, Lcom/android/settings/DateTimeSettingsSetupWizard;->findViewById(I)Landroid/view/View;
 
@@ -448,7 +448,7 @@
     iput-object v4, p0, Lcom/android/settings/DateTimeSettingsSetupWizard;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
 
     .line 147
-    const v4, 0x7f09002b
+    const v4, 0x7f09002c
 
     invoke-virtual {p0, v4}, Lcom/android/settings/DateTimeSettingsSetupWizard;->findViewById(I)Landroid/view/View;
 
@@ -459,7 +459,7 @@
     invoke-virtual {v4, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 148
-    const v4, 0x7f090034
+    const v4, 0x7f090033
 
     invoke-virtual {p0, v4}, Lcom/android/settings/DateTimeSettingsSetupWizard;->findViewById(I)Landroid/view/View;
 
@@ -620,7 +620,7 @@
 
     .line 174
     :sswitch_0
-    const v2, 0x7f090066
+    const v2, 0x7f090065
 
     invoke-direct {p0, v2}, Lcom/android/settings/DateTimeSettingsSetupWizard;->showTimezonePicker(I)V
 
@@ -775,9 +775,9 @@
     .line 172
     :sswitch_data_0
     .sparse-switch
-        0x7f09002b -> :sswitch_1
-        0x7f090034 -> :sswitch_2
-        0x7f090066 -> :sswitch_0
+        0x7f09002c -> :sswitch_1
+        0x7f090033 -> :sswitch_2
+        0x7f090065 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -802,7 +802,7 @@
     invoke-virtual {p0, v3}, Lcom/android/settings/DateTimeSettingsSetupWizard;->setContentView(I)V
 
     .line 89
-    const v3, 0x7f090066
+    const v3, 0x7f090065
 
     invoke-virtual {p0, v3}, Lcom/android/settings/DateTimeSettingsSetupWizard;->findViewById(I)Landroid/view/View;
 
@@ -837,7 +837,7 @@
     if-nez v1, :cond_0
 
     .line 104
-    const v1, 0x7f090062
+    const v1, 0x7f090061
 
     invoke-virtual {p0, v1}, Lcom/android/settings/DateTimeSettingsSetupWizard;->findViewById(I)Landroid/view/View;
 
@@ -862,7 +862,7 @@
 
     .line 93
     :cond_2
-    const v1, 0x7f09002b
+    const v1, 0x7f09002c
 
     invoke-virtual {p0, v1}, Lcom/android/settings/DateTimeSettingsSetupWizard;->findViewById(I)Landroid/view/View;
 
@@ -1016,7 +1016,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f090064
+    const v5, 0x7f090063
 
     invoke-virtual {v4, v5}, Landroid/app/FragmentManager;->findFragmentById(I)Landroid/app/Fragment;
 
@@ -1054,7 +1054,7 @@
 
     .prologue
     .line 278
-    const v0, 0x7f090063
+    const v0, 0x7f090062
 
     invoke-direct {p0, v0}, Lcom/android/settings/DateTimeSettingsSetupWizard;->showTimezonePicker(I)V
 

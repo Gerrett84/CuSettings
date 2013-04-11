@@ -113,7 +113,7 @@
 
     iget-object v0, v0, Lcom/android/settings/VirusScanAppActivity;->mTitle:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f02014f
+    const v1, 0x7f020151
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 

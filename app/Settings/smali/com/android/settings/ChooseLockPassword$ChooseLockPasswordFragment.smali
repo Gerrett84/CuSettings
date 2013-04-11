@@ -1264,7 +1264,7 @@
 
     .line 421
     :pswitch_data_0
-    .packed-switch 0x7f09002f
+    .packed-switch 0x7f090030
         :pswitch_1
         :pswitch_0
     .end packed-switch
@@ -1514,7 +1514,7 @@
 
     .line 188
     .local v9, view:Landroid/view/View;
-    const v10, 0x7f09002f
+    const v10, 0x7f090030
 
     invoke-virtual {v9, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1530,7 +1530,7 @@
     invoke-virtual {v10, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 190
-    const v10, 0x7f090030
+    const v10, 0x7f090031
 
     invoke-virtual {v9, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1571,7 +1571,7 @@
     iput-boolean v10, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mIsAlphaMode:Z
 
     .line 196
-    const v10, 0x7f090029
+    const v10, 0x7f09002a
 
     invoke-virtual {v9, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1582,7 +1582,7 @@
     iput-object v10, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mKeyboardView:Landroid/inputmethodservice/KeyboardView;
 
     .line 197
-    const v10, 0x7f090028
+    const v10, 0x7f090029
 
     invoke-virtual {v9, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1632,7 +1632,7 @@
     invoke-virtual {v11, v10}, Lcom/android/internal/widget/PasswordEntryKeyboardHelper;->setKeyboardMode(I)V
 
     .line 208
-    const v10, 0x7f090026
+    const v10, 0x7f090027
 
     invoke-virtual {v9, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

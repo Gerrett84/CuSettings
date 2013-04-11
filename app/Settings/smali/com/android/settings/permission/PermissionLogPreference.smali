@@ -8,7 +8,7 @@
 
 .field private mPermState:Ljava/lang/CharSequence;
 
-.field private mTitle:Ljava/lang/String;
+.field private mTime:Ljava/lang/String;
 
 
 # direct methods
@@ -23,17 +23,17 @@
     .line 11
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/permission/PermissionLogPreference;->mTitle:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings/permission/PermissionLogPreference;->mPermName:Ljava/lang/String;
 
     .line 12
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/permission/PermissionLogPreference;->mPermName:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/settings/permission/PermissionLogPreference;->mPermState:Ljava/lang/CharSequence;
 
     .line 13
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/settings/permission/PermissionLogPreference;->mPermState:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/android/settings/permission/PermissionLogPreference;->mTime:Ljava/lang/String;
 
     .line 17
     const v0, 0x7f040065
@@ -81,6 +81,19 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 25
+    const v0, 0x7f090047
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/android/settings/permission/PermissionLogPreference;->mTime:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 26
     return-void
 .end method
 
@@ -89,13 +102,13 @@
     .parameter "name"
 
     .prologue
-    .line 28
+    .line 29
     iput-object p1, p0, Lcom/android/settings/permission/PermissionLogPreference;->mPermName:Ljava/lang/String;
 
-    .line 29
+    .line 30
     invoke-virtual {p0}, Lcom/android/settings/permission/PermissionLogPreference;->notifyChanged()V
 
-    .line 30
+    .line 31
     return-void
 .end method
 
@@ -104,12 +117,27 @@
     .parameter "state"
 
     .prologue
-    .line 33
+    .line 34
     iput-object p1, p0, Lcom/android/settings/permission/PermissionLogPreference;->mPermState:Ljava/lang/CharSequence;
 
-    .line 34
+    .line 35
     invoke-virtual {p0}, Lcom/android/settings/permission/PermissionLogPreference;->notifyChanged()V
 
-    .line 35
+    .line 36
+    return-void
+.end method
+
+.method public setTime(Ljava/lang/String;)V
+    .locals 0
+    .parameter "time"
+
+    .prologue
+    .line 39
+    iput-object p1, p0, Lcom/android/settings/permission/PermissionLogPreference;->mTime:Ljava/lang/String;
+
+    .line 40
+    invoke-virtual {p0}, Lcom/android/settings/permission/PermissionLogPreference;->notifyChanged()V
+
+    .line 41
     return-void
 .end method

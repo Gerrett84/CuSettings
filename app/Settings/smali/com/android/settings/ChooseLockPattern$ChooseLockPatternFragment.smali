@@ -699,7 +699,7 @@
 
     .line 326
     .local v2, view:Landroid/view/View;
-    const v3, 0x7f090026
+    const v3, 0x7f090027
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -710,7 +710,7 @@
     iput-object v3, p0, Lcom/android/settings/ChooseLockPattern$ChooseLockPatternFragment;->mHeaderText:Landroid/widget/TextView;
 
     .line 327
-    const v3, 0x7f09002d
+    const v3, 0x7f09002e
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -743,7 +743,7 @@
     invoke-virtual {v3, v4}, Lmiui/widget/LockPatternView;->setTactileFeedbackEnabled(Z)V
 
     .line 332
-    const v3, 0x7f09002e
+    const v3, 0x7f09002f
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -754,7 +754,7 @@
     iput-object v3, p0, Lcom/android/settings/ChooseLockPattern$ChooseLockPatternFragment;->mFooterText:Landroid/widget/TextView;
 
     .line 334
-    const v3, 0x7f09002f
+    const v3, 0x7f090030
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -765,7 +765,7 @@
     iput-object v3, p0, Lcom/android/settings/ChooseLockPattern$ChooseLockPatternFragment;->mFooterLeftButton:Landroid/widget/TextView;
 
     .line 335
-    const v3, 0x7f090030
+    const v3, 0x7f090031
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -786,7 +786,7 @@
     invoke-virtual {v3, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 342
-    const v3, 0x7f09002c
+    const v3, 0x7f09002d
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

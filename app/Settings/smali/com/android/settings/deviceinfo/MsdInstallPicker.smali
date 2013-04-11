@@ -79,7 +79,7 @@
     invoke-virtual {p0, v3}, Lcom/android/settings/deviceinfo/MsdInstallPicker;->setContentView(I)V
 
     .line 25
-    const v3, 0x7f0900d6
+    const v3, 0x7f09000e
 
     invoke-virtual {p0, v3}, Lcom/android/settings/deviceinfo/MsdInstallPicker;->findViewById(I)Landroid/view/View;
 

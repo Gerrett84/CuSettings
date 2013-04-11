@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 200
+    .line 202
     iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$ClearCacheObserver;->this$0:Lcom/android/settings/applications/InstalledAppDetailsFragment;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDataObserver$Stub;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "succeeded"
 
     .prologue
-    .line 202
+    .line 204
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$ClearCacheObserver;->this$0:Lcom/android/settings/applications/InstalledAppDetailsFragment;
 
     #getter for: Lcom/android/settings/applications/InstalledAppDetailsFragment;->mHandler:Landroid/os/Handler;
@@ -54,7 +54,7 @@
 
     move-result-object v0
 
-    .line 203
+    .line 205
     .local v0, msg:Landroid/os/Message;
     if-eqz p2, :cond_0
 
@@ -63,7 +63,7 @@
     :goto_0
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 204
+    .line 206
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$ClearCacheObserver;->this$0:Lcom/android/settings/applications/InstalledAppDetailsFragment;
 
     #getter for: Lcom/android/settings/applications/InstalledAppDetailsFragment;->mHandler:Landroid/os/Handler;
@@ -73,10 +73,10 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 205
+    .line 207
     return-void
 
-    .line 203
+    .line 205
     :cond_0
     const/4 v1, 0x2
 

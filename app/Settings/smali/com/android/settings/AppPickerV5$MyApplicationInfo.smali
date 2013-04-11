@@ -28,7 +28,7 @@
     .parameter
 
     .prologue
-    .line 66
+    .line 78
     iput-object p1, p0, Lcom/android/settings/AppPickerV5$MyApplicationInfo;->this$0:Lcom/android/settings/AppPickerV5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

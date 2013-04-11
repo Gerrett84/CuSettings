@@ -52,10 +52,10 @@
     .parameter "state"
 
     .prologue
-    .line 471
+    .line 474
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 472
+    .line 475
     #getter for: Lcom/android/settings/applications/InstalledAppDetailsFragment;->mPm:Landroid/content/pm/PackageManager;
     invoke-static {p1}, Lcom/android/settings/applications/InstalledAppDetailsFragment;->access$500(Lcom/android/settings/applications/InstalledAppDetailsFragment;)Landroid/content/pm/PackageManager;
 
@@ -63,20 +63,20 @@
 
     iput-object v0, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$DisableChanger;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 473
+    .line 476
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$DisableChanger;->mActivity:Ljava/lang/ref/WeakReference;
 
-    .line 474
+    .line 477
     iput-object p2, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$DisableChanger;->mInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 475
+    .line 478
     iput p3, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$DisableChanger;->mState:I
 
-    .line 476
+    .line 479
     return-void
 .end method
 
@@ -87,7 +87,7 @@
     .parameter "params"
 
     .prologue
-    .line 480
+    .line 483
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$DisableChanger;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$DisableChanger;->mInfo:Landroid/content/pm/ApplicationInfo;
@@ -100,7 +100,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/pm/PackageManager;->setApplicationEnabledSetting(Ljava/lang/String;II)V
 
-    .line 481
+    .line 484
     const/4 v0, 0x0
 
     return-object v0

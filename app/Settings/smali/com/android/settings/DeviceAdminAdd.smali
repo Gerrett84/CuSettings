@@ -559,7 +559,7 @@
     invoke-virtual {p0, v7}, Lcom/android/settings/DeviceAdminAdd;->setContentView(I)V
 
     .line 159
-    const v7, 0x7f09006f
+    const v7, 0x7f09006e
 
     invoke-virtual {p0, v7}, Lcom/android/settings/DeviceAdminAdd;->findViewById(I)Landroid/view/View;
 
@@ -570,7 +570,7 @@
     iput-object v7, p0, Lcom/android/settings/DeviceAdminAdd;->mAdminIcon:Landroid/widget/ImageView;
 
     .line 160
-    const v7, 0x7f090070
+    const v7, 0x7f09006f
 
     invoke-virtual {p0, v7}, Lcom/android/settings/DeviceAdminAdd;->findViewById(I)Landroid/view/View;
 
@@ -581,7 +581,7 @@
     iput-object v7, p0, Lcom/android/settings/DeviceAdminAdd;->mAdminName:Landroid/widget/TextView;
 
     .line 161
-    const v7, 0x7f090071
+    const v7, 0x7f090070
 
     invoke-virtual {p0, v7}, Lcom/android/settings/DeviceAdminAdd;->findViewById(I)Landroid/view/View;
 
@@ -592,7 +592,7 @@
     iput-object v7, p0, Lcom/android/settings/DeviceAdminAdd;->mAdminDescription:Landroid/widget/TextView;
 
     .line 163
-    const v7, 0x7f090073
+    const v7, 0x7f090072
 
     invoke-virtual {p0, v7}, Lcom/android/settings/DeviceAdminAdd;->findViewById(I)Landroid/view/View;
 
@@ -603,7 +603,7 @@
     iput-object v7, p0, Lcom/android/settings/DeviceAdminAdd;->mAddMsg:Landroid/widget/TextView;
 
     .line 164
-    const v7, 0x7f090072
+    const v7, 0x7f090071
 
     invoke-virtual {p0, v7}, Lcom/android/settings/DeviceAdminAdd;->findViewById(I)Landroid/view/View;
 
@@ -628,7 +628,7 @@
     invoke-virtual {p0, v7}, Lcom/android/settings/DeviceAdminAdd;->toggleMessageEllipsis(Landroid/view/View;)V
 
     .line 174
-    const v7, 0x7f090074
+    const v7, 0x7f090073
 
     invoke-virtual {p0, v7}, Lcom/android/settings/DeviceAdminAdd;->findViewById(I)Landroid/view/View;
 
@@ -639,7 +639,7 @@
     iput-object v7, p0, Lcom/android/settings/DeviceAdminAdd;->mAdminWarning:Landroid/widget/TextView;
 
     .line 175
-    const v7, 0x7f090075
+    const v7, 0x7f090074
 
     invoke-virtual {p0, v7}, Lcom/android/settings/DeviceAdminAdd;->findViewById(I)Landroid/view/View;
 
@@ -650,7 +650,7 @@
     iput-object v7, p0, Lcom/android/settings/DeviceAdminAdd;->mAdminPolicies:Landroid/view/ViewGroup;
 
     .line 176
-    const v7, 0x7f09002a
+    const v7, 0x7f09002b
 
     invoke-virtual {p0, v7}, Lcom/android/settings/DeviceAdminAdd;->findViewById(I)Landroid/view/View;
 

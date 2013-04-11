@@ -6,5 +6,5 @@
         <TextView android:layout_gravity="center_horizontal" android:id="@id/lib_provider" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@miui:style/V5.TextAppearance.Title.Medium.Secondary" />
     </LinearLayout>
     <ListView android:id="@id/scan_item" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
-    <Button android:textAppearance="@101515287" android:layout_gravity="center_horizontal" android:id="@id/scan_now" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="15.0dip" android:text="@string/virus_scanner_scan" />
+    <Button android:textAppearance="@miui:style/V5.TextAppearance.Button" android:layout_gravity="center_horizontal" android:id="@id/scan_now" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="15.0dip" android:text="@string/virus_scanner_scan" />
 </LinearLayout>

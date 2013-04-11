@@ -1176,7 +1176,7 @@
     invoke-super {p0, p1, p2}, Lcom/android/settings/wifi/WifiSettings;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 78
-    const v0, 0x7f090025
+    const v0, 0x7f090026
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

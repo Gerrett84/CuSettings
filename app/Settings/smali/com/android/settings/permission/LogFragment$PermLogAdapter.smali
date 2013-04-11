@@ -207,7 +207,7 @@
     .line 202
     .end local v5           #layoutId:I
     :cond_2
-    const v12, 0x7f090011
+    const v12, 0x7f090012
 
     invoke-virtual {v11, v12}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -227,7 +227,7 @@
 
     .line 204
     .local v7, permView:Landroid/widget/TextView;
-    const v12, 0x7f090015
+    const v12, 0x7f090016
 
     invoke-virtual {v11, v12}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -237,7 +237,7 @@
 
     .line 205
     .local v9, statusView:Landroid/widget/TextView;
-    const v12, 0x7f090048
+    const v12, 0x7f090047
 
     invoke-virtual {v11, v12}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

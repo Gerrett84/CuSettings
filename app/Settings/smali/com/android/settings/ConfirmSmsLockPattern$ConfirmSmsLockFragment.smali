@@ -112,7 +112,7 @@
 
     .prologue
     .line 108
-    const v0, 0x7f0c0891
+    const v0, 0x7f0c0896
 
     invoke-virtual {p0, v0}, Lcom/android/settings/ConfirmSmsLockPattern$ConfirmSmsLockFragment;->getText(I)Ljava/lang/CharSequence;
 
@@ -126,7 +126,7 @@
 
     .prologue
     .line 103
-    const v0, 0x7f0c0890
+    const v0, 0x7f0c0895
 
     return v0
 .end method

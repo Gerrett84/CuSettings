@@ -14,7 +14,7 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 35
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
@@ -27,10 +27,10 @@
     .parameter "savedInstanceState"
 
     .prologue
-    .line 46
+    .line 48
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 48
+    .line 50
     const-string v0, "wifi"
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiConfigInfo;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -41,12 +41,12 @@
 
     iput-object v0, p0, Lcom/android/settings/wifi/WifiConfigInfo;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    .line 49
+    .line 51
     const v0, 0x7f0400b5
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiConfigInfo;->setContentView(I)V
 
-    .line 50
+    .line 52
     const v0, 0x7f0901e5
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiConfigInfo;->findViewById(I)Landroid/view/View;
@@ -57,31 +57,42 @@
 
     iput-object v0, p0, Lcom/android/settings/wifi/WifiConfigInfo;->mConfigList:Landroid/widget/TextView;
 
-    .line 51
+    .line 53
     return-void
 .end method
 
 .method protected onResume()V
     .locals 4
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
-    .line 55
+    .line 58
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 56
+    .line 59
     iget-object v3, p0, Lcom/android/settings/wifi/WifiConfigInfo;->mWifiManager:Landroid/net/wifi/WifiManager;
 
     invoke-virtual {v3}, Landroid/net/wifi/WifiManager;->getConfiguredNetworks()Ljava/util/List;
 
     move-result-object v2
 
-    .line 57
+    .line 60
     .local v2, wifiConfigs:Ljava/util/List;,"Ljava/util/List<Landroid/net/wifi/WifiConfiguration;>;"
+    if-nez v2, :cond_0
+
+    .line 68
+    :goto_0
+    return-void
+
+    .line 63
+    :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 58
+    .line 64
     .local v0, configList:Ljava/lang/StringBuffer;
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -90,27 +101,26 @@
     add-int/lit8 v1, v3, -0x1
 
     .local v1, i:I
-    :goto_0
-    if-ltz v1, :cond_0
+    :goto_1
+    if-ltz v1, :cond_1
 
-    .line 59
+    .line 65
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
 
-    .line 58
+    .line 64
     add-int/lit8 v1, v1, -0x1
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 61
-    :cond_0
+    .line 67
+    :cond_1
     iget-object v3, p0, Lcom/android/settings/wifi/WifiConfigInfo;->mConfigList:Landroid/widget/TextView;
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 62
-    return-void
+    goto :goto_0
 .end method

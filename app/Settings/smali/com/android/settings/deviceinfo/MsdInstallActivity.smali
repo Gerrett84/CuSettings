@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/settings/deviceinfo/MsdInstallActivity$HtmlLinkSpan;,
         Lcom/android/settings/deviceinfo/MsdInstallActivity$MsdInstallRetrySpan;
     }
 .end annotation
@@ -50,6 +51,8 @@
 
 .field private mNextButton:Landroid/widget/Button;
 
+.field private mTitleView:Landroid/widget/TextView;
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -58,7 +61,7 @@
     .prologue
     const/4 v3, 0x4
 
-    .line 38
+    .line 42
     new-array v0, v3, [[I
 
     const/4 v1, 0x0
@@ -95,7 +98,7 @@
 
     sput-object v0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->INSTALL_ICON_ARR:[[I
 
-    .line 63
+    .line 67
     new-array v0, v3, [I
 
     fill-array-data v0, :array_4
@@ -104,15 +107,15 @@
 
     return-void
 
-    .line 38
+    .line 42
     nop
 
     :array_0
     .array-data 0x4
         0x30t 0x1t 0x2t 0x7ft
-        0x32t 0x1t 0x2t 0x7ft
-        0x35t 0x1t 0x2t 0x7ft
-        0x35t 0x1t 0x2t 0x7ft
+        0x33t 0x1t 0x2t 0x7ft
+        0x37t 0x1t 0x2t 0x7ft
+        0x37t 0x1t 0x2t 0x7ft
     .end array-data
 
     :array_1
@@ -127,8 +130,8 @@
     .array-data 0x4
         0x2ft 0x1t 0x2t 0x7ft
         0x31t 0x1t 0x2t 0x7ft
-        0x34t 0x1t 0x2t 0x7ft
-        0x34t 0x1t 0x2t 0x7ft
+        0x36t 0x1t 0x2t 0x7ft
+        0x36t 0x1t 0x2t 0x7ft
     .end array-data
 
     :array_3
@@ -139,7 +142,7 @@
         0x0t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 63
+    .line 67
     :array_4
     .array-data 0x4
         0x50t 0x8t 0xct 0x7ft
@@ -153,17 +156,17 @@
     .locals 1
 
     .prologue
-    .line 23
+    .line 26
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 159
+    .line 164
     new-instance v0, Lcom/android/settings/deviceinfo/MsdInstallActivity$4;
 
     invoke-direct {v0, p0}, Lcom/android/settings/deviceinfo/MsdInstallActivity$4;-><init>(Lcom/android/settings/deviceinfo/MsdInstallActivity;)V
 
     iput-object v0, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallStatus:Landroid/widget/RadioGroup$OnCheckedChangeListener;
 
-    .line 211
+    .line 250
     return-void
 .end method
 
@@ -172,7 +175,7 @@
     .parameter "x0"
 
     .prologue
-    .line 23
+    .line 26
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSucceed:Landroid/widget/CheckBox;
 
     return-object v0
@@ -183,7 +186,7 @@
     .parameter "x0"
 
     .prologue
-    .line 23
+    .line 26
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mNextButton:Landroid/widget/Button;
 
     return-object v0
@@ -194,7 +197,7 @@
     .parameter "x0"
 
     .prologue
-    .line 23
+    .line 26
     iget v0, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
 
     return v0
@@ -206,7 +209,7 @@
     .parameter "x1"
 
     .prologue
-    .line 23
+    .line 26
     iput p1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
 
     return p1
@@ -217,7 +220,7 @@
     .parameter "x0"
 
     .prologue
-    .line 23
+    .line 26
     iget-boolean v0, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mIsInstallAlready:Z
 
     return v0
@@ -229,7 +232,7 @@
     .parameter "x1"
 
     .prologue
-    .line 23
+    .line 26
     iput-boolean p1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mIsInstallAlready:Z
 
     return p1
@@ -240,7 +243,7 @@
     .parameter "x0"
 
     .prologue
-    .line 23
+    .line 26
     invoke-direct {p0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->showInstallUI()V
 
     return-void
@@ -251,7 +254,7 @@
     .parameter "x0"
 
     .prologue
-    .line 23
+    .line 26
     invoke-direct {p0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->init()V
 
     return-void
@@ -267,7 +270,7 @@
 
     const/4 v8, 0x0
 
-    .line 92
+    .line 97
     invoke-virtual {p0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
@@ -280,13 +283,13 @@
 
     iput v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSystemType:I
 
-    .line 93
+    .line 98
     iput v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
 
-    .line 94
+    .line 99
     iput-boolean v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mIsInstallAlready:Z
 
-    .line 95
+    .line 100
     const v4, 0x7f09000c
 
     invoke-virtual {p0, v4}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->findViewById(I)Landroid/view/View;
@@ -294,6 +297,11 @@
     move-result-object v4
 
     check-cast v4, Landroid/widget/TextView;
+
+    iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mTitleView:Landroid/widget/TextView;
+
+    .line 101
+    iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mTitleView:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->getResources()Landroid/content/res/Resources;
 
@@ -311,8 +319,8 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 97
-    const v4, 0x7f0900ca
+    .line 102
+    const v4, 0x7f0900cb
 
     invoke-virtual {p0, v4}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->findViewById(I)Landroid/view/View;
 
@@ -320,10 +328,10 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mHeaderView:Landroid/view/View;
 
-    .line 98
+    .line 103
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mHeaderView:Landroid/view/View;
 
-    const v5, 0x7f0900d4
+    const v5, 0x7f0900d5
 
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -333,10 +341,10 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSummary:Landroid/widget/TextView;
 
-    .line 99
+    .line 104
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mHeaderView:Landroid/view/View;
 
-    const v5, 0x7f0900d5
+    const v5, 0x7f0900d6
 
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -346,10 +354,10 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallIcon:Landroid/widget/ImageView;
 
-    .line 100
+    .line 105
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mHeaderView:Landroid/view/View;
 
-    const v5, 0x7f0900d2
+    const v5, 0x7f0900d3
 
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -359,10 +367,10 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSummary_1:Landroid/widget/TextView;
 
-    .line 101
+    .line 106
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mHeaderView:Landroid/view/View;
 
-    const v5, 0x7f0900d3
+    const v5, 0x7f0900d4
 
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -372,8 +380,8 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallIcon_1:Landroid/widget/ImageView;
 
-    .line 103
-    const v4, 0x7f0900cb
+    .line 108
+    const v4, 0x7f0900cc
 
     invoke-virtual {p0, v4}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->findViewById(I)Landroid/view/View;
 
@@ -383,15 +391,15 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallStatusGrp:Landroid/widget/RadioGroup;
 
-    .line 104
+    .line 109
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallStatusGrp:Landroid/widget/RadioGroup;
 
     iget-object v5, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallStatus:Landroid/widget/RadioGroup$OnCheckedChangeListener;
 
     invoke-virtual {v4, v5}, Landroid/widget/RadioGroup;->setOnCheckedChangeListener(Landroid/widget/RadioGroup$OnCheckedChangeListener;)V
 
-    .line 106
-    const v4, 0x7f0900ce
+    .line 111
+    const v4, 0x7f0900cf
 
     invoke-virtual {p0, v4}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->findViewById(I)Landroid/view/View;
 
@@ -401,7 +409,7 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSucceed:Landroid/widget/CheckBox;
 
-    .line 107
+    .line 112
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSucceed:Landroid/widget/CheckBox;
 
     new-instance v5, Lcom/android/settings/deviceinfo/MsdInstallActivity$1;
@@ -410,8 +418,8 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 114
-    const v4, 0x7f0900d0
+    .line 119
+    const v4, 0x7f0900d1
 
     invoke-virtual {p0, v4}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->findViewById(I)Landroid/view/View;
 
@@ -421,7 +429,7 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mCancelButton:Landroid/widget/Button;
 
-    .line 115
+    .line 120
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mCancelButton:Landroid/widget/Button;
 
     new-instance v5, Lcom/android/settings/deviceinfo/MsdInstallActivity$2;
@@ -430,8 +438,8 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 123
-    const v4, 0x7f0900d1
+    .line 128
+    const v4, 0x7f0900d2
 
     invoke-virtual {p0, v4}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->findViewById(I)Landroid/view/View;
 
@@ -441,7 +449,7 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mNextButton:Landroid/widget/Button;
 
-    .line 124
+    .line 129
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mNextButton:Landroid/widget/Button;
 
     new-instance v5, Lcom/android/settings/deviceinfo/MsdInstallActivity$3;
@@ -450,8 +458,8 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 131
-    const v4, 0x7f0900cf
+    .line 136
+    const v4, 0x7f0900d0
 
     invoke-virtual {p0, v4}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->findViewById(I)Landroid/view/View;
 
@@ -461,7 +469,7 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallRetry:Landroid/widget/TextView;
 
-    .line 132
+    .line 137
     iget v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSystemType:I
 
     if-eq v4, v9, :cond_0
@@ -470,7 +478,7 @@
 
     if-ne v4, v10, :cond_1
 
-    .line 133
+    .line 138
     :cond_0
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallRetry:Landroid/widget/TextView;
 
@@ -482,13 +490,13 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(I)V
 
-    .line 144
+    .line 149
     :goto_0
     invoke-virtual {p0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 145
+    .line 150
     .local v1, res:Landroid/content/res/Resources;
     const/4 v4, 0x4
 
@@ -496,7 +504,7 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
 
-    .line 146
+    .line 151
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
 
     const v5, 0x7f080066
@@ -511,7 +519,7 @@
 
     aput-object v5, v4, v8
 
-    .line 148
+    .line 153
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
 
     const v5, 0x7f080067
@@ -526,7 +534,7 @@
 
     aput-object v5, v4, v9
 
-    .line 150
+    .line 155
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
 
     const/4 v5, 0x2
@@ -543,7 +551,7 @@
 
     aput-object v6, v4, v5
 
-    .line 152
+    .line 157
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
 
     const v5, 0x7f080069
@@ -558,7 +566,7 @@
 
     aput-object v5, v4, v10
 
-    .line 154
+    .line 159
     sget-object v4, Lcom/android/settings/deviceinfo/MsdInstallActivity;->INSTALL_ICON_ARR:[[I
 
     iget v5, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSystemType:I
@@ -567,13 +575,13 @@
 
     iput-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallIcon:[I
 
-    .line 156
+    .line 161
     invoke-direct {p0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->showInstallUI()V
 
-    .line 157
+    .line 162
     return-void
 
-    .line 135
+    .line 140
     .end local v1           #res:Landroid/content/res/Resources;
     :cond_1
     invoke-virtual {p0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->getResources()Landroid/content/res/Resources;
@@ -590,13 +598,13 @@
 
     move-result-object v0
 
-    .line 136
+    .line 141
     .local v0, msdInstallRetry:Ljava/lang/CharSequence;
     new-instance v3, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v3, v0}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 137
+    .line 142
     .local v3, ss:Landroid/text/SpannableStringBuilder;
     const v4, 0x7f0c084d
 
@@ -608,7 +616,7 @@
 
     move-result v2
 
-    .line 138
+    .line 143
     .local v2, spanLength:I
     new-instance v4, Lcom/android/settings/deviceinfo/MsdInstallActivity$MsdInstallRetrySpan;
 
@@ -632,7 +640,7 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 140
+    .line 145
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallRetry:Landroid/widget/TextView;
 
     invoke-static {}, Landroid/text/method/LinkMovementMethod;->getInstance()Landroid/text/method/MovementMethod;
@@ -641,7 +649,7 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
-    .line 141
+    .line 146
     iget-object v4, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallRetry:Landroid/widget/TextView;
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -650,234 +658,395 @@
 .end method
 
 .method private showInstallUI()V
-    .locals 8
+    .locals 11
 
     .prologue
-    const/4 v7, 0x3
+    const/4 v10, 0x3
 
-    const/4 v6, 0x2
+    const/4 v9, 0x2
+
+    const/16 v7, 0x8
+
+    const/4 v5, 0x0
 
     const/4 v4, 0x1
 
-    const/16 v3, 0x8
+    .line 181
+    new-instance v6, Ljava/io/File;
 
-    const/4 v2, 0x0
+    const-string v8, "/data/media/cdrom_install.iso"
 
-    .line 176
-    iget v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSystemType:I
+    invoke-direct {v6, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    packed-switch v1, :pswitch_data_0
+    invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
-    .line 190
+    move-result v6
+
+    if-nez v6, :cond_3
+
+    move v1, v4
+
+    .line 182
+    .local v1, driverNeedDownload:Z
     :goto_0
-    :pswitch_0
-    iget v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSystemType:I
+    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSystemType:I
 
-    if-eq v1, v7, :cond_0
+    packed-switch v6, :pswitch_data_0
 
-    .line 191
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSummary:Landroid/widget/TextView;
-
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
-
-    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 192
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallIcon:Landroid/widget/ImageView;
-
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallIcon:[I
-
-    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
-
-    aget v5, v5, v6
-
-    invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 194
+    .line 205
     :cond_0
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallRetry:Landroid/widget/TextView;
-
-    iget v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
-
-    if-le v1, v4, :cond_4
-
-    move v1, v2
-
     :goto_1
-    invoke-virtual {v5, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mTitleView:Landroid/widget/TextView;
 
-    .line 196
-    iget v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+    invoke-virtual {p0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->getResources()Landroid/content/res/Resources;
 
-    if-eqz v1, :cond_5
+    move-result-object v8
 
-    .line 197
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallStatusGrp:Landroid/widget/RadioGroup;
+    const v9, 0x7f080065
 
-    invoke-virtual {v1, v3}, Landroid/widget/RadioGroup;->setVisibility(I)V
+    invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
-    .line 202
+    move-result-object v8
+
+    iget v9, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSystemType:I
+
+    aget-object v8, v8, v9
+
+    invoke-virtual {v6, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 206
+    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSystemType:I
+
+    if-eq v6, v10, :cond_1
+
+    .line 207
+    if-eqz v1, :cond_6
+
+    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    if-ne v6, v4, :cond_6
+
+    .line 208
+    new-instance v3, Landroid/text/SpannableStringBuilder;
+
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
+
+    iget v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    aget-object v6, v6, v8
+
+    invoke-direct {v3, v6}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
+
+    .line 209
+    .local v3, ss:Landroid/text/SpannableStringBuilder;
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
+
+    iget v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    aget-object v6, v6, v8
+
+    const-string v8, "http://miui.com/"
+
+    invoke-virtual {v6, v8}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v2
+
+    .line 210
+    .local v2, spanStart:I
+    new-instance v6, Lcom/android/settings/deviceinfo/MsdInstallActivity$HtmlLinkSpan;
+
+    invoke-direct {v6, p0}, Lcom/android/settings/deviceinfo/MsdInstallActivity$HtmlLinkSpan;-><init>(Lcom/android/settings/deviceinfo/MsdInstallActivity;)V
+
+    iget-object v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
+
+    iget v9, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    aget-object v8, v8, v9
+
+    invoke-virtual {v8}, Ljava/lang/String;->length()I
+
+    move-result v8
+
+    const/16 v9, 0x21
+
+    invoke-virtual {v3, v6, v2, v8, v9}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
+
+    .line 212
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSummary:Landroid/widget/TextView;
+
+    invoke-virtual {v6, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 213
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mTitleView:Landroid/widget/TextView;
+
+    const v8, 0x7f0c0856
+
+    invoke-virtual {v6, v8}, Landroid/widget/TextView;->setText(I)V
+
+    .line 217
+    .end local v2           #spanStart:I
+    .end local v3           #ss:Landroid/text/SpannableStringBuilder;
     :goto_2
-    iget v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallIcon:Landroid/widget/ImageView;
 
-    if-le v1, v4, :cond_6
+    iget-object v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallIcon:[I
+
+    iget v9, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    aget v8, v8, v9
+
+    invoke-virtual {v6, v8}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 219
+    :cond_1
+    iget-object v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallRetry:Landroid/widget/TextView;
+
+    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    if-le v6, v4, :cond_7
+
+    move v6, v5
+
+    :goto_3
+    invoke-virtual {v8, v6}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 221
+    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    if-eqz v6, :cond_8
+
+    .line 222
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallStatusGrp:Landroid/widget/RadioGroup;
+
+    invoke-virtual {v6, v7}, Landroid/widget/RadioGroup;->setVisibility(I)V
+
+    .line 227
+    :goto_4
+    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    if-le v6, v4, :cond_9
 
     const v0, 0x7f0c084e
 
-    .line 203
+    .line 228
     .local v0, buttonResId:I
-    :goto_3
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mCancelButton:Landroid/widget/Button;
-
-    invoke-virtual {v1, v0}, Landroid/widget/Button;->setText(I)V
-
-    .line 205
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mNextButton:Landroid/widget/Button;
-
-    iget v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
-
-    if-le v1, v4, :cond_7
-
-    move v1, v3
-
-    :goto_4
-    invoke-virtual {v5, v1}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 206
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mNextButton:Landroid/widget/Button;
-
-    iget v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
-
-    if-ne v1, v4, :cond_1
-
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSucceed:Landroid/widget/CheckBox;
-
-    invoke-virtual {v1}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    :cond_1
-    move v1, v4
-
     :goto_5
-    invoke-virtual {v5, v1}, Landroid/widget/Button;->setEnabled(Z)V
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mCancelButton:Landroid/widget/Button;
 
-    .line 208
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSucceed:Landroid/widget/CheckBox;
+    invoke-virtual {v6, v0}, Landroid/widget/Button;->setText(I)V
 
-    iget v5, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+    .line 230
+    iget-object v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mNextButton:Landroid/widget/Button;
 
-    if-ne v5, v4, :cond_9
+    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    if-le v6, v4, :cond_a
+
+    move v6, v7
 
     :goto_6
-    invoke-virtual {v1, v2}, Landroid/widget/CheckBox;->setVisibility(I)V
+    invoke-virtual {v8, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 209
-    return-void
+    .line 231
+    iget-object v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mNextButton:Landroid/widget/Button;
 
-    .line 178
-    .end local v0           #buttonResId:I
-    :pswitch_1
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSummary_1:Landroid/widget/TextView;
+    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
 
-    iget v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+    if-ne v6, v4, :cond_2
 
-    if-ne v1, v6, :cond_2
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSucceed:Landroid/widget/CheckBox;
 
-    move v1, v2
+    invoke-virtual {v6}, Landroid/widget/CheckBox;->isChecked()Z
 
-    :goto_7
-    invoke-virtual {v5, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    move-result v6
 
-    .line 179
-    iget-object v5, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallIcon_1:Landroid/widget/ImageView;
-
-    iget v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
-
-    if-ne v1, v6, :cond_3
-
-    move v1, v2
-
-    :goto_8
-    invoke-virtual {v5, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    goto :goto_0
+    if-eqz v6, :cond_b
 
     :cond_2
-    move v1, v3
+    move v6, v4
 
-    .line 178
-    goto :goto_7
+    :goto_7
+    invoke-virtual {v8, v6}, Landroid/widget/Button;->setEnabled(Z)V
 
+    .line 233
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSucceed:Landroid/widget/CheckBox;
+
+    iget v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    if-ne v8, v4, :cond_c
+
+    :goto_8
+    invoke-virtual {v6, v5}, Landroid/widget/CheckBox;->setVisibility(I)V
+
+    .line 234
+    return-void
+
+    .end local v0           #buttonResId:I
+    .end local v1           #driverNeedDownload:Z
     :cond_3
-    move v1, v3
+    move v1, v5
 
-    .line 179
-    goto :goto_8
+    .line 181
+    goto/16 :goto_0
 
     .line 184
-    :pswitch_2
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mHeaderView:Landroid/view/View;
+    .restart local v1       #driverNeedDownload:Z
+    :pswitch_0
+    iget-object v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSummary_1:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    if-ne v6, v9, :cond_4
+
+    move v6, v5
+
+    :goto_9
+    invoke-virtual {v8, v6}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 185
+    iget-object v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallIcon_1:Landroid/widget/ImageView;
+
+    iget v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    if-ne v6, v9, :cond_5
+
+    move v6, v5
+
+    :goto_a
+    invoke-virtual {v8, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 186
-    :pswitch_3
-    iput v7, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+    if-eqz v1, :cond_0
 
-    goto :goto_0
+    .line 187
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
+
+    const v8, 0x7f0c0857
+
+    invoke-virtual {p0, v8}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    aput-object v8, v6, v4
+
+    .line 188
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallIcon:[I
+
+    const v8, 0x7f020134
+
+    aput v8, v6, v4
+
+    goto/16 :goto_1
 
     :cond_4
-    move v1, v3
+    move v6, v7
+
+    .line 184
+    goto :goto_9
+
+    :cond_5
+    move v6, v7
+
+    .line 185
+    goto :goto_a
+
+    .line 192
+    :pswitch_1
+    if-eqz v1, :cond_0
+
+    .line 193
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
+
+    const v8, 0x7f0c0858
+
+    invoke-virtual {p0, v8}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    aput-object v8, v6, v4
 
     .line 194
-    goto :goto_1
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallIcon:[I
+
+    const v8, 0x7f020132
+
+    aput v8, v6, v4
+
+    goto/16 :goto_1
 
     .line 199
-    :cond_5
-    iget-object v1, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallStatusGrp:Landroid/widget/RadioGroup;
+    :pswitch_2
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mHeaderView:Landroid/view/View;
 
-    invoke-virtual {v1, v2}, Landroid/widget/RadioGroup;->setVisibility(I)V
+    invoke-virtual {v6, v7}, Landroid/view/View;->setVisibility(I)V
 
-    goto :goto_2
+    .line 201
+    :pswitch_3
+    iput v10, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
 
-    .line 202
+    goto/16 :goto_1
+
+    .line 215
     :cond_6
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallSummary:Landroid/widget/TextView;
+
+    iget-object v8, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallSummaryArr:[Ljava/lang/String;
+
+    iget v9, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mInstallStep:I
+
+    aget-object v8, v8, v9
+
+    invoke-virtual {v6, v8}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto/16 :goto_2
+
+    :cond_7
+    move v6, v7
+
+    .line 219
+    goto/16 :goto_3
+
+    .line 224
+    :cond_8
+    iget-object v6, p0, Lcom/android/settings/deviceinfo/MsdInstallActivity;->mMsdInstallStatusGrp:Landroid/widget/RadioGroup;
+
+    invoke-virtual {v6, v5}, Landroid/widget/RadioGroup;->setVisibility(I)V
+
+    goto/16 :goto_4
+
+    .line 227
+    :cond_9
     const/high16 v0, 0x104
 
-    goto :goto_3
+    goto/16 :goto_5
 
     .restart local v0       #buttonResId:I
-    :cond_7
-    move v1, v2
+    :cond_a
+    move v6, v5
 
-    .line 205
-    goto :goto_4
+    .line 230
+    goto/16 :goto_6
 
-    :cond_8
-    move v1, v2
+    :cond_b
+    move v6, v5
 
-    .line 206
-    goto :goto_5
+    .line 231
+    goto :goto_7
 
-    :cond_9
-    move v2, v3
+    :cond_c
+    move v5, v7
 
-    .line 208
-    goto :goto_6
+    .line 233
+    goto :goto_8
 
-    .line 176
+    .line 182
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
-        :pswitch_3
         :pswitch_0
+        :pswitch_3
+        :pswitch_1
         :pswitch_2
     .end packed-switch
 .end method
@@ -889,17 +1058,17 @@
     .parameter "savedInstanceState"
 
     .prologue
-    .line 85
+    .line 90
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 86
+    .line 91
     const v0, 0x7f040057
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->setContentView(I)V
 
-    .line 88
+    .line 93
     invoke-direct {p0}, Lcom/android/settings/deviceinfo/MsdInstallActivity;->init()V
 
-    .line 89
+    .line 94
     return-void
 .end method

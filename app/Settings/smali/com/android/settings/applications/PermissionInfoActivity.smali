@@ -741,7 +741,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c087b
+    const v2, 0x7f0c087e
 
     invoke-virtual {p0, v2}, Lcom/android/settings/applications/PermissionInfoActivity;->getString(I)Ljava/lang/String;
 

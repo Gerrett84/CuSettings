@@ -166,7 +166,7 @@
     move-result-object p2
 
     .line 129
-    const v5, 0x7f090010
+    const v5, 0x7f090011
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -177,7 +177,7 @@
     iput-object v5, v1, Lcom/android/settings/SelectAutoRunApplicationActivity$ViewHolder;->mIcon:Landroid/widget/ImageView;
 
     .line 130
-    const v5, 0x7f090011
+    const v5, 0x7f090012
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -188,7 +188,7 @@
     iput-object v5, v1, Lcom/android/settings/SelectAutoRunApplicationActivity$ViewHolder;->mAppName:Landroid/widget/TextView;
 
     .line 131
-    const v5, 0x7f090012
+    const v5, 0x7f090013
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -199,7 +199,7 @@
     iput-object v5, v1, Lcom/android/settings/SelectAutoRunApplicationActivity$ViewHolder;->mEnable:Landroid/widget/Button;
 
     .line 132
-    const v5, 0x7f090013
+    const v5, 0x7f090014
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -244,7 +244,7 @@
     .local v2, holderClick:Lcom/android/settings/SelectAutoRunApplicationActivity$ViewHolder;
     iget-object v5, v1, Lcom/android/settings/SelectAutoRunApplicationActivity$ViewHolder;->mEnable:Landroid/widget/Button;
 
-    const v6, 0x7f0c0887
+    const v6, 0x7f0c088a
 
     invoke-virtual {v5, v6}, Landroid/widget/Button;->setText(I)V
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TwoLineListItem android:background="@100794866" android:layout_width="fill_parent" android:layout_height="wrap_content" android:mode="twoLine"
+<TwoLineListItem android:background="@miui:drawable/v5_preference_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:mode="twoLine"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textAppearance="@101515305" android:id="@android:id/text1" android:paddingTop="@101318711" android:paddingRight="@101318709" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@101318710" />
-    <TextView android:textAppearance="@101515300" android:id="@android:id/text2" android:paddingRight="@101318709" android:paddingBottom="@101318708" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@android:id/text1" android:layout_alignLeft="@android:id/text1" />
+    <TextView android:textAppearance="@miui:style/V5.TextAppearance.PreferenceList" android:id="@android:id/text1" android:paddingTop="@miui:dimen/v5_preference_item_padding_top" android:paddingRight="@miui:dimen/v5_preference_item_padding_inner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@miui:dimen/v5_preference_item_padding_side" />
+    <TextView android:textAppearance="@miui:style/V5.TextAppearance.List.Secondary" android:id="@android:id/text2" android:paddingRight="@miui:dimen/v5_preference_item_padding_inner" android:paddingBottom="@miui:dimen/v5_preference_item_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@android:id/text1" android:layout_alignLeft="@android:id/text1" />
 </TwoLineListItem>

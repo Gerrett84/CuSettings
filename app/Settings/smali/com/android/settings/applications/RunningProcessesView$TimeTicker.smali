@@ -21,9 +21,9 @@
     .parameter "attrs"
 
     .prologue
-    .line 203
+    .line 202
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 204
+    .line 203
     return-void
 .end method

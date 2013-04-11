@@ -568,7 +568,7 @@
     iput-object v0, p0, Lcom/android/settings/BandMode;->mPhone:Lcom/android/internal/telephony/Phone;
 
     .line 70
-    const v0, 0x7f090014
+    const v0, 0x7f090015
 
     invoke-virtual {p0, v0}, Lcom/android/settings/BandMode;->findViewById(I)Landroid/view/View;
 

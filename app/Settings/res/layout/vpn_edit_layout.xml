@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@101318713" android:layout_marginBottom="@101318712">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@miui:dimen/v5_preference_screen_padding_top" android:layout_marginBottom="@miui:dimen/v5_preference_screen_padding_bottom">
         <LinearLayout android:orientation="vertical" android:id="@id/editor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <LinearLayout android:background="@100794770" style="@style/input_item_horizontal">
+            <LinearLayout android:background="@miui:drawable/v5_group_single_item_bg_light" style="@style/input_item_horizontal">
                 <TextView android:background="@drawable/input_item_single" android:text="@string/vpn_name" style="@style/input_item_label" />
                 <EditText android:id="@id/name" android:inputType="textCapWords" style="@style/input_item_content" />
             </LinearLayout>
             <TextView android:text="@string/vpn_type" style="@style/vpn_input_category" />
             <Spinner android:entries="@array/vpn_types" android:id="@id/type" android:prompt="@string/vpn_type" style="@style/vpn_value" />
-            <LinearLayout android:background="@100794770" android:layout_marginTop="10.0dip" style="@style/input_item_horizontal">
+            <LinearLayout android:background="@miui:drawable/v5_group_single_item_bg_light" android:layout_marginTop="10.0dip" style="@style/input_item_horizontal">
                 <TextView android:background="@drawable/input_item_single" android:text="@string/vpn_server" style="@style/input_item_label" />
                 <EditText android:id="@id/server" style="@style/input_item_content" />
             </LinearLayout>
@@ -42,7 +42,7 @@
             <CheckBox android:id="@id/show_options" android:layout_marginTop="10.0dip" android:text="@string/vpn_show_options" android:singleLine="false" style="@style/vpn_value" />
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:id="@id/options" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
-            <LinearLayout android:background="@100794766" style="@style/input_item_horizontal">
+            <LinearLayout android:background="@miui:drawable/v5_group_first_item_bg_light" style="@style/input_item_horizontal">
                 <TextView android:background="@drawable/input_item_first" android:text="@string/vpn_search_domains" style="@style/input_item_label" />
                 <EditText android:id="@id/search_domains" android:hint="@string/vpn_not_used" style="@style/input_item_content" />
             </LinearLayout>
@@ -50,17 +50,17 @@
                 <TextView android:text="@string/vpn_dns_servers" style="@style/input_item_label" />
                 <EditText android:id="@id/dns_servers" android:hint="@string/vpn_dns_servers_hint" style="@style/input_item_content" />
             </LinearLayout>
-            <LinearLayout android:background="@100794768" style="@style/input_item_horizontal">
+            <LinearLayout android:background="@miui:drawable/v5_group_last_item_bg_light" style="@style/input_item_horizontal">
                 <TextView android:background="@drawable/input_item_last" android:text="@string/vpn_routes" style="@style/input_item_label" />
                 <EditText android:id="@id/routes" android:hint="@string/vpn_routes_hint" style="@style/input_item_content" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:id="@id/login" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
-            <LinearLayout android:background="@100794766" style="@style/input_item_horizontal">
+            <LinearLayout android:background="@miui:drawable/v5_group_first_item_bg_light" style="@style/input_item_horizontal">
                 <TextView android:background="@drawable/input_item_first" android:text="@string/vpn_username" style="@style/input_item_label" />
                 <EditText android:id="@id/username" style="@style/input_item_content" />
             </LinearLayout>
-            <LinearLayout android:background="@100794768" style="@style/input_item_horizontal">
+            <LinearLayout android:background="@miui:drawable/v5_group_last_item_bg_light" style="@style/input_item_horizontal">
                 <TextView android:background="@drawable/input_item_last" android:text="@string/vpn_password" style="@style/input_item_label" />
                 <EditText android:id="@id/password" android:password="true" style="@style/input_item_content" />
             </LinearLayout>

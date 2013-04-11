@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 718
+    .line 737
     iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment$4;->this$0:Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 720
+    .line 739
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment$4;->this$0:Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment;
 
     invoke-virtual {v0}, Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment;->getOwner()Lcom/android/settings/applications/InstalledAppDetailsFragment;
@@ -53,13 +53,13 @@
     move-result-object v0
 
     #getter for: Lcom/android/settings/applications/InstalledAppDetailsFragment;->mPrefClearData:Lcom/android/settings/applications/ButtonPreference;
-    invoke-static {v0}, Lcom/android/settings/applications/InstalledAppDetailsFragment;->access$1000(Lcom/android/settings/applications/InstalledAppDetailsFragment;)Lcom/android/settings/applications/ButtonPreference;
+    invoke-static {v0}, Lcom/android/settings/applications/InstalledAppDetailsFragment;->access$1100(Lcom/android/settings/applications/InstalledAppDetailsFragment;)Lcom/android/settings/applications/ButtonPreference;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lcom/android/settings/applications/ButtonPreference;->setEnabled(Z)V
 
-    .line 722
+    .line 741
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment$4;->this$0:Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment;
 
     invoke-virtual {v0}, Lcom/android/settings/applications/InstalledAppDetailsFragment$MyAlertDialogFragment;->getOwner()Lcom/android/settings/applications/InstalledAppDetailsFragment;
@@ -67,8 +67,8 @@
     move-result-object v0
 
     #calls: Lcom/android/settings/applications/InstalledAppDetailsFragment;->setIntentAndFinish(ZZ)V
-    invoke-static {v0, v1, v1}, Lcom/android/settings/applications/InstalledAppDetailsFragment;->access$900(Lcom/android/settings/applications/InstalledAppDetailsFragment;ZZ)V
+    invoke-static {v0, v1, v1}, Lcom/android/settings/applications/InstalledAppDetailsFragment;->access$1000(Lcom/android/settings/applications/InstalledAppDetailsFragment;ZZ)V
 
-    .line 723
+    .line 742
     return-void
 .end method

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:paddingLeft="@101318710" android:paddingRight="@101318710" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:paddingLeft="@miui:dimen/v5_preference_item_padding_side" android:paddingRight="@miui:dimen/v5_preference_item_padding_side" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView android:textAppearance="?android:textAppearanceLarge" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/display_order_text" />
     <Spinner android:entries="@array/usage_stats_display_order_types" android:id="@id/typeSpinner" android:layout_width="fill_parent" android:layout_height="wrap_content" />

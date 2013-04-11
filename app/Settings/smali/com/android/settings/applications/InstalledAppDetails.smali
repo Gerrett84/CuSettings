@@ -2127,7 +2127,7 @@
     .line 543
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails;->mRootView:Landroid/view/View;
 
-    const v1, 0x7f0900a2
+    const v1, 0x7f0900a3
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2138,7 +2138,7 @@
     .line 544
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetails;->mRootView:Landroid/view/View;
 
-    const v8, 0x7f0900a3
+    const v8, 0x7f0900a4
 
     invoke-virtual {v1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2194,7 +2194,7 @@
     .line 603
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails;->mRootView:Landroid/view/View;
 
-    const v1, 0x7f0900a8
+    const v1, 0x7f0900a9
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2222,7 +2222,7 @@
     invoke-virtual {v0, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 608
-    const v2, 0x7f0900aa
+    const v2, 0x7f0900ab
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -2634,7 +2634,7 @@
     :goto_d
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails;->mRootView:Landroid/view/View;
 
-    const v2, 0x7f0900a9
+    const v2, 0x7f0900aa
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2849,7 +2849,7 @@
     .line 433
     iget-object v3, p0, Lcom/android/settings/applications/InstalledAppDetails;->mRootView:Landroid/view/View;
 
-    const v4, 0x7f09008d
+    const v4, 0x7f09008e
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2857,7 +2857,7 @@
 
     .line 434
     .local v0, appSnippet:Landroid/view/View;
-    const v3, 0x7f090057
+    const v3, 0x7f090056
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2881,7 +2881,7 @@
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 438
-    const v3, 0x7f090011
+    const v3, 0x7f090012
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2898,7 +2898,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 441
-    const v3, 0x7f0900bf
+    const v3, 0x7f0900c0
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3389,7 +3389,7 @@
     .line 1062
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails;->mRootView:Landroid/view/View;
 
-    const v1, 0x7f0900a2
+    const v1, 0x7f0900a3
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3400,7 +3400,7 @@
     .line 1064
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetails;->mRootView:Landroid/view/View;
 
-    const v2, 0x7f0900a3
+    const v2, 0x7f0900a4
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3770,7 +3770,7 @@
     .line 397
     .end local v5           #str:Ljava/lang/String;
     :cond_0
-    const v8, 0x7f090092
+    const v8, 0x7f090093
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3781,7 +3781,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mTotalSize:Landroid/widget/TextView;
 
     .line 398
-    const v8, 0x7f090094
+    const v8, 0x7f090095
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3792,7 +3792,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mAppSize:Landroid/widget/TextView;
 
     .line 399
-    const v8, 0x7f090099
+    const v8, 0x7f09009a
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3803,7 +3803,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mDataSize:Landroid/widget/TextView;
 
     .line 400
-    const v8, 0x7f090096
+    const v8, 0x7f090097
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3814,7 +3814,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mExternalCodeSize:Landroid/widget/TextView;
 
     .line 401
-    const v8, 0x7f09009b
+    const v8, 0x7f09009c
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3825,7 +3825,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mExternalDataSize:Landroid/widget/TextView;
 
     .line 404
-    const v8, 0x7f09008e
+    const v8, 0x7f09008f
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3865,7 +3865,7 @@
     invoke-virtual {v8, v9}, Landroid/widget/Button;->setEnabled(Z)V
 
     .line 411
-    const v8, 0x7f09009c
+    const v8, 0x7f09009d
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3891,7 +3891,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mMoveAppButton:Landroid/widget/Button;
 
     .line 416
-    const v8, 0x7f0900a0
+    const v8, 0x7f0900a1
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3902,7 +3902,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mCacheSize:Landroid/widget/TextView;
 
     .line 417
-    const v8, 0x7f0900a1
+    const v8, 0x7f0900a2
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3913,7 +3913,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mClearCacheButton:Landroid/widget/Button;
 
     .line 419
-    const v8, 0x7f0900a4
+    const v8, 0x7f0900a5
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3924,7 +3924,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mActivitiesButton:Landroid/widget/Button;
 
     .line 422
-    const v8, 0x7f0900a5
+    const v8, 0x7f0900a6
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3933,7 +3933,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mScreenCompatSection:Landroid/view/View;
 
     .line 423
-    const v8, 0x7f0900a6
+    const v8, 0x7f0900a7
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3944,7 +3944,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mAskCompatibilityCB:Landroid/widget/CheckBox;
 
     .line 424
-    const v8, 0x7f0900a7
+    const v8, 0x7f0900a8
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3955,7 +3955,7 @@
     iput-object v8, p0, Lcom/android/settings/applications/InstalledAppDetails;->mEnableCompatibilityCB:Landroid/widget/CheckBox;
 
     .line 426
-    const v8, 0x7f09008f
+    const v8, 0x7f090090
 
     invoke-virtual {v7, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

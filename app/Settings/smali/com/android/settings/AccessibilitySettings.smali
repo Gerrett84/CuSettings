@@ -247,7 +247,7 @@
 
     .line 592
     .local v0, toggleSwitch:Lcom/android/settings/AccessibilitySettings$ToggleSwitch;
-    const v1, 0x7f0c085f
+    const v1, 0x7f0c0862
 
     invoke-virtual {v0, v1}, Lcom/android/settings/AccessibilitySettings$ToggleSwitch;->setTitle(I)V
 

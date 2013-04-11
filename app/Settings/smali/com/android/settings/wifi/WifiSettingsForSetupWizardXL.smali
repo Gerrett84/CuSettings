@@ -259,7 +259,7 @@
     if-eqz v2, :cond_0
 
     .line 166
-    const v2, 0x7f090062
+    const v2, 0x7f090061
 
     invoke-virtual {p0, v2}, Lcom/android/settings/wifi/WifiSettingsForSetupWizardXL;->findViewById(I)Landroid/view/View;
 

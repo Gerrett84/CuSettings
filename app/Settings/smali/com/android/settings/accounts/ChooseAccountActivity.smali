@@ -146,7 +146,7 @@
     if-eqz v1, :cond_0
 
     .line 115
-    const v1, 0x7f090025
+    const v1, 0x7f090026
 
     invoke-virtual {p0, v1}, Lcom/android/settings/accounts/ChooseAccountActivity;->findViewById(I)Landroid/view/View;
 

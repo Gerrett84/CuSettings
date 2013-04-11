@@ -205,7 +205,7 @@
     .line 359
     iget-object v2, p0, Lcom/android/settings/applications/ManageApplicationsActivity$TabInfo;->mRootView:Landroid/view/View;
 
-    const v3, 0x7f0900bc
+    const v3, 0x7f0900bd
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

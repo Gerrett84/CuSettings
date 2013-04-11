@@ -190,7 +190,7 @@
 
     .line 51
     .local v0, rootView:Landroid/view/View;
-    const v1, 0x7f090057
+    const v1, 0x7f090056
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -201,7 +201,7 @@
     iput-object v1, p0, Lcom/android/settings/applications/AppInfoPreference;->mIcon:Landroid/widget/ImageView;
 
     .line 52
-    const v1, 0x7f090011
+    const v1, 0x7f090012
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -212,7 +212,7 @@
     iput-object v1, p0, Lcom/android/settings/applications/AppInfoPreference;->mLabel:Landroid/widget/TextView;
 
     .line 53
-    const v1, 0x7f0900bf
+    const v1, 0x7f0900c0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -3460,7 +3460,7 @@
     iput-object v4, p0, Lcom/android/settings/DataUsageSummary;->mTabHost:Landroid/widget/TabHost;
 
     .line 312
-    const v4, 0x7f090061
+    const v4, 0x7f090060
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3596,7 +3596,7 @@
     :cond_0
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mHeader:Landroid/view/ViewGroup;
 
-    const v7, 0x7f09005e
+    const v7, 0x7f09005d
 
     invoke-virtual {v4, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -3609,7 +3609,7 @@
     .line 349
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mHeader:Landroid/view/ViewGroup;
 
-    const v7, 0x7f09005f
+    const v7, 0x7f09005e
 
     invoke-virtual {v4, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -3714,7 +3714,7 @@
     .line 367
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mHeader:Landroid/view/ViewGroup;
 
-    const v7, 0x7f090054
+    const v7, 0x7f090053
 
     invoke-virtual {v4, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -3725,7 +3725,7 @@
     .line 368
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mCycleView:Landroid/view/View;
 
-    const v7, 0x7f090055
+    const v7, 0x7f090054
 
     invoke-virtual {v4, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3759,7 +3759,7 @@
     .line 373
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mHeader:Landroid/view/ViewGroup;
 
-    const v7, 0x7f09004b
+    const v7, 0x7f09004a
 
     invoke-virtual {v4, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -3784,7 +3784,7 @@
     .line 379
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mHeader:Landroid/view/ViewGroup;
 
-    const v7, 0x7f090056
+    const v7, 0x7f090055
 
     invoke-virtual {v4, v7}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -3795,7 +3795,7 @@
     .line 380
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mAppDetail:Landroid/view/View;
 
-    const v7, 0x7f090057
+    const v7, 0x7f090056
 
     invoke-virtual {v4, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3808,7 +3808,7 @@
     .line 381
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mAppDetail:Landroid/view/View;
 
-    const v7, 0x7f090058
+    const v7, 0x7f090057
 
     invoke-virtual {v4, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3821,7 +3821,7 @@
     .line 382
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mAppDetail:Landroid/view/View;
 
-    const v7, 0x7f09005b
+    const v7, 0x7f09005a
 
     invoke-virtual {v4, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3834,7 +3834,7 @@
     .line 383
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mAppDetail:Landroid/view/View;
 
-    const v7, 0x7f090059
+    const v7, 0x7f090058
 
     invoke-virtual {v4, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3847,7 +3847,7 @@
     .line 384
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mAppDetail:Landroid/view/View;
 
-    const v7, 0x7f09005a
+    const v7, 0x7f090059
 
     invoke-virtual {v4, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3860,7 +3860,7 @@
     .line 385
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mAppDetail:Landroid/view/View;
 
-    const v7, 0x7f09005d
+    const v7, 0x7f09005c
 
     invoke-virtual {v4, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3873,7 +3873,7 @@
     .line 387
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mAppDetail:Landroid/view/View;
 
-    const v7, 0x7f09005c
+    const v7, 0x7f09005b
 
     invoke-virtual {v4, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3949,7 +3949,7 @@
     .line 400
     iget-object v4, p0, Lcom/android/settings/DataUsageSummary;->mHeader:Landroid/view/ViewGroup;
 
-    const v5, 0x7f090060
+    const v5, 0x7f09005f
 
     invoke-virtual {v4, v5}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 

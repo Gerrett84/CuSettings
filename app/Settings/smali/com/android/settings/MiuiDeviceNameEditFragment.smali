@@ -29,7 +29,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c0862
+    const v1, 0x7f0c0865
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -187,7 +187,7 @@
 
     .prologue
     .line 29
-    const v3, 0x7f09007b
+    const v3, 0x7f09007c
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
